@@ -17,6 +17,7 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 | `offline_libs/` | `leaflet-1.9.4-dist.zip` (Leaflet JS/CSS/images for the no-internet map). |
 | `scripts/` | Data checks and processing scripts. |
 | `outputs/` | Generated summaries (CSV). |
+| `docs/pitch.md` | 2-minute pitch outline (Spanish), with the source of every number. |
 
 ## Setup
 
@@ -63,6 +64,21 @@ Source: NASA GIBS WMS (`epsg4326/best`). They serve as an offline basemap (Leafl
 
 - Suomi NPP stopped delivering data on 2 Nov 2026, so recent data should come from NOAA-20 / NOAA-21.
 - VIIRS (375 m) detects roughly 4–5× more points than MODIS (1 km) over the same area; see `outputs/cr_detections_by_year_source.csv`.
+- The `canton` names in the NASA POWER CSV were normalized to match the geoBoundaries ADM2 names (underscores → spaces: `La Cruz`, `Santa Cruz`, `San Jose ref`) with `scripts/normalize_power_cantons.py`. No other value changed. `scripts/check_power_join.py` verifies four things: all 11 Guanacaste cantons have a series, each canton-seat point falls inside its own canton polygon, the 2 reference points sit outside Guanacaste, and every series has one row per day (5,114).
+
+## What the data says so far
+
+Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season = calendar year, and "detections" = VIIRS S-NPP 375 m inside the 11 Guanacaste cantons, unless stated otherwise.
+
+- **Concentrated in space and time.** Guanacaste holds 63.4% of Costa Rica's 2012–2025 detections (82,461 of 129,973, all sensors). 87.9% of its VIIRS detections fall in February–April (86.8% across all sensors; 80.0% for MODIS alone).
+- **No single climate index predicts season severity.** By VIIRS, the two worst seasons were 2013 (DJF ONI −0.24, neutral) and 2022 (−0.76, La Niña). The correlation between season detections and DJF ONI is r = 0.40 (r² = 0.16, p = 0.16, n = 14). The correlation stays at r ≈ 0.40–0.43 with a Nov–Oct season or with MODIS instead of VIIRS. MODIS ranks the seasons differently (2013, 2015, 2016 top), so the "two worst" statement is specific to VIIRS.
+- **The strong El Niño seasons in the record were above the median.** 2016 (DJF ONI +2.50) had 4,320 detections (rank 4 of 14). 2024 (+1.84) had 4,029 (rank 6). The median season is 3,892, and the full range is 1,241–5,935.
+- **2027 outlook, with honest uncertainty.** The latest ONI is +2.46 (ASO 2026). A simple linear fit of season detections on DJF ONI gives about 4,700 detections at that ONI. Its 80% prediction interval is 2,600–6,800, and its 95% interval is 1,300–8,000. In other words, it is consistent with anything from a below-median season to a record one. ENSO alone cannot plan a season, so the model must also use each canton's history and weekly dryness. 2027 detections will come from NOAA-20/21, because S-NPP stopped in Nov 2026. NOAA-20 tracks S-NPP about 1:1 in 2019–2025 (for example 4,019 vs 4,029 in Guanacaste in 2024).
+
+## Next steps
+
+- Build during the event (14–15 Nov): harmonization, the canton risk model, alert triage and the offline Leaflet app.
+- **Validate against SINAC burned-area reports** (seasonal reports from the Programa Nacional de Manejo del Fuego). Compare reported area burned and number of fires per season and canton with the harmonized detection record, and with the triage labels. This validation is not a prerequisite for the demo.
 
 ## Data sources and citations
 
