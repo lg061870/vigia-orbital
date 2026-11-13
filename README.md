@@ -39,6 +39,9 @@ python3 -m venv .venv
 | `costa_rica_distritos_geoboundaries.geojson` | 472 districts | geoBoundaries gbOpen CRI ADM3 |
 | `costa_rica_areas_protegidas_osm.geojson` | 132 protected areas / national parks / reserves as MultiPolygon, with OSM tags (`name`, `protect_class`, …). Converted from Overpass JSON | OpenStreetMap |
 | `esa_worldcover_2021_guanacaste_~35m.tif` | Land-cover GeoTIFF, bbox lon −86.0 to −84.7, lat 9.6 to 11.25, 4096 × 5199 px (~35 m/px, nearest-neighbour from 10 m). Classes: 10 trees, 20 shrub, 30 grassland, 40 cropland, 50 built-up, 60 bare, 80 water, 90 herbaceous wetland, 95 mangrove | ESA WorldCover 2021 v200 (tile `N09W087`) |
+| `costa_rica_areas_conservacion_sirefor_2021.geojson` | SINAC conservation areas, 10 polygons (ACG, ACT, ACAT, ACAHN, ACTo, ACLAC, ACLAP, ACC, ACOPAC, ACOSA; the marine Isla del Coco area is not included). Columns `ac_code`, `ac_name`, `ac_abbr`. Simplified to 20 m and converted from CRTM05 (EPSG:5367) to WGS84 | SIREFOR (SINAC/MINAE) WFS layer `SIREFORV2:aprovechamiento_areas_conservacion_numpermisos_2021` |
+| `guanacaste_canton_area_conservacion.csv` | Each Guanacaste canton's conservation area and the share of the canton's area inside it (96.5–99.8%). ACG: Liberia, La Cruz. ACT: Santa Cruz, Carrillo, Nicoya, Hojancha, Nandayure. ACAT: Bagaces, Cañas, Abangares, Tilarán | Derived (`scripts/build_conservation_areas.py`) |
+| `raw/sirefor_limites_areas_conservacion_2021_CRTM05.zip` | Original shapefile of the layer above, as downloaded (EPSG:5367) | SIREFOR WFS |
 
 Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Overpass backup of the protected areas. It stays in the project Drive folder and isn't needed, because the GeoJSON above has the same content.
 
@@ -47,6 +50,7 @@ Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Over
 - The geoBoundaries GeoJSONs, protected areas, NASA POWER CSV and ONI CSV were copied byte-for-byte from the project's Drive kit (downloaded 12 Nov 2026).
 - The FIRMS CSV was rebuilt from the FIRMS country files (`https://firms.modaps.eosdis.nasa.gov/data/country/{modis,viirs-snpp,viirs-jpss1}/<year>/…_Costa_Rica.csv`, 2012–2025). The files were concatenated and their columns renamed as above. The result matches the Drive original in row count (129,973), byte size (11,711,241) and leading rows.
 - The WorldCover GeoTIFF was regenerated from the official ESA WorldCover 2021 v200 10 m tile (`esa-worldcover.s3.eu-central-1.amazonaws.com`), with a nearest-neighbour resample to the bbox above.
+- The conservation-area boundaries were downloaded on 13 Nov 2026 from SIREFOR's WFS (`https://www.sirefor.go.cr/GeoserviciosSIREFOR/wfs`, `typeName=SIREFORV2:aprovechamiento_areas_conservacion_numpermisos_2021`, `outputFormat=SHAPE-ZIP`). SIREFOR doesn't publish a standalone boundary layer, so these come from a 2021 harvest-permit layer that has one polygon per conservation area. Its permit, tree and timber-volume columns are dropped. The 2022 and 2023 versions of that layer exist but are empty. SIREFOR has no fire statistics.
 
 ### Demo images (`imagenes_demo/`)
 
@@ -77,7 +81,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 
 ## Next steps
 
-- Build during the event (14–15 Nov): harmonization, the canton risk model, alert triage and the offline Leaflet app.
+- Build during the event (14–15 Nov): harmonization, the risk model (built by canton and added up to SINAC's conservation areas ACG, ACT and ACAT, which is SINAC's planning unit), alert triage and the offline Leaflet app.
 - **Validate against SINAC burned-area reports** (seasonal reports from the Programa Nacional de Manejo del Fuego). Compare reported area burned and number of fires per season and canton with the harmonized detection record, and with the triage labels. This validation is not a prerequisite for the demo.
 
 ## Data sources and citations
@@ -87,6 +91,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 - **NOAA CPC**: Oceanic Niño Index (ONI), Climate Prediction Center.
 - **geoBoundaries**: Runfola, D. et al. (2020). geoBoundaries: A global database of political administrative boundaries. *PLoS ONE* 15(4): e0231866. CC BY 4.0.
 - **OpenStreetMap**: © OpenStreetMap contributors, ODbL. Retrieved via the Overpass API.
+- **SIREFOR / SINAC**: conservation-area boundaries from the Sistema de Información de Recursos Forestales (SINAC, MINAE), WFS layer `aprovechamiento_areas_conservacion_numpermisos_2021`.
 - **ESA WorldCover**: Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. CC BY 4.0.
 - **NASA GIBS / Worldview**: imagery from NASA's Global Imagery Browse Services (GIBS), part of EOSDIS.
 - **Leaflet** 1.9.4 (BSD-2-Clause).
