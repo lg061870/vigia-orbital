@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Raw HDX downloads (re-fetched by scripts/build_hdx_layers.py)
+data/raw_hdx/

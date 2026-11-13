@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "guanacaste_bomberos_hotosm",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-05,
+"features": [
+{ "type": "Feature", "properties": { "id": "way/658456346", "name": "Estación de Bomberos de Nosara", "amenity": "fire_station", "addr_city": "Nosara" }, "geometry": { "type": "Point", "coordinates": [ -85.66585, 9.96376 ] } },
+{ "type": "Feature", "properties": { "id": "way/657937466", "name": "Estación de Bomberos 5-10", "amenity": "fire_station", "addr_city": "Santa Rita" }, "geometry": { "type": "Point", "coordinates": [ -85.25888, 10.01476 ] } },
+{ "type": "Feature", "properties": { "id": "way/380893272", "name": "Estatión de Bomberos 5-4", "amenity": "fire_station", "addr_city": "Nicoya" }, "geometry": { "type": "Point", "coordinates": [ -85.45308, 10.14502 ] } },
+{ "type": "Feature", "properties": { "id": "way/657938836", "name": "Estación de Bomberos de Santa Cruz", "amenity": "fire_station", "addr_city": "Santa Cruz" }, "geometry": { "type": "Point", "coordinates": [ -85.58437, 10.26248 ] } },
+{ "type": "Feature", "properties": { "id": "way/389985999", "name": "Estación de Bomberos 5-1", "amenity": "fire_station", "addr_city": "Las Juntas" }, "geometry": { "type": "Point", "coordinates": [ -84.95878, 10.28177 ] } },
+{ "type": "Feature", "properties": { "id": "way/657950106", "name": "Estación de Bomberos 6-14", "amenity": "fire_station", "addr_city": "Monte Verde" }, "geometry": { "type": "Point", "coordinates": [ -84.82681, 10.31954 ] } },
+{ "type": "Feature", "properties": { "id": "way/657938112", "name": "Estación de Bomberos 5-11", "amenity": "fire_station", "addr_city": "Cabo Velas" }, "geometry": { "type": "Point", "coordinates": [ -85.79004, 10.38644 ] } },
+{ "type": "Feature", "properties": { "id": "way/657938642", "name": "Estación de Bomberos 5-2", "amenity": "fire_station", "addr_city": "Cañas" }, "geometry": { "type": "Point", "coordinates": [ -85.09256, 10.43063 ] } },
+{ "type": "Feature", "properties": { "id": "way/195201926", "name": "Estación de Bomberos 5-7", "amenity": "fire_station", "addr_city": "Filadelfia" }, "geometry": { "type": "Point", "coordinates": [ -85.55309, 10.4475 ] } },
+{ "type": "Feature", "properties": { "id": "way/499541188", "name": "Estación de Bomberos 5-6", "amenity": "fire_station", "addr_city": "Tilarán" }, "geometry": { "type": "Point", "coordinates": [ -84.96942, 10.46829 ] } },
+{ "type": "Feature", "properties": { "id": "way/657943974", "name": "Estación de Bomberos 5-9", "amenity": "fire_station", "addr_city": "Bagaces" }, "geometry": { "type": "Point", "coordinates": [ -85.25901, 10.52785 ] } },
+{ "type": "Feature", "properties": { "id": "way/396116014", "name": "Estación de Bomberos 5-5", "amenity": "fire_station", "addr_city": "Liberia" }, "geometry": { "type": "Point", "coordinates": [ -85.53955, 10.59938 ] } },
+{ "type": "Feature", "properties": { "id": "way/391055360", "name": "Estación de Bomberos 5-0", "amenity": "fire_station", "addr_city": "Liberia" }, "geometry": { "type": "Point", "coordinates": [ -85.43976, 10.63441 ] } },
+{ "type": "Feature", "properties": { "id": "way/99832245", "name": "Estación de Bomberos 5-8", "amenity": "fire_station", "addr_city": "La Cruz" }, "geometry": { "type": "Point", "coordinates": [ -85.62967, 11.07879 ] } }
+]
+}

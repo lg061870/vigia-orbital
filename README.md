@@ -42,6 +42,12 @@ python3 -m venv .venv
 | `costa_rica_areas_conservacion_sirefor_2021.geojson` | SINAC conservation areas, 10 polygons (ACG, ACT, ACAT, ACAHN, ACTo, ACLAC, ACLAP, ACC, ACOPAC, ACOSA; the marine Isla del Coco area is not included). Columns `ac_code`, `ac_name`, `ac_abbr`. Simplified to 20 m and converted from CRTM05 (EPSG:5367) to WGS84 | SIREFOR (SINAC/MINAE) WFS layer `SIREFORV2:aprovechamiento_areas_conservacion_numpermisos_2021` |
 | `guanacaste_canton_area_conservacion.csv` | Each Guanacaste canton's conservation area and the share of the canton's area inside it (96.5–99.8%). ACG: Liberia, La Cruz. ACT: Santa Cruz, Carrillo, Nicoya, Hojancha, Nandayure. ACAT: Bagaces, Cañas, Abangares, Tilarán | Derived (`scripts/build_conservation_areas.py`) |
 | `raw/sirefor_limites_areas_conservacion_2021_CRTM05.zip` | Original shapefile of the layer above, as downloaded (EPSG:5367) | SIREFOR WFS |
+| `guanacaste_poblacion_kontur_h3_400m.geojson` | Population on H3 hexagons of ~400 m (6,816 hexagons; about 423,000 people in Guanacaste). Columns `h3`, `population` | Kontur Population, 2023-11-01 release (CC BY), via HDX |
+| `costa_rica_poblacion_distritos_unfpa_2021.csv` | Population 2021 by district (ADM3) for all Costa Rica, by sex and 5-year age group. Codes `ADM1_PCODE`…`ADM3_PCODE`, names `ADM1_ES`…`ADM3_ES`. Guanacaste total: 399,409 | UNFPA Subnational Population Statistics (CC BY-IGO), via HDX |
+| `guanacaste_caminos_hotosm.geojson` | Vehicle roads in Guanacaste, including tracks (20,090 lines; footways, paths and steps removed). Columns `id`, `name`, `highway`, `surface` | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
+| `guanacaste_poblados_hotosm.geojson` | Populated places as points (1,027). Columns `id`, `name`, `place`, `population` | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
+| `guanacaste_salud_hotosm.geojson` | Health facilities as points (311: clinics, pharmacies, doctors, dentists, hospitals) | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
+| `guanacaste_bomberos_hotosm.geojson` | Fire stations (`amenity=fire_station`) as points: 13 in Guanacaste plus Monteverde's, just over the border | OpenStreetMap via HOT points-of-interest export, 2026-11-03 (ODbL), via HDX |
 
 Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Overpass backup of the protected areas. It stays in the project Drive folder and isn't needed, because the GeoJSON above has the same content.
 
@@ -51,6 +57,7 @@ Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Over
 - The FIRMS CSV was rebuilt from the FIRMS country files (`https://firms.modaps.eosdis.nasa.gov/data/country/{modis,viirs-snpp,viirs-jpss1}/<year>/…_Costa_Rica.csv`, 2012–2025). The files were concatenated and their columns renamed as above. The result matches the Drive original in row count (129,973), byte size (11,711,241) and leading rows.
 - The WorldCover GeoTIFF was regenerated from the official ESA WorldCover 2021 v200 10 m tile (`esa-worldcover.s3.eu-central-1.amazonaws.com`), with a nearest-neighbour resample to the bbox above.
 - The conservation-area boundaries were downloaded on 13 Nov 2026 from SIREFOR's WFS (`https://www.sirefor.go.cr/GeoserviciosSIREFOR/wfs`, `typeName=SIREFORV2:aprovechamiento_areas_conservacion_numpermisos_2021`, `outputFormat=SHAPE-ZIP`). SIREFOR doesn't publish a standalone boundary layer, so these come from a 2021 harvest-permit layer that has one polygon per conservation area. Its permit, tree and timber-volume columns are dropped. The 2022 and 2023 versions of that layer exist but are empty. SIREFOR has no fire statistics.
+- The HDX layers were downloaded on 13 Nov 2026 and clipped to Guanacaste (province polygon + 2 km buffer) by `scripts/build_hdx_layers.py`. The script lists every source URL, keeps the raw files in `data/raw_hdx/` (git-ignored, re-downloaded if missing), and turns polygon features into points. OSM coverage of roads, places, health facilities and fire stations is volunteer-mapped and may be incomplete.
 
 ### Demo images (`imagenes_demo/`)
 
@@ -92,6 +99,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 - **geoBoundaries**: Runfola, D. et al. (2020). geoBoundaries: A global database of political administrative boundaries. *PLoS ONE* 15(4): e0231866. CC BY 4.0.
 - **OpenStreetMap**: © OpenStreetMap contributors, ODbL. Retrieved via the Overpass API.
 - **SIREFOR / SINAC**: conservation-area boundaries from the Sistema de Información de Recursos Forestales (SINAC, MINAE), WFS layer `aprovechamiento_areas_conservacion_numpermisos_2021`.
+- **Kontur Population** (2023), CC BY; **UNFPA** Subnational Population Statistics (2021), CC BY-IGO; **Humanitarian OpenStreetMap Team** exports of OpenStreetMap data, ODbL. All via the Humanitarian Data Exchange (data.humdata.org).
 - **ESA WorldCover**: Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. CC BY 4.0.
 - **NASA GIBS / Worldview**: imagery from NASA's Global Imagery Browse Services (GIBS), part of EOSDIS.
 - **Leaflet** 1.9.4 (BSD-2-Clause).
