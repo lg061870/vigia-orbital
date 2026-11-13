@@ -80,6 +80,27 @@ Source: NASA GIBS WMS (`epsg4326/best`). They serve as an offline basemap (Leafl
 - VIIRS (375 m) detects roughly 4–5× more points than MODIS (1 km) over the same area; see `outputs/cr_detections_by_year_source.csv`.
 - The `canton` names in the NASA POWER CSV were normalized to match the geoBoundaries ADM2 names (underscores → spaces: `La Cruz`, `Santa Cruz`, `San Jose ref`) with `scripts/normalize_power_cantons.py`. No other value changed. `scripts/check_power_join.py` verifies four things: all 11 Guanacaste cantons have a series, each canton-seat point falls inside its own canton polygon, the 2 reference points sit outside Guanacaste, and every series has one row per day (5,114).
 
+## Database (`data/vigia_orbital.duckdb`)
+
+A single DuckDB file (10.5 MB) that ties the data kit together and works offline. Rebuild it with `.venv/bin/python scripts/build_db.py`, which takes ~40 s; the script is the source of truth. Geometries are stored as WKB blobs (EPSG:4326). Rasters stay as GeoTIFF files and are listed in `raster_catalog`.
+
+| Table | Rows | Key / contents |
+|---|---|---|
+| `canton` | 83 | `canton_id` = UNFPA ADM2 code (CR501–CR511 for Guanacaste; `GB-<name>` for Puerto Jiménez and Río Cuarto, which UNFPA 2021 lacks), names with accents, province, `ac_code`, area, population 2021 |
+| `conservation_area` | 10 | SINAC areas (SIREFOR) |
+| `protected_area` | 132 | OSM protected areas |
+| `detection` | 129,973 | FIRMS points + `canton_id`, `h3` (H3 resolution 8, ~400 m, same grid as Kontur), `in_protected_area`, `dist_protected_area_km` |
+| `cell` | 6,816 | Guanacaste H3 cells: population, `canton_id`, WorldCover class at the centroid, distance to protected area / road / fire station / populated place |
+| `facility` | 1,352 | fire stations, health facilities, populated places (OSM) |
+| `weather_day` | 66,482 | NASA POWER daily per canton seat (+ Puntarenas and San José reference points) |
+| `vi_canton_8day` | 6,908 | MODIS NDVI / NBR per canton and composite |
+| `oni` | 177 | ONI with `center_month` |
+| `population_district` | 478 | UNFPA 2021 totals by district |
+| `raster_catalog` | 15 | GeoTIFF paths and band names |
+| view `canton_day` | 61,368 | canton × day 2012–2025: weather + latest clear MODIS composite (as-of join, ≥30% clear pixels) + ONI. Puntarenas has weather only (outside the MODIS area). No fire counts yet: the harmonized count is built at the event. |
+
+To browse it: the DuckDB CLI's built-in web UI (`duckdb -ui data/vigia_orbital.duckdb`), DBeaver (DuckDB driver), or from Python (`duckdb.connect("data/vigia_orbital.duckdb")`).
+
 ## What the data says so far
 
 Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season = calendar year, and "detections" = VIIRS S-NPP 375 m inside the 11 Guanacaste cantons, unless stated otherwise.
