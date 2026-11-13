@@ -221,3 +221,4 @@ __marimo__/
 
 # Raw HDX downloads (re-fetched by scripts/build_hdx_layers.py)
 data/raw_hdx/
+data/raw_modis/
