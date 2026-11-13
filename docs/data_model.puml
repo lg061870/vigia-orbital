@@ -1,0 +1,182 @@
+@startuml vigia_orbital_data_model
+' Vigía Orbital – data model of data/vigia_orbital.duckdb
+' Solid tables exist today (scripts/build_db.py). <<planned>> ones are built at the event.
+hide circle
+skinparam linetype ortho
+skinparam class {
+  BackgroundColor<<planned>> #FFF4E5
+  BorderColor<<planned>> #F08A24
+  BackgroundColor<<view>> #EAF3FB
+}
+
+package "Places" {
+  entity conservation_area {
+    * ac_code : VARCHAR <<PK>>
+    --
+    ac_name : VARCHAR
+    ac_abbr : VARCHAR
+    geom_wkb : BLOB
+  }
+  entity canton {
+    * canton_id : VARCHAR <<PK>>  ' UNFPA ADM2 code, e.g. CR501
+    --
+    name : VARCHAR
+    name_es : VARCHAR
+    province : VARCHAR
+    ac_code : VARCHAR <<FK>>
+    area_km2 : DOUBLE
+    pop_2021 : DOUBLE
+    geom_wkb : BLOB
+  }
+  entity protected_area {
+    * osm_id : VARCHAR <<PK>>
+    --
+    name : VARCHAR
+    boundary : VARCHAR
+    protect_class : VARCHAR
+    protection_title : VARCHAR
+    geom_wkb : BLOB
+  }
+  entity cell {
+    * h3 : VARCHAR <<PK>>  ' H3 res 8 (~400 m)
+    --
+    canton_id : VARCHAR <<FK>>
+    population : INTEGER
+    landcover_centroid : SMALLINT
+    dist_protected_area_km : DOUBLE
+    dist_road_km : DOUBLE
+    dist_fire_station_km : DOUBLE
+    dist_populated_place_km : DOUBLE
+    geom_wkb : BLOB
+  }
+  entity facility {
+    * id : VARCHAR <<PK>>
+    --
+    kind : VARCHAR  ' fire_station | health | populated_place
+    subtype : VARCHAR
+    name : VARCHAR
+    geom_wkb : BLOB
+  }
+  entity population_district {
+    * ADM3_PCODE : VARCHAR <<PK>>
+    --
+    ADM2_PCODE : VARCHAR <<FK>>
+    ADM3_ES : VARCHAR
+    T_TL : INTEGER
+    F_TL : INTEGER
+    M_TL : INTEGER
+  }
+}
+
+package "Observations" {
+  entity detection {
+    * detection_id : BIGINT <<PK>>
+    --
+    source : VARCHAR  ' modis | viirs-snpp | viirs-jpss1
+    acq_datetime_utc : TIMESTAMP
+    latitude : DOUBLE
+    longitude : DOUBLE
+    confidence : VARCHAR
+    frp : DOUBLE
+    daynight : VARCHAR
+    bright_main : DOUBLE
+    bright_secondary : DOUBLE
+    canton_id : VARCHAR <<FK>>
+    h3 : VARCHAR <<FK>>
+    in_protected_area : BOOLEAN
+    dist_protected_area_km : DOUBLE
+  }
+  entity weather_day {
+    * canton_id : VARCHAR <<FK>>
+    * date : DATE
+    --
+    T2M, T2M_MAX, T2M_MIN : DOUBLE
+    PRECTOTCORR : DOUBLE
+    RH2M : DOUBLE
+    WS2M : DOUBLE
+    GWETTOP : DOUBLE
+  }
+  entity vi_canton_8day {
+    * canton_id : VARCHAR <<FK>>
+    * date : DATE
+    * sensor : VARCHAR  ' MOD | MYD
+    --
+    ndvi_mean : DOUBLE
+    nbr_mean : DOUBLE
+    valid_share : DOUBLE
+  }
+  entity oni {
+    * year : INTEGER
+    * season : VARCHAR
+    --
+    center_month : INTEGER
+    oni_anomaly : DOUBLE
+  }
+  entity raster_catalog {
+    * path : VARCHAR <<PK>>
+    --
+    kind : VARCHAR
+    season_year : INTEGER
+    bands : VARCHAR
+    scale : DOUBLE
+  }
+}
+
+package "Model" {
+  entity canton_day <<view>> {
+    * canton_id : VARCHAR
+    * date : DATE
+    --
+    weather (T2M … GWETTOP)
+    vi_date, ndvi_mean, nbr_mean
+    oni_anomaly
+  }
+  entity cell_day <<planned>> {
+    * h3 : VARCHAR <<FK>>
+    * date : DATE
+    --
+    n_modis : INTEGER
+    n_viirs_snpp : INTEGER
+    n_viirs_noaa20 : INTEGER
+    fire_present_harmonized : BOOLEAN
+  }
+  entity forecast <<planned>> {
+    * canton_id : VARCHAR <<FK>>
+    * issue_date : DATE
+    * lead_day : INTEGER  ' 1..10
+    --
+    expected_vs_normal : DOUBLE
+    danger_class : VARCHAR
+    p10 : DOUBLE
+    p90 : DOUBLE
+  }
+  entity alert <<planned>> {
+    * detection_id : BIGINT <<PK, FK>>
+    --
+    priority : VARCHAR  ' verificar primero | después
+    reason_protected_area : VARCHAR
+    reason_recurrence : VARCHAR
+    reason_landcover : VARCHAR
+    reason_season : VARCHAR
+    message_text : VARCHAR  ' <= 5 KB
+  }
+}
+
+conservation_area ||--o{ canton : ac_code
+canton ||--o{ cell : canton_id
+canton ||--o{ detection : canton_id
+canton ||--o{ weather_day : canton_id
+canton ||--o{ vi_canton_8day : canton_id
+canton ||--o{ population_district : ADM2_PCODE
+cell ||--o{ detection : h3
+cell ||--o{ cell_day : h3
+protected_area }o..o{ detection : "spatial (in / distance)"
+facility }o..o{ cell : "spatial (distance)"
+weather_day ||--|| canton_day
+vi_canton_8day |o..o{ canton_day : "as-of join"
+oni |o..o{ canton_day : "month"
+canton ||--o{ forecast : canton_id
+canton_day ..> forecast : trains
+detection ||--o| alert : detection_id
+cell ..> alert : reasons
+@enduml
