@@ -48,6 +48,8 @@ python3 -m venv .venv
 | `guanacaste_poblados_hotosm.geojson` | Populated places as points (1,027). Columns `id`, `name`, `place`, `population` | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
 | `guanacaste_salud_hotosm.geojson` | Health facilities as points (311: clinics, pharmacies, doctors, dentists, hospitals) | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
 | `guanacaste_bomberos_hotosm.geojson` | Fire stations (`amenity=fire_station`) as points: 13 in Guanacaste plus Monteverde's, just over the border | OpenStreetMap via HOT points-of-interest export, 2026-11-03 (ODbL), via HDX |
+| `modis_ndvi_nbr_canton_8day_2012_2025.csv` | Mean NDVI and NBR per Guanacaste canton for every MODIS composite (Terra + Aqua, one every 8 days, Nov 2011–Dec 2025; 628 composites), plus the share of valid (cloud-free) pixels | MODIS MOD13Q1/MYD13Q1 v061 via Planetary Computer; `scripts/build_modis_indices.py` |
+| `modis_season/season_<YEAR>.tif` | One raster per dry season, 2012–2025, ~275 m, EPSG:4326, int16 ×10000. Bands: NDVI_pre (Dec–Jan), NBR_pre, NDVI_peak (March), NBR_post (16 Apr–May), dNBR (pre − post), and dNBR_anom (dNBR minus the 2012–2025 per-pixel median, i.e. change beyond normal dry-season leaf loss) | same |
 
 Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Overpass backup of the protected areas. It stays in the project Drive folder and isn't needed, because the GeoJSON above has the same content.
 
@@ -58,6 +60,7 @@ Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Over
 - The WorldCover GeoTIFF was regenerated from the official ESA WorldCover 2021 v200 10 m tile (`esa-worldcover.s3.eu-central-1.amazonaws.com`), with a nearest-neighbour resample to the bbox above.
 - The conservation-area boundaries were downloaded on 13 Nov 2026 from SIREFOR's WFS (`https://www.sirefor.go.cr/GeoserviciosSIREFOR/wfs`, `typeName=SIREFORV2:aprovechamiento_areas_conservacion_numpermisos_2021`, `outputFormat=SHAPE-ZIP`). SIREFOR doesn't publish a standalone boundary layer, so these come from a 2021 harvest-permit layer that has one polygon per conservation area. Its permit, tree and timber-volume columns are dropped. The 2022 and 2023 versions of that layer exist but are empty. SIREFOR has no fire statistics.
 - The HDX layers were downloaded on 13 Nov 2026 and clipped to Guanacaste (province polygon + 2 km buffer) by `scripts/build_hdx_layers.py`. The script lists every source URL, keeps the raw files in `data/raw_hdx/` (git-ignored, re-downloaded if missing), and turns polygon features into points. OSM coverage of roads, places, health facilities and fire stations is volunteer-mapped and may be incomplete.
+- MODIS indices: NDVI comes from the product's own layer, and NBR = (NIR − MIR)/(NIR + MIR) uses MODIS band 7 (2.1 µm, SWIR2). Pixels whose `pixel_reliability` isn't good or marginal are masked. Both tiles (h09v07, h09v08) are warped to a 0.0025° grid. The full 8-day stack (~330 MB) is in `data/raw_modis/` (git-ignored); the script rebuilds it. At 250 m, dNBR blurs small burns, so use the USGS/MTBS severity thresholds (calibrated for 30 m Landsat) only as a rough guide.
 
 ### Demo images (`imagenes_demo/`)
 
@@ -85,6 +88,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 - **No single climate index predicts season severity.** By VIIRS, the two worst seasons were 2013 (DJF ONI −0.24, neutral) and 2022 (−0.76, La Niña). The correlation between season detections and DJF ONI is r = 0.40 (r² = 0.16, p = 0.16, n = 14). The correlation stays at r ≈ 0.40–0.43 with a Nov–Oct season or with MODIS instead of VIIRS. MODIS ranks the seasons differently (2013, 2015, 2016 top), so the "two worst" statement is specific to VIIRS.
 - **The strong El Niño seasons in the record were above the median.** 2016 (DJF ONI +2.50) had 4,320 detections (rank 4 of 14). 2024 (+1.84) had 4,029 (rank 6). The median season is 3,892, and the full range is 1,241–5,935.
 - **2027 outlook, with honest uncertainty.** The latest ONI is +2.46 (ASO 2026). A simple linear fit of season detections on DJF ONI gives about 4,700 detections at that ONI. Its 80% prediction interval is 2,600–6,800, and its 95% interval is 1,300–8,000. In other words, it is consistent with anything from a below-median season to a record one. ENSO alone cannot plan a season, so the model must also use each canton's history and weekly dryness. 2027 detections will come from NOAA-20/21, because S-NPP stopped in Nov 2026. NOAA-20 tracks S-NPP about 1:1 in 2019–2025 (for example 4,019 vs 4,029 in Guanacaste in 2024).
+- **Vegetation dryness is the strongest signal so far, and it's available before the season.** Across the 14 seasons, mean NDVI over the Guanacaste cantons correlates with season detections at r = −0.80 in January (p = 0.001), −0.81 in the first half of February, and −0.84 in March (p < 0.001): greener vegetation, fewer fires. For comparison, ONI gives r = 0.40. The March figure is partly simultaneous with the fires, but the January one comes before the season. The burn-scar signal (share of the province with dNBR_anom > 0.1) correlates more weakly (r = 0.48, p = 0.08) because MODIS's 250 m blurs small burns. See `outputs/gte_season_modis_vs_fires.csv`.
 
 ## Next steps
 
@@ -93,6 +97,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 
 ## Data sources and citations
 
+- **MODIS MOD13Q1 / MYD13Q1 v061** (Didan, K., NASA EOSDIS LP DAAC), accessed via Microsoft Planetary Computer.
 - **NASA FIRMS**: MODIS Collection 6.1 and VIIRS 375 m active fire detections (S-NPP, NOAA-20), standard processing. This project acknowledges the use of data and/or imagery from NASA's Fire Information for Resource Management System (FIRMS), part of NASA's Earth Science Data and Information System (ESDIS), and LANCE/EOSDIS.
 - **NASA POWER**: These data were obtained from the NASA Langley Research Center (LaRC) POWER Project, funded through the NASA Earth Science/Applied Science Program.
 - **NOAA CPC**: Oceanic Niño Index (ONI), Climate Prediction Center.
