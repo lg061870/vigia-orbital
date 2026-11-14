@@ -102,6 +102,8 @@ def main() -> None:
                     dtype={"acq_time": str, "confidence": str, "version": str}).assign(processing="SP"),
         pd.read_csv(DATA / "vigia_orbital_firms_costa_rica_2026.csv",
                     dtype={"acq_time": str, "confidence": str, "version": str}),
+        pd.read_csv(DATA / "vigia_orbital_firms_costa_rica_noaa21_2023_2026.csv",
+                    dtype={"acq_time": str, "confidence": str, "version": str}),
     ], ignore_index=True)
     d["type"] = d["type"].astype("Int64")  # NULL for near-real-time rows (FIRMS NRT has no type)
     d.insert(0, "detection_id", np.arange(1, len(d) + 1))

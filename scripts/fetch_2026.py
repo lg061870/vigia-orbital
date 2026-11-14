@@ -36,6 +36,7 @@ FIRMS_SOURCES = [
 ]
 COLS = ["source", "latitude", "longitude", "acq_date", "acq_time", "satellite", "instrument", "confidence",
         "frp", "daynight", "type", "bright_main", "bright_secondary", "scan", "track", "version", "processing"]
+OUT_NAME = "vigia_orbital_firms_costa_rica_2026.csv"
 POWER_PARAMS = "T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,WS2M,GWETTOP"
 
 
@@ -77,7 +78,7 @@ def firms() -> None:
     pts = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.longitude, df.latitude), crs=4326)
     inside = gpd.sjoin(pts, prov[["geometry"]], how="inner", predicate="within").index.unique()
     df = df.loc[inside].sort_values(["source", "acq_date", "acq_time"])[COLS]
-    out = DATA / "vigia_orbital_firms_costa_rica_2026.csv"
+    out = DATA / OUT_NAME
     df.to_csv(out, index=False)
     print(out.name, len(df), "rows;", df.groupby(["source", "processing"]).size().to_dict())
 
