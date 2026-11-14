@@ -101,6 +101,15 @@ A single DuckDB file (10.5 MB) that ties the data kit together and works offline
 
 To browse it: the DuckDB CLI's built-in web UI (`duckdb -ui data/vigia_orbital.duckdb`), DBeaver (DuckDB driver), or from Python (`duckdb.connect("data/vigia_orbital.duckdb")`).
 
+### Update 14 Nov 2026: 2026 data, NOAA-21, NDMI, terrain, CSV export
+- `detection` now holds **157,918** rows: 2012–2025, plus 2026 (FIRMS API, standard processing to 31 Jul / 31 Aug 2026 and near-real-time after; `fetch_2026.py`), plus **VIIRS NOAA-21** (`viirs-jpss2`, Mar 2023 – Nov 2026; `fetch_noaa21.py`). New column `processing` (SP / NRT). NRT rows have `type` = NULL, because FIRMS NRT has no type. NOAA-21 matches S-NPP within ±8% per year (2023: 1.01, 2024: 0.96, 2025: 0.97).
+- `weather_day` extended to 11 Nov 2026 (NASA POWER). `vi_canton_8day` extended to Nov 2026, and a `season_2026` raster added.
+- New `ndmi_canton_8day` (14,641 rows): **NDMI = (NIR − SWIR1)/(NIR + SWIR1)**, MODIS bands 2 and 6, from MOD09A1/MYD09A1 v061 (500 m, 8-day) with a clear-sky mask from the state QA (`build_modis_ndmi.py`). Guanacaste median NDMI: ~0.33 in the rainy season, 0.03 in March. January NDMI vs season detections (S-NPP, 2012–2025): r = −0.65 (p = 0.012). It's strongly collinear with January NDVI (r = 0.94), so the model should use one of them or a combination.
+- New `terrain_canton` and terrain columns in `cell` (`elevation_m`, `slope_deg`, `northness`, `eastness`) from **NASADEM** (NASA, 30 m → 90 m; `build_terrain.py`). Raster: `data/terrain_guanacaste_nasadem_90m.tif`.
+- `canton_day` view adds `ndmi_date`, `ndmi_mean` and the terrain columns, and runs to 11 Nov 2026 (ONI to Sep 2026, the latest ASO value).
+- **CSV export:** `data/csv/<table>.csv` for every table and view (`scripts/export_csv.py`). Geometry is replaced by `centroid_lon`/`centroid_lat`. Load them in Colab from `https://raw.githubusercontent.com/lg061870/vigia-orbital/setup/data/data/csv/<table>.csv`.
+- Citations added: NASADEM (NASA JPL, 2020, via Planetary Computer); MODIS MOD09A1/MYD09A1 v061 (Vermote, NASA LP DAAC).
+
 ## What the data says so far
 
 Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season = calendar year, and "detections" = VIIRS S-NPP 375 m inside the 11 Guanacaste cantons, unless stated otherwise.

@@ -1,0 +1,1353 @@
+id,name,kind,subtype,centroid_lon,centroid_lat
+way/658456346,Estación de Bomberos de Nosara,fire_station,,-85.66585,9.96376
+way/657937466,Estación de Bomberos 5-10,fire_station,,-85.25888,10.01476
+way/380893272,Estatión de Bomberos 5-4,fire_station,,-85.45308,10.14502
+way/657938836,Estación de Bomberos de Santa Cruz,fire_station,,-85.58437,10.26248
+way/389985999,Estación de Bomberos 5-1,fire_station,,-84.95878,10.28177
+way/657950106,Estación de Bomberos 6-14,fire_station,,-84.82681,10.31954
+way/657938112,Estación de Bomberos 5-11,fire_station,,-85.79004,10.38644
+way/657938642,Estación de Bomberos 5-2,fire_station,,-85.09256,10.43063
+way/195201926,Estación de Bomberos 5-7,fire_station,,-85.55309,10.4475
+way/499541188,Estación de Bomberos 5-6,fire_station,,-84.96942,10.46829
+way/657943974,Estación de Bomberos 5-9,fire_station,,-85.25901,10.52785
+way/396116014,Estación de Bomberos 5-5,fire_station,,-85.53955,10.59938
+way/391055360,Estación de Bomberos 5-0,fire_station,,-85.43976,10.63441
+way/99832245,Estación de Bomberos 5-8,fire_station,,-85.62967,11.07879
+node/8635785139,Ebais San Francisco de Coyote,health,clinic,-85.24464,9.80272
+node/8632902583,Ebais Pueblo Nuevo - Bejuco,health,doctors,-85.32915,9.83419
+node/8636057924,Ebais Zapote,health,clinic,-85.19025,9.83692
+node/1241642373,Ebais Puerto Carrillo,health,clinic,-85.4799,9.86479
+node/8635978916,Ebais Jabillos,health,doctors,-85.22733,9.86869
+node/8680035215,Ebais Sámara,health,clinic,-85.53396,9.87708
+node/14021091018,Samara Dental,health,dentist,-85.53659,9.88083
+node/8632809974,Ebais Quebrada Grande,health,clinic,-85.27329,9.88232
+node/10148727117,Farmacia Don Gerardo,health,pharmacy,-85.52759,9.8824
+node/14055142516,Don Gerardo Farmacia,health,pharmacy,-85.52889,9.8826
+way/381023065,Centro Medico,health,clinic,-85.52773,9.88277
+node/14055041297,Farmacia Elimar Samara,health,pharmacy,-85.52769,9.88347
+node/14055142515,Si Dental,health,dentist,-85.52791,9.88364
+node/14055041293,Laboratorio Dr. Ricardo Cerdas,health,,-85.52778,9.88375
+way/1267405191,Ebais Los Ángeles,health,doctors,-85.28182,9.90186
+node/4709000532,Ebais San Pedro,health,doctors,-85.3794,9.90967
+node/4831043057,Ebais Santa Marta,health,clinic,-85.43238,9.92691
+node/8632630983,Ebais Cerro Azul,health,doctors,-85.29736,9.9385
+node/4987421523,,health,clinic,-85.66502,9.94521
+node/4987421522,Nosara Dental,health,dentist,-85.66514,9.94524
+node/4987216421,,health,doctors,-85.66505,9.94529
+node/8632607536,Ebais Bellavista,health,clinic,-85.28216,9.95344
+node/4917713329,Dra. Kattia Porras,health,doctors,-85.66266,9.95862
+way/1148551393,Ebais Maquenco - Belén,health,clinic,-85.51475,9.96687
+way/964454980,Ebais Zaragoza,health,clinic,-85.56625,9.97208
+way/489431000,Ebais Nosara,health,clinic,-85.64868,9.97885
+node/8632543834,Ebais Corozal Oeste,health,clinic,-85.1734,9.98158
+node/8630702266,Ebais Río de Oro,health,clinic,-85.34271,9.99375
+node/4831190896,Ebais Lajas,health,clinic,-85.45029,9.99398
+node/14247033605,,health,pharmacy,-85.25342,9.99532
+way/108188310,Clínica CCSS Nandayure,health,clinic,-85.25168,9.99571
+node/9297684066,Ebais Río de Oro,health,clinic,-85.35468,9.99912
+node/4833212685,Ebais Monte Romo,health,clinic,-85.38481,10.00067
+node/4833440746,Ebais Huacas,health,clinic,-85.36364,10.02275
+way/918069546,Ebais Belén,health,clinic,-85.50278,10.02903
+node/8672680004,Ebais San Pablo,health,clinic,-85.23376,10.03013
+way/1148892152,Ebais La Virginia - Quirimán,health,clinic,-85.54185,10.04855
+way/491165216,Clínica CCSS Hojancha,health,clinic,-85.41827,10.05894
+node/10688779271,Ebais Caimital,health,clinic,-85.47495,10.06765
+node/5873832811,Proyecto Epidemiológico Guanacaste,health,,-85.53436,10.5874
+node/9334830746,Consejero Matrimonial Getting the Love You Want,health,,-85.64933,10.58923
+node/9661819117,Lab Echandi,health,,-85.53368,10.5939
+node/12434247144,Holistic Dental,health,dentist,-85.4629,10.61916
+way/379988324,Farmacia Sucre,health,pharmacy,-85.44378,10.62539
+way/380870258,Clínica Madre Teresa,health,clinic,-85.43935,10.62743
+node/5246682437,Farmacia La Bomba,health,pharmacy,-85.44045,10.62806
+way/1536022016,,health,clinic,-85.44119,10.62809
+node/13993720153,,health,dentist,-85.44149,10.62812
+node/13993720161,FarmaValue,health,pharmacy,-85.44105,10.62815
+node/3942063153,,health,dentist,-85.44176,10.6284
+way/380861790,Farmacia Lux,health,pharmacy,-85.43906,10.62871
+way/380845120,Clínica Dental,health,dentist,-85.44272,10.62881
+node/6286188987,,health,,-85.44207,10.62915
+node/6286189121,,health,doctors,-85.44189,10.62992
+node/5047109121,,health,pharmacy,-85.44191,10.63002
+way/390861638,Clínica Dental - Moncada y Morales,health,dentist,-85.43652,10.63015
+node/3940265863,Farmacia Elimar de Liberia,health,pharmacy,-85.43834,10.63019
+way/380875507,Farmacia Santa Fe,health,pharmacy,-85.43611,10.63035
+node/2267547132,Farmacia Chavarría Liberia,health,pharmacy,-85.43821,10.63037
+way/380876479,Navarro & Alpízar Laboratorio Clinico,health,clinic,-85.43605,10.63038
+node/6286188994,Clínica Prenatal,health,clinic,-85.44212,10.63041
+node/6286187278,,health,pharmacy,-85.44206,10.63044
+node/3841751130,Ciudad Blanca,health,clinic,-85.43588,10.63058
+way/380828448,,health,pharmacy,-85.43602,10.63097
+way/380845136,Farmacia Santa Margarita,health,pharmacy,-85.43828,10.63114
+way/390876407,,health,dentist,-85.43621,10.63124
+node/1229608209,Farmacia Sucre,health,pharmacy,-85.43843,10.63133
+way/391066149,Dr. Gomez Urología,health,clinic,-85.43388,10.63152
+way/380825999,Farmacia Auxiliadora,health,pharmacy,-85.43433,10.63175
+way/390899308,Centro Radiológico e Imágenes,health,clinic,-85.43906,10.63177
+way/380878188,,health,pharmacy,-85.43385,10.63186
+way/379955805,Sante Fe,health,pharmacy,-85.43926,10.63259
+way/379960779,Medica Interna,health,clinic,-85.43623,10.63399
+node/14086659911,Clínica Renovarte,health,doctors,-85.43498,10.63559
+way/380861776,Clínica 25 de Julio,health,clinic,-85.4322,10.63624
+node/7307702177,FARMACIA 25 DE JULIO,health,pharmacy,-85.43237,10.63628
+node/14086625398,,health,dentist,-85.43672,10.63726
+node/6417239467,Ebais Rodeito,health,doctors,-85.49201,10.63827
+way/83715136,Hospital Dr. Enrique Baltodano Briceño,health,hospital,-85.43143,10.6384
+way/380825115,Clínica Dental O.C.I.,health,dentist,-85.43267,10.63839
+node/9107890051,Ebais Nueva Guatemala,health,doctors,-85.05772,10.6388
+node/4589479177,Ebais Guadalupe,health,doctors,-85.47033,10.66154
+node/3934453158,Clínica CCSS La Fortuna,health,clinic,-85.20232,10.67398
+way/246979270,Ebais Río Naranjo,health,doctors,-85.09251,10.68359
+node/1257778189,Clínica CCSS Guayabo,health,clinic,-85.22473,10.70558
+node/4518481530,Farmacia Monserrat,health,pharmacy,-85.22575,10.70709
+node/928631053,Farmacia,health,pharmacy,-85.22524,10.70804
+node/4592786669,Ebais Curubandé,health,doctors,-85.40938,10.72114
+node/2539343551,Ebais Bijagua,health,clinic,-85.05898,10.72984
+node/2526083841,Farmacia,health,pharmacy,-85.05663,10.73079
+node/5227079612,Ebais Cañas Dulces,health,clinic,-85.47783,10.7372
+node/5226972481,Ebais Buena Vista,health,clinic,-85.4715,10.74834
+way/1274305377,Ebais Quebrada Grande,health,clinic,-85.49283,10.84358
+way/480238976,Ebais Santa Elena,health,clinic,-85.67838,10.94165
+node/4745628092,Ebais El Jobo,health,doctors,-85.72494,11.01637
+node/6417257487,Ebias Tempatal,health,doctors,-85.66552,11.02636
+node/4736410356,Ebais San Rafael,health,doctors,-85.26802,11.03058
+node/4734550111,Ebais Piedras Azules,health,doctors,-85.31684,11.05306
+node/4737053522,Ebais Belice,health,doctors,-85.27861,11.05498
+way/426978589,Clínica CCSS Santa Cecilia,health,clinic,-85.41615,11.06267
+node/1216938664,Farmacia Monte de Sion,health,pharmacy,-85.63058,11.07032
+way/332486022,Clínica CCSS La Cruz,health,hospital,-85.62866,11.07079
+way/383553690,,health,pharmacy,-85.63426,11.07374
+node/4758183647,Ebais Caoba,health,doctors,-85.31579,11.07661
+node/4738755426,Ebais La Garita,health,doctors,-85.55119,11.08755
+node/6417260994,Ebais Armenia,health,doctors,-85.32983,11.09473
+node/4751201936,Ebais Los Andes,health,doctors,-85.51441,11.10811
+node/4736496838,Ebais La Virgen,health,doctors,-85.38308,11.11058
+node/6417257987,Ebais Las Brisas,health,doctors,-85.57158,11.1693
+way/1148894623,Ebais Dulce Nombre,health,clinic,-85.49377,10.07913
+node/5538902181,Ebais Matambú,health,clinic,-85.41995,10.08849
+node/3955244002,Ebais La Mansión,health,clinic,-85.37309,10.09716
+way/1148895107,Ebais Quirimán,health,clinic,-85.50852,10.11041
+node/9432218926,Ebais San Joaquín,health,clinic,-85.31346,10.11168
+way/1458787749,Ebais Manzanillo,health,clinic,-85.01876,10.13209
+way/394214439,Clínica Dental,health,dentist,-85.45315,10.14141
+way/384238594,Clínica Dental,health,dentist,-85.45263,10.14187
+node/4994851622,,health,pharmacy,-85.45127,10.14208
+node/2436017701,Farmacia San Angel,health,pharmacy,-85.45268,10.14233
+way/380887134,Clínica Médica Nicoyana,health,doctors,-85.45219,10.14305
+way/380887139,Farmacia Fischel Nicoya,health,pharmacy,-85.4522,10.1432
+way/383851236,Farmacia Elimar,health,pharmacy,-85.45194,10.1433
+node/2434357103,Somnus FisioSpa,health,doctors,-85.4526,10.14338
+node/3972087447,Clínica Dental,health,dentist,-85.45316,10.14373
+way/384245171,Ebais Noreste - Sureste,health,clinic,-85.4549,10.14519
+way/394411146,Clínica Santa Lucía,health,clinic,-85.45397,10.14524
+node/14049590121,,health,doctors,-85.45117,10.14543
+way/394411134,Farmacia San Blas,health,pharmacy,-85.45266,10.14681
+way/964427290,Ebais La Esperanza,health,clinic,-85.56752,10.14728
+relation/20343753,Hospital de La Anexión,health,hospital,-85.45397,10.14846
+way/553565727,Ebais Barra Honda,health,clinic,-85.35364,10.14994
+way/381327745,Farmacia M&M,health,pharmacy,-85.45174,10.15204
+node/2431392791,Ebais San Martín,health,clinic,-85.45925,10.15204
+way/1148898273,Ebais Santa Ana,health,clinic,-85.38638,10.15949
+way/921120127,Ebais Juan Díaz,health,clinic,-85.54064,10.16724
+way/1148935913,Ebais Copal,health,clinic,-85.26441,10.1699
+way/1148935175,Ebais Quebrada Honda,health,clinic,-85.29695,10.18574
+node/2645856708,Ebais Sabana Grande,health,clinic,-85.48418,10.18627
+way/441269286,Clínica CCSS Colorado,health,clinic,-85.10872,10.18629
+node/3948414996,Ebais de de San Buenaventura,health,clinic,-85.1541,10.1884
+node/8665909882,Ebais San Antonio,health,clinic,-85.42968,10.2005
+way/1148897938,Ebais Nambí,health,clinic,-85.50092,10.20947
+way/558886311,Ebais Níspero,health,doctors,-85.23021,10.2119
+way/1148965941,Ebais Corralillo,health,clinic,-85.37543,10.2181
+way/1148935912,Ebais Roblar,health,clinic,-85.29674,10.22604
+way/1148945001,Ebais Moracia,health,clinic,-85.38859,10.22658
+way/945906539,Ebais Santa Lucía,health,doctors,-85.18707,10.23244
+node/9098603990,Ebais Concepción,health,doctors,-85.13595,10.24061
+way/775122622,Clínica CCSS Veintisiete de Abril,health,clinic,-85.7095,10.24422
+node/4833520420,Ebais,health,doctors,-85.00845,10.24598
+node/12434247153,Terapias Familia Holística,health,,-85.71244,10.2472
+node/3948278441,Ebais La Palma,health,doctors,-85.05572,10.25365
+way/107117708,Clínica CCSS Santa Cruz,health,hospital,-85.58447,10.25684
+way/393906815,Centro Medico María Auxiliadora,health,clinic,-85.58561,10.2572
+way/1066215576,Centro Medico Santa Cruz,health,,-85.58608,10.25775
+way/1148940556,Ebais San Vicente,health,clinic,-85.49122,10.25784
+way/393906798,Clínica Integral Santa Cruz,health,clinic,-85.5854,10.25811
+node/3958509774,Farmacia Santa Elena,health,pharmacy,-85.58586,10.25966
+way/392680802,,health,dentist,-85.58486,10.25981
+node/9800079254,Clinica Dental Shirley Angulo,health,dentist,-85.58763,10.26002
+node/9824010763,Macrobiotica BP,health,pharmacy,-85.5863,10.26003
+way/1067366249,Centro Odontologico Bienestar Social,health,dentist,-85.5878,10.26003
+node/9793987226,Macrobiotica BP Santa Cruz,health,pharmacy,-85.58629,10.26006
+node/9793987225,Farmacia Elimar Santa Cruz,health,pharmacy,-85.58618,10.26007
+node/8670029522,Ebais Porozal,health,doctors,-85.19778,10.26112
+node/9824009359,Laboratorio Fisico Quimico y Microbiologico,health,,-85.5849,10.26178
+node/3958752149,Dictamen para Licencia,health,doctors,-85.5852,10.2619
+way/392373896,Farmacia Sucre Santa Cruz,health,pharmacy,-85.58629,10.26226
+way/393768051,Clínica De Terapia Neuromuscular Y Rehabilitacion Fisica,health,clinic,-85.58382,10.26233
+node/9828654846,Centro Medico Shemuel,health,doctors,-85.58298,10.26298
+node/8670043818,Ebais San Juan,health,doctors,-84.94676,10.26322
+node/3969307162,Medico Cirujano,health,doctors,-85.58632,10.2637
+node/3969301753,Farmacia Chorotege,health,pharmacy,-85.58635,10.26376
+node/3969301754,,health,dentist,-85.58628,10.26377
+node/8766522129,Farmacia Don Gerardo,health,pharmacy,-85.01951,10.26496
+way/392370648,Clinica odontologica Laura Espinoza,health,dentist,-85.5869,10.26526
+way/392370647,Macrobiotica,health,pharmacy,-85.58662,10.26558
+way/392370645,Farmacia Barrantes,health,pharmacy,-85.58666,10.26577
+node/8604434986,La Bomba,health,pharmacy,-85.58684,10.26713
+way/393820705,La Auxiliadora,health,pharmacy,-85.58534,10.26764
+way/209921493,Centro Médico,health,clinic,-85.81028,10.26767
+way/1148943522,Ebais San Lázaro,health,clinic,-85.46155,10.2728
+way/115446927,Clínica CCSS Abangares,health,clinic,-84.95948,10.27917
+way/1119485573,,health,doctors,-84.95886,10.27913
+way/1119485572,,health,dentist,-84.96012,10.27959
+way/1119485574,,health,dentist,-84.95744,10.28014
+way/918487083,Ebais Diriá,health,doctors,-85.52626,10.2806
+way/1119485575,,health,doctors,-84.95707,10.28067
+way/1119483234,,health,dentist,-84.9594,10.28114
+way/1119483235,,health,pharmacy,-84.95916,10.28118
+way/1119483240,,health,pharmacy,-84.95846,10.28174
+way/1119483242,,health,,-84.95803,10.28208
+node/3291846477,Ebais Pozo de Agua,health,clinic,-85.34059,10.28358
+node/9787018266,Casa Tribu,health,,-85.59816,10.28905
+node/12565682415,Dentista Solside,health,dentist,-85.84064,10.29788
+way/380112354,Clínica Dental OCI,health,dentist,-85.84217,10.29865
+node/1416814661,Farmacia Conchal,health,pharmacy,-85.84121,10.29918
+node/3954109225,Pacifico,health,pharmacy,-85.84096,10.30035
+node/3834691547,Centro Médico Diriá,health,,-85.84056,10.30036
+node/9442807407,,health,,-85.80288,10.30299
+node/9442821518,Farmacia Ámbar,health,pharmacy,-85.80297,10.30309
+node/14050222471,Farmacia Villarreal,health,pharmacy,-85.80361,10.30382
+way/514594883,Ebais Tamarindo,health,doctors,-85.80308,10.30416
+way/379474592,,health,doctors,-85.83822,10.30423
+way/379474591,Farmacia Tamarindo,health,pharmacy,-85.83813,10.30427
+node/12923611290,Quiropráctico Bruces,health,,-85.83519,10.30665
+node/12778940657,Pacific Medi Spa,health,doctors,-85.83092,10.30829
+node/12778900885,Oculista Ojos del Mar,health,,-85.83089,10.30829
+node/13064693542,Ojos Del Mar,health,clinic,-85.83083,10.30851
+node/1416873562,Farmacia El Cruce,health,pharmacy,-85.8313,10.30877
+node/3953901603,,health,dentist,-85.83118,10.30953
+node/3953901606,Centro de Bienestar Tamarindo,health,doctors,-85.83117,10.30957
+node/9865038416,Radiología Dental Tamarindo,health,dentist,-85.83075,10.30963
+way/389810854,Emergencias Monteverde,health,clinic,-84.81707,10.31417
+node/3827029482,Farmacia Fischel,health,pharmacy,-85.8038,10.31543
+node/9385638702,Don Gerardo,health,pharmacy,-84.82289,10.31557
+way/389740189,Clínica Dental,health,dentist,-84.82177,10.31577
+node/14130017672,Medicenter Monteverde,health,clinic,-84.82405,10.31677
+way/1036703460,Farmacia Vitosi,health,pharmacy,-84.82443,10.31697
+way/389740184,Farmacia Don Gerardo,health,pharmacy,-84.8229,10.31712
+way/657950108,Clínica CCSS Monteverde,health,hospital,-84.8264,10.31999
+way/1038396992,Ebais Cañitas,health,clinic,-84.84425,10.32833
+node/5123528422,Ebais San Miguel,health,doctors,-85.07693,10.35379
+node/11200684577,Ebais La Unión,health,clinic,-84.87316,10.35848
+way/913665585,Ebais Bolsón,health,clinic,-85.45961,10.36157
+node/8669501244,Ebais Matapalo,health,clinic,-85.81113,10.36268
+node/6417246692,Ebais Coyolito,health,doctors,-85.64768,10.3636
+node/3944542403,,health,dentist,-85.7748,10.36869
+way/391244475,,health,pharmacy,-85.77444,10.36872
+way/391251159,,health,clinic,-85.77735,10.3698
+way/106624478,,health,hospital,-85.67124,10.37164
+relation/15527026,Clínica CCSS Cartagena,health,clinic,-85.671,10.37147
+node/5123610125,Ebais Bebedero,health,doctors,-85.18518,10.37239
+way/391253813,Clínica Dental,health,dentist,-85.78304,10.37325
+way/511148237,Ebais,health,doctors,-84.99027,10.37331
+node/13191500115,Life Booster,health,,-85.78581,10.3781
+node/9110969724,Ebais Libertad,health,doctors,-85.11249,10.38039
+way/1038397006,Ebais El Dos,health,clinic,-84.90278,10.38107
+node/9099142132,Ebais San Juan,health,doctors,-85.0393,10.38114
+way/467812943,Hospital Metropolitano,health,hospital,-85.78984,10.38597
+node/6417246599,Ebais Santa Ana,health,doctors,-85.61237,10.39566
+node/11200587844,Ebais Florida,health,clinic,-84.90298,10.39905
+way/913001101,Ebais Brasilito,health,clinic,-85.79643,10.40261
+node/4913538963,Ebais Bagatzi,health,clinic,-85.31082,10.40619
+way/466398573,Ebais Belén 1 y 2,health,clinic,-85.58565,10.40711
+node/5321391059,Ebais Tempate,health,clinic,-85.72032,10.41435
+node/4929711497,Ebais Líbano,health,clinic,-84.98636,10.4188
+node/6417246385,Ebais Los Planes,health,doctors,-85.62322,10.4189
+way/1152462869,Flamingo Medical Center,health,,-85.78506,10.42179
+way/1054137942,Ebais El Castillo,health,clinic,-84.75184,10.42543
+way/80476812,Clínica CCSS Cañas,health,clinic,-85.0932,10.42569
+way/390150531,Laboratorio Clinico Dr. Arturo Robles F.,health,clinic,-85.0924,10.42579
+way/390150551,Farmacia Elimar,health,pharmacy,-85.09222,10.42635
+way/390318215,Siglo XXI,health,pharmacy,-85.09206,10.42669
+way/390318214,Farmacia Chavarría Cañas,health,pharmacy,-85.09196,10.42673
+node/3933100209,Farmacia Don Gerardo,health,pharmacy,-85.09043,10.42716
+way/390150542,Clínica Calderón,health,clinic,-85.08893,10.42718
+way/390318234,Montero Clínica Dental,health,dentist,-85.09019,10.4294
+way/390256852,Clínica Ruisánchez,health,dentist,-85.09068,10.42979
+node/8672382667,Ebais Quebrada Grande,health,doctors,-84.94598,10.43084
+way/1418927733,Clínica CCSS Filadelfia,health,hospital,-85.56672,10.43477
+node/12291929637,Farmacia Guanacasteca,health,pharmacy,-85.7892,10.43955
+node/12100577275,Medi Red - Flamingo Urgent Care,health,clinic,-85.78935,10.43959
+node/2177723630,,health,pharmacy,-85.79107,10.43965
+way/85416553,Centro de Atención Integral de Salud - Cañas,health,hospital,-85.0855,10.4423
+way/434177951,Ebais Filadelfia Sur,health,clinic,-85.55482,10.44252
+way/379450528,Farmacia Filadelfia,health,pharmacy,-85.55167,10.44436
+way/391050587,Farmacia,health,pharmacy,-85.55155,10.44462
+way/379436555,Farmacia Chorotega,health,pharmacy,-85.55185,10.44502
+way/391041403,Farmacia Carillo,health,pharmacy,-85.55228,10.44552
+way/390129641,Clínica Dental,health,dentist,-85.5525,10.44674
+node/5657493022,Villa Sueno,health,hospital,-85.76199,10.45365
+way/1032738336,Farmacia Elimar,health,pharmacy,-84.96703,10.46967
+way/367541866,Clínica CCSS Tilarán,health,clinic,-84.97043,10.46965
+way/1032738341,Centro Medico Juan Pablo Segundo,health,clinic,-84.96618,10.47034
+node/9515265644,Laboratorio Clínico Santorini,health,,-84.9697,10.47189
+way/500252958,Ebais Montenegro,health,doctors,-85.21026,10.47496
+node/6417243540,Ebais El Moral,health,doctors,-85.60104,10.4817
+node/9080806006,Ebais San Ramón,health,doctors,-85.38275,10.49077
+way/511097894,Ebais Tromadora,health,doctors,-84.92182,10.49946
+way/451813313,Clínica CCSS Paso Tempisque,health,clinic,-85.57279,10.50232
+node/6417244150,Ebais Artola,health,doctors,-85.68173,10.50967
+way/107108151,Clínica CCSS Sardinal,health,clinic,-85.64788,10.51535
+way/389781763,Panadoi Farmacia Sardinal,health,pharmacy,-85.64889,10.51615
+way/378816237,Clínica Dental,health,dentist,-85.65,10.51688
+node/1231486638,LUC Sardinal,health,doctors,-85.64831,10.51983
+way/383564902,Clínica CCSS Bagaces,health,clinic,-85.25506,10.5206
+node/9091665366,Ebais Montano,health,doctors,-85.18954,10.52609
+node/3934385681,Farmacia Zavaqui,health,pharmacy,-85.25553,10.52683
+way/390281130,Clínica Medicodental,health,clinic,-85.25517,10.52723
+node/1231596881,Consultorio Medico Papagayo,health,doctors,-85.66318,10.53452
+node/9088728167,Farmacia Azul,health,pharmacy,-85.69253,10.54142
+node/9108351525,Ebais Palmira,health,doctors,-85.08676,10.54473
+way/1270978649,Clínica CCSS Arenal,health,hospital,-84.89387,10.54525
+node/9499917398,Farmacia Nuevo Arenal,health,pharmacy,-84.8922,10.54532
+way/1030590032,Ebais,health,clinic,-84.89972,10.54575
+way/379777910,Farmacia Fischel Playas del Coco,health,pharmacy,-85.69324,10.54618
+way/391295560,,health,dentist,-85.69468,10.54675
+node/1231891959,Farmacia Sucre,health,pharmacy,-85.6947,10.54692
+node/1231894345,Farmacia San Angel,health,pharmacy,-85.6946,10.54769
+node/3831127863,,health,dentist,-85.69464,10.54775
+way/379778992,Centro Médico Coco Medical,health,clinic,-85.69512,10.54876
+way/478109867,Clínica CCSS Comunidad,health,clinic,-85.58947,10.54945
+way/379780971,Farmacia Aloe,health,pharmacy,-85.69679,10.55015
+way/475322312,Ebais La Costa,health,clinic,-85.69336,10.55035
+way/380007003,Hospital Clínica Bíblica,health,hospital,-85.59206,10.55709
+node/9091665372,Ebais Santa Fe,health,doctors,-85.15286,10.56208
+node/5096415584,Ebais Guardia,health,clinic,-85.5852,10.56357
+way/456266059,Ebais El Salto,health,doctors,-85.38815,10.56926
+way/1545955469,Ebais de Tierras Morenas,health,clinic,-85.02548,10.57083
+way/389625098,,health,pharmacy,-85.67356,10.57166
+node/3626154034,Los Ángeles,populated_place,hamlet,-85.39653,10.07698
+node/3953873443,Acoyapa,populated_place,hamlet,-85.27305,10.07856
+node/4299321789,Dulce Nombre,populated_place,hamlet,-85.49339,10.08112
+node/4303752077,Lajas,populated_place,hamlet,-85.53796,10.08308
+node/3626154392,Guastomatal,populated_place,hamlet,-85.34687,10.08404
+node/3293534761,Marbella,populated_place,hamlet,-85.76506,10.08425
+way/1147038943,Resid. Finca El Carmen,populated_place,,-85.45764,10.0846
+node/8623827531,Varillal,populated_place,hamlet,-85.44179,10.08615
+node/3626154728,Lapas,populated_place,hamlet,-85.37584,10.08629
+way/1150016009,Cond. Jardín del Sol,populated_place,,-85.77785,10.08789
+node/3295099815,Matambú,populated_place,village,-85.41847,10.08833
+node/3626154035,Cerrillos,populated_place,hamlet,-85.39242,10.08898
+way/1528624345,,populated_place,,-85.4216,10.09023
+node/4134633874,Cerro Negro,populated_place,hamlet,-85.58028,10.09246
+way/1286767157,,populated_place,,-85.18627,10.0936
+node/3289233803,Puerto Palito,populated_place,hamlet,-85.18624,10.09473
+way/1150016006,Cond. Lomas del Sol,populated_place,,-85.77664,10.09995
+node/1241382803,Mansión,populated_place,village,-85.37213,10.10109
+node/4303405780,Mercedes,populated_place,hamlet,-85.39451,10.10119
+way/1530938781,,populated_place,,-85.37486,10.10173
+node/3953873392,La Vigía,populated_place,hamlet,-85.28597,10.10386
+node/4781957869,El Socorro,populated_place,hamlet,-85.71172,10.10444
+way/1147038942,Cond. Reserva Curime,populated_place,,-85.44831,10.10528
+node/3291713071,Polvazales,populated_place,hamlet,-85.38492,10.10505
+node/4134633873,Ángeles,populated_place,hamlet,-85.59562,10.10564
+node/4303405779,Matambuguito,populated_place,hamlet,-85.40956,10.10604
+way/1022709200,Urb. Los Mangos,populated_place,,-85.31269,10.10691
+node/9432218104,Boca Letras,populated_place,hamlet,-85.31199,10.10938
+way/1022709199,Urb. Zapandí,populated_place,,-85.31294,10.111
+node/1239215704,Quirimán,populated_place,hamlet,-85.50889,10.11164
+node/3953873416,Puerto Jesús,populated_place,hamlet,-85.27005,10.11295
+node/4303405778,Hondores,populated_place,hamlet,-85.42819,10.11315
+node/2084729841,Pueblo Viejo,populated_place,hamlet,-85.34285,10.11851
+node/3658391938,Vista al Mar,populated_place,hamlet,-85.62739,10.11913
+node/1363277290,Jarquín,populated_place,hamlet,-84.9485,10.11942
+way/629142991,Urb. Carlota,populated_place,,-84.95013,10.11947
+node/4303396617,Obispo,populated_place,hamlet,-85.38531,10.12093
+node/3658372165,Lagarto,populated_place,hamlet,-85.793,10.12115
+node/10681520997,Pilas,populated_place,hamlet,-85.55725,10.12179
+way/1151063260,Cond. Playa Lagarto Ecoresident,populated_place,,-85.7655,10.12185
+way/1150806651,Cond. Sueños del Mar,populated_place,,-85.78723,10.12364
+way/1150806647,Cond. Colinas del Sol,populated_place,,-85.79046,10.12438
+node/4303405777,Casitas,populated_place,hamlet,-85.43247,10.12491
+way/1151065885,Cond.,populated_place,,-85.7668,10.12618
+way/485213547,Urb.,populated_place,,-85.439,10.1281
+node/10681316444,Garcimuñoz,populated_place,hamlet,-85.53473,10.12862
+way/1150808059,Cond. Playa Lagarto Eco Development,populated_place,,-85.77654,10.13095
+way/1458931577,,populated_place,,-85.01814,10.1325
+node/1363288889,Manzanillo,populated_place,village,-85.01948,10.13261
+node/4303405776,Río Grande,populated_place,hamlet,-85.42315,10.13316
+way/1081549826,Urb. Curime,populated_place,,-85.44395,10.13648
+node/4300006593,Venado,populated_place,hamlet,-85.78823,10.13855
+node/3291642984,San Juan,populated_place,hamlet,-85.30568,10.14118
+node/1363277907,Coyolito,populated_place,hamlet,-84.98082,10.14384
+node/4303798123,La Florida,populated_place,hamlet,-85.75636,10.14445
+node/3291644781,Pochote,populated_place,hamlet,-85.28567,10.14784
+node/4781914768,Las Brisas,populated_place,hamlet,-85.65828,10.14844
+node/4134633831,La Esperanza,populated_place,hamlet,-85.56618,10.1486
+way/1151063250,Cond. Rancho Montaña,populated_place,,-85.79476,10.14904
+node/790503307,Nicoya,populated_place,city,-85.45312,10.14922
+way/1249302328,,populated_place,,-85.46434,10.14948
+way/1530938780,,populated_place,,-85.45481,10.15232
+node/3181930748,Barra Honda,populated_place,hamlet,-85.35522,10.15048
+way/1249302325,,populated_place,,-85.45871,10.15149
+node/2434393908,Los Ángeles,populated_place,hamlet,-85.44949,10.15155
+node/1239181885,San Martín,populated_place,hamlet,-85.45566,10.15243
+way/1249302326,,populated_place,,-85.45988,10.15268
+node/10681335639,El Jobo,populated_place,hamlet,-85.5229,10.15318
+way/1151054392,Cala Honda,populated_place,,-85.80554,10.15364
+way/1249302327,,populated_place,,-85.46008,10.15456
+node/3288895515,Abangaritos,populated_place,hamlet,-85.03879,10.15638
+node/4300006594,Junquillal,populated_place,hamlet,-85.80694,10.15812
+node/332770101,Yomalé (Lagarto Norte),populated_place,hamlet,-84.91533,10.15836
+node/1349938951,Santa Ana,populated_place,hamlet,-85.38602,10.15984
+node/4170615790,Cola de Gallo,populated_place,hamlet,-85.54847,10.16033
+node/3623933518,Pochote,populated_place,hamlet,-85.46614,10.16288
+node/3658386788,Retallano,populated_place,hamlet,-85.62177,10.16363
+way/675165927,Resid. Brisas de La Sabana,populated_place,,-85.44071,10.16456
+node/4781903011,Río Tabaco,populated_place,hamlet,-85.68702,10.1668
+node/4781896291,Las Mesas,populated_place,hamlet,-85.75345,10.16692
+node/4134562402,Juan Díaz,populated_place,hamlet,-85.53931,10.16717
+way/1146785278,Resid. Hacienda La Alianza,populated_place,,-85.45233,10.16662
+node/2646089295,Bosques de Don José,populated_place,neighbourhood,-85.44872,10.16791
+node/3291596836,Copal,populated_place,hamlet,-85.26288,10.16805
+node/1363251548,Pita,populated_place,hamlet,-84.90947,10.16849
+way/1075649392,Residencial Tierra Pacífica,populated_place,,-85.80341,10.17135
+way/1150006112,Cond. Villas Las Ventanas,populated_place,,-85.81235,10.17158
+node/4303510200,La Cuesta,populated_place,hamlet,-85.43666,10.17179
+node/4129371346,Tortugal,populated_place,hamlet,-84.99453,10.17376
+node/4301496432,Pochotes,populated_place,hamlet,-85.81405,10.17767
+node/4227842522,Lourdes,populated_place,hamlet,-84.93517,10.18194
+way/1095039862,Urbanización Ujarrás,populated_place,,-85.48493,10.18214
+node/3623931730,Sabana Grande,populated_place,hamlet,-85.48479,10.1838
+way/740621638,,populated_place,,-85.10628,10.18637
+node/4227950381,Pozo Azul,populated_place,hamlet,-84.90459,10.18385
+node/1349935651,Flor,populated_place,hamlet,-85.37158,10.18434
+node/4782080930,Oriente,populated_place,hamlet,-85.52581,10.18438
+node/3623864650,Pueblo Real,populated_place,hamlet,-85.46858,10.18453
+node/3293467599,Paraíso,populated_place,hamlet,-85.79606,10.18464
+node/1049251089,Colorado,populated_place,village,-85.10842,10.185
+node/3291550110,Tortuguero,populated_place,hamlet,-85.27557,10.18665
+node/330086160,Quebrada Honda,populated_place,village,-85.29765,10.18758
+node/7157237552,Raizal,populated_place,hamlet,-85.08161,10.18767
+way/1530938783,,populated_place,,-85.29949,10.18774
+node/3658420687,San Buenaventura,populated_place,hamlet,-85.1543,10.1879
+way/555025106,,populated_place,,-85.15441,10.18916
+way/555025107,,populated_place,,-85.17057,10.19058
+way/1150971345,Cond.,populated_place,,-85.81035,10.19087
+node/3948415007,Peñas Blancas,populated_place,hamlet,-85.1687,10.19138
+way/1075649393,Residencial Caramar,populated_place,,-85.82613,10.19224
+node/3623925338,El Llano,populated_place,hamlet,-85.47318,10.19223
+way/555025108,,populated_place,,-85.16952,10.19389
+node/332769865,Arizona,populated_place,hamlet,-84.95459,10.19637
+way/1150965999,Cond. Harmonia,populated_place,,-85.83017,10.19644
+node/1349928701,San Antonio,populated_place,village,-85.43109,10.19906
+way/1150966002,Resid. Rancho Playa Negra,populated_place,,-85.83202,10.19916
+way/1530938782,,populated_place,,-85.42982,10.19949
+node/6988545999,Millal,populated_place,hamlet,-85.31139,10.20082
+node/3623914894,Las Guineas,populated_place,hamlet,-85.50508,10.20093
+way/1150172303,Resid. Los Pargos,populated_place,,-85.82753,10.20153
+node/3291436921,Loma Bonita,populated_place,hamlet,-85.2766,10.20257
+way/1075649391,Residencial Río Verde,populated_place,,-85.7607,10.20291
+node/6988546000,Finca Florida,populated_place,hamlet,-85.31684,10.20318
+way/1150969590,Resid. Finca Los Pargos,populated_place,,-85.80619,10.20349
+node/3214218127,Puerto Moreno,populated_place,hamlet,-85.25045,10.20493
+node/3623925340,Cuba,populated_place,hamlet,-85.49023,10.20583
+way/1096443562,Urbanización Las Palmas,populated_place,,-85.50692,10.20709
+node/3623925651,Nambí,populated_place,hamlet,-85.50104,10.20711
+node/4781903010,San José de la Montaña,populated_place,hamlet,-85.70086,10.20746
+node/4227950382,Lajón,populated_place,hamlet,-84.88615,10.21031
+node/4227950383,Tierra Colorada,populated_place,hamlet,-84.91586,10.21116
+node/3293469285,Río Seco,populated_place,hamlet,-85.75766,10.21174
+way/1096443564,Villa Wild Acres,populated_place,,-85.4989,10.21201
+node/4136510815,Puerto Níspero,populated_place,hamlet,-85.23012,10.21235
+node/4227857414,Palmita,populated_place,hamlet,-84.96194,10.21282
+node/3948829925,Sonzapote,populated_place,hamlet,-85.2683,10.21687
+node/732219055,Corallillo,populated_place,hamlet,-85.37488,10.21913
+node/3293557823,San Juan,populated_place,hamlet,-85.55577,10.2194
+node/4227857415,Brisas del Lago,populated_place,hamlet,-84.95211,10.22067
+node/3293395889,Arado,populated_place,hamlet,-85.59793,10.22423
+node/3626108891,Chumico,populated_place,hamlet,-85.53995,10.22549
+node/3291444266,Roblar,populated_place,hamlet,-85.29611,10.22549
+way/1082169661,Urb. Cuatro Cruces,populated_place,,-85.53652,10.22621
+way/766307545,Proyecto Tierra Verde,populated_place,,-85.15081,10.22709
+node/3948365644,Pueblo Nuevo,populated_place,hamlet,-85.11185,10.22751
+node/4633970727,Santa Lucía,populated_place,hamlet,-85.18656,10.23144
+node/4227868333,Nancital,populated_place,hamlet,-84.97128,10.23156
+node/3959750646,Florida,populated_place,hamlet,-85.46181,10.23356
+node/3371279384,Irma,populated_place,hamlet,-84.99773,10.23367
+node/330086158,Corral de Piedra,populated_place,hamlet,-85.32933,10.23369
+node/3293468996,Las Delicias,populated_place,hamlet,-85.73229,10.23568
+node/330086159,Caballito,populated_place,hamlet,-85.34564,10.23642
+node/4301446985,Icacal,populated_place,hamlet,-85.83194,10.23766
+node/4227431984,Las Huacas,populated_place,hamlet,-85.01642,10.23811
+way/1150784680,Residencial Avellanas,populated_place,,-85.84183,10.23856
+node/794609078,Moracia,populated_place,hamlet,-85.39726,10.23874
+node/3293556761,Diriá,populated_place,hamlet,-85.5329,10.23918
+node/4051730930,Concepción,populated_place,hamlet,-85.13734,10.23975
+way/1082168895,Urb. Brisas de Paso Hondo,populated_place,,-85.68994,10.24262
+node/4261760732,Guapinol,populated_place,hamlet,-85.22323,10.24288
+way/1082168894,Urb. Marcial Contreras,populated_place,,-85.69356,10.2433
+way/1530937285,,populated_place,,-85.71193,10.2457
+node/3371279383,Matapalo,populated_place,hamlet,-85.0111,10.24589
+node/852474735,Veintisiete de Abril,populated_place,village,-85.70739,10.24646
+way/1082168886,Urb. Loma Linda,populated_place,,-85.68938,10.24663
+way/900795213,Urb. La Paz,populated_place,,-85.70483,10.24716
+way/1096861523,Residencial Jardines de Palma Real,populated_place,,-85.8452,10.24911
+node/4781853688,Pilas,populated_place,hamlet,-85.67883,10.24989
+node/4301455969,Cebadilla,populated_place,hamlet,-85.78284,10.25033
+node/4227939527,La Marimba,populated_place,hamlet,-85.0074,10.25079
+way/1096861536,Cond. Los Almendros,populated_place,,-85.82837,10.25072
+way/1149997588,Resid. Concha Verde,populated_place,,-85.77002,10.25081
+way/1096861522,Residencial Lagos de Palma Real,populated_place,,-85.84763,10.2509
+node/4227939526,La Culebra,populated_place,hamlet,-85.02063,10.25175
+way/1096861524,Residencial Reserva de Golf,populated_place,,-85.84182,10.25164
+way/1096861519,,populated_place,,-85.58192,10.25248
+way/1096861535,Cond Las Brisas,populated_place,,-85.82607,10.25258
+node/1351017667,Zapote,populated_place,hamlet,-85.43117,10.25315
+node/835053973,Chira,populated_place,hamlet,-85.47196,10.2532
+node/3948267612,La Palma,populated_place,hamlet,-85.05533,10.25331
+way/1096861521,Residencial Las Golondrinas,populated_place,,-85.84797,10.25444
+node/3291846568,Cañal,populated_place,hamlet,-85.36811,10.25445
+way/1081534611,,populated_place,,-85.58979,10.25464
+node/1351017609,San Vicente,populated_place,hamlet,-85.49219,10.25601
+way/518437772,Condominio Monte Donato,populated_place,,-85.80299,10.25737
+way/1150784679,Resid. Los Malinches,populated_place,,-85.82813,10.25805
+way/1157801835,Cerro Grande Estates,populated_place,,-85.79383,10.26005
+way/1530940285,,populated_place,,-85.198,10.25951
+node/4227797806,Los Ángeles (Portones),populated_place,hamlet,-84.89416,10.25966
+way/1530936715,,populated_place,,-85.58177,10.26013
+node/2064126470,Piedra Verde,populated_place,hamlet,-85.03732,10.26018
+relation/18580083,Hacienda Pinilla,populated_place,,-85.83934,10.26039
+node/1351017610,Pozas,populated_place,hamlet,-85.47995,10.26142
+node/279297453,Santa Cruz,populated_place,town,-85.58504,10.26145
+node/3214218909,Porozal,populated_place,village,-85.19748,10.26155
+node/1349959463,Monte Galán,populated_place,hamlet,-85.39173,10.26155
+node/4299881895,Soncoyo,populated_place,hamlet,-85.72113,10.26237
+node/4136641510,Tiquirusas,populated_place,hamlet,-85.16942,10.26239
+node/4834908614,Limonal Viejo,populated_place,hamlet,-85.01227,10.26242
+way/1528623376,,populated_place,,-84.94585,10.26295
+node/3371265240,San Juan Grande,populated_place,village,-84.94636,10.26415
+way/1150784685,La Dulce Vida,populated_place,,-85.8479,10.26453
+node/3948365605,San Joaquín,populated_place,hamlet,-85.09777,10.26542
+node/4301447070,Cañafístula,populated_place,hamlet,-85.76708,10.26592
+way/765551150,Residencial El Malinche,populated_place,,-85.58009,10.26718
+node/2084778634,Lagunilla,populated_place,hamlet,-85.64824,10.26721
+way/1082170810,Urb. Llanos de Moya,populated_place,,-85.63419,10.26751
+node/4227425643,Las Brisas,populated_place,hamlet,-85.06114,10.26788
+node/1351017605,Guaitil,populated_place,hamlet,-85.51037,10.26802
+node/1228879887,San Francisco,populated_place,hamlet,-85.74444,10.26997
+node/10665019642,Conchal,populated_place,hamlet,-85.34536,10.27294
+node/835053983,San Lázaro,populated_place,hamlet,-85.46279,10.27294
+way/1082165994,Urb. Los Espaveles,populated_place,,-85.58547,10.27317
+node/4299844612,Chircó,populated_place,hamlet,-85.63602,10.27377
+node/4299805207,San Pedro,populated_place,hamlet,-85.67419,10.27386
+way/518127187,Villas de San Francisco,populated_place,,-85.79968,10.27566
+way/1082170524,Urb. Piñuelas,populated_place,,-85.63663,10.27571
+way/1528623373,,populated_place,,-84.97239,10.27691
+node/1349959470,Los Ángeles,populated_place,hamlet,-85.40254,10.27719
+node/4299844591,Caimito,populated_place,hamlet,-85.69653,10.27842
+way/1530937889,,populated_place,,-85.52479,10.27958
+node/4301455608,Hernández,populated_place,hamlet,-85.79003,10.27947
+way/485202957,Urb. Cacique Diriá,populated_place,,-85.52184,10.27961
+node/1351017566,Santa Bárbara,populated_place,village,-85.52485,10.28027
+node/876324842,Las Juntas,populated_place,town,-84.95972,10.28072
+way/518343038,Residencial Río Santo,populated_place,,-85.78375,10.2809
+node/2113897999,Oriente,populated_place,hamlet,-85.5201,10.2836
+way/1528623377,,populated_place,,-84.92798,10.28376
+node/1349959039,Pozo de Agua,populated_place,hamlet,-85.34083,10.28407
+way/485287809,Urbanización La Carpio,populated_place,,-85.71349,10.28479
+node/3371270844,La Sierra,populated_place,village,-84.92804,10.2861
+way/1065979555,Residencial Vista Real,populated_place,,-85.5893,10.28727
+way/379474845,Condominio Horizontes del Mar,populated_place,,-85.85121,10.28799
+node/4226005083,El Güis,populated_place,hamlet,-85.06888,10.28833
+way/485399099,Courtyard Villas,populated_place,,-85.85057,10.28847
+node/2064003418,Linderos,populated_place,hamlet,-85.77397,10.28864
+way/1082169950,Urb. El Cacao,populated_place,,-85.56779,10.2889
+way/514590194,Condominio Casa Wasabi,populated_place,,-85.85007,10.28908
+way/1165932910,Villa Circa Del Mar,populated_place,,-85.85094,10.28928
+node/1351017230,Lomitas,populated_place,hamlet,-85.53113,10.28969
+node/3293430075,Los Ángeles,populated_place,hamlet,-85.52495,10.28973
+node/3886215155,Langosta,populated_place,hamlet,-85.85092,10.28982
+node/2064003471,San Jerónimo,populated_place,hamlet,-85.71375,10.29114
+node/4228729033,Aguas Claras,populated_place,hamlet,-84.89063,10.29132
+way/515648532,Residencial Punta Mala Norte,populated_place,,-85.8361,10.29195
+node/4228729032,San Antonio,populated_place,hamlet,-84.87221,10.2925
+way/516666222,Residencial Black Stallion Hills,populated_place,,-85.78795,10.29245
+way/515648534,Residencias Tamarindo,populated_place,,-85.84157,10.29303
+way/514902732,Residencial Casas de Oro,populated_place,,-85.83799,10.29342
+node/4227912366,Barrio Santa Lucía,populated_place,hamlet,-84.97868,10.29365
+way/1149942568,,populated_place,,-85.71331,10.2939
+way/514902731,Condominio Tamarindo Azul,populated_place,,-85.83874,10.29401
+way/1149161699,Urb. Las Lomitas,populated_place,,-85.53445,10.29406
+way/514902733,Condominio Casa Antigua,populated_place,,-85.83713,10.29408
+node/1351017504,Duendes,populated_place,hamlet,-85.5217,10.29425
+way/514902736,Condominio Los Sueños 3,populated_place,,-85.83651,10.29451
+way/485410766,Condominio Villa Verde II,populated_place,,-85.84128,10.29487
+way/485873353,Condominio Los Sueños 2,populated_place,,-85.83709,10.29483
+way/514902735,Condominio Leora Pacífico,populated_place,,-85.83583,10.29483
+way/379627232,Villas Mariposa,populated_place,,-85.83693,10.29547
+way/516235487,Condominio Pueblo de Mar,populated_place,,-85.83869,10.29561
+way/516666860,Residencial,populated_place,,-85.80081,10.29594
+way/514904204,Residencial Del Este,populated_place,,-85.83494,10.29803
+node/4301491904,Hatillo,populated_place,hamlet,-85.71347,10.29935
+node/4226008089,La Estaca,populated_place,hamlet,-85.0366,10.29972
+way/514587295,Residencial Rancho Villa Real,populated_place,,-85.79891,10.30029
+way/485296193,Condominio Palmas de Tamarindo,populated_place,,-85.80229,10.30037
+node/3658498327,Polvazal,populated_place,hamlet,-85.51144,10.30089
+node/3884886603,Tres Amigos,populated_place,hamlet,-84.92875,10.30222
+node/4227912343,Concepción,populated_place,hamlet,-85.00258,10.30246
+way/485296194,Condominio Vistas de Tamarindo,populated_place,,-85.80384,10.30266
+way/514891887,Condominio El Roble,populated_place,,-85.80414,10.30358
+node/4136687109,El Coco,populated_place,hamlet,-85.05956,10.30442
+way/514587299,Residencial El Tesoro,populated_place,,-85.83441,10.30497
+node/3658495982,Talolinguita,populated_place,hamlet,-85.49709,10.30514
+way/516231504,Residencial Tamarindo Heights,populated_place,,-85.83187,10.30613
+node/1226743624,Villarreal,populated_place,village,-85.80354,10.30654
+way/1530938164,,populated_place,,-85.80341,10.3071
+way/516484787,Condominio Nimboyore,populated_place,,-85.80509,10.30891
+way/516222594,Condominio Oasis de Tamarindo,populated_place,,-85.82538,10.30997
+way/516415876,Condominio Girasol,populated_place,,-85.80954,10.31058
+node/4301416825,Guatemala,populated_place,hamlet,-85.77156,10.31132
+way/1528626613,,populated_place,,-84.82006,10.31195
+node/835053998,Puerto Humo,populated_place,hamlet,-85.35094,10.31416
+way/514889091,Condominio Río San Andrés,populated_place,,-85.80717,10.31462
+way/517454734,Condominio Loma Verde,populated_place,,-85.77953,10.31541
+node/4227939525,Barrio Jesús Arriba,populated_place,hamlet,-85.02934,10.31538
+way/964421469,Condominio Villa Azul,populated_place,,-84.83119,10.316
+node/332768822,Jesús Abajo,populated_place,hamlet,-85.04363,10.31598
+node/3158720993,Santa Elena,populated_place,town,-84.82434,10.31651
+node/4301416815,San Andrés,populated_place,hamlet,-85.80113,10.31669
+way/485296662,Urbanización Palm Beach,populated_place,,-85.83772,10.3158
+node/1886896963,El Rosario,populated_place,hamlet,-85.38891,10.31901
+node/1350984214,Talolinga,populated_place,hamlet,-85.48026,10.31993
+way/517456431,Residencial Lomas de Santa Rosa,populated_place,,-85.77746,10.32135
+way/1085002100,,populated_place,,-85.80977,10.32308
+way/1085002096,,populated_place,,-85.81198,10.3237
+way/1135849248,Residencial Roble Sabana,populated_place,,-85.71432,10.32424
+way/517465474,Residencial Tamarindo Beach,populated_place,,-85.80197,10.32545
+node/8920786197,Alto Cebadilla,populated_place,hamlet,-84.85637,10.32689
+node/1363204303,Cañitas,populated_place,hamlet,-84.84358,10.32827
+way/1135849249,Residencial Venado Hills,populated_place,,-85.72798,10.33046
+way/517429717,Residencial Proyecto Tun Tun,populated_place,,-85.79464,10.33054
+node/4225999024,Gotera,populated_place,hamlet,-85.05649,10.33294
+node/367950918,Playa Grande,populated_place,hamlet,-85.84702,10.33463
+way/1149915701,Cond. El Sandal,populated_place,,-85.79133,10.33642
+way/517743061,Residencial La Esmeralda,populated_place,,-85.79321,10.33718
+node/1363204172,La Cruz,populated_place,hamlet,-84.83909,10.33751
+node/1304241350,Altamira,populated_place,hamlet,-85.15759,10.3376
+way/1149915693,Cond.,populated_place,,-85.81923,10.34032
+node/4134362139,Salinas,populated_place,hamlet,-85.84704,10.34071
+way/517779912,Cond. The Oaks,populated_place,,-85.7867,10.34119
+way/90340919,,populated_place,,-85.78912,10.34228
+way/1149915692,Cond. Colinas del Golf,populated_place,,-85.81557,10.34311
+node/11200731539,San Rafael,populated_place,hamlet,-84.8759,10.34473
+node/1226743634,Portegolpe,populated_place,hamlet,-85.73459,10.34537
+way/379393804,Condominio La Meridiana,populated_place,,-85.78062,10.34806
+node/4137231886,Turín,populated_place,hamlet,-84.8665,10.34883
+node/3934055814,Higuerón,populated_place,hamlet,-85.05142,10.34982
+way/1530940283,,populated_place,,-85.07811,10.3505
+node/4301187534,Garita,populated_place,hamlet,-85.79025,10.35117
+way/1135849244,Residencial Corona del Cabo,populated_place,,-85.82398,10.35311
+node/332768567,San Miguel,populated_place,village,-85.07993,10.35368
+way/1135849247,Residencial Rancho Cartagena,populated_place,,-85.72736,10.35747
+way/1551448989,Residencial Acacia del Norte,populated_place,,-85.7742,10.35729
+node/4301187535,Garita Viejo,populated_place,hamlet,-85.79431,10.35768
+way/1149174719,Residencial Loma Linda,populated_place,,-85.67551,10.35872
+node/4137231885,Cabeceras,populated_place,village,-84.87367,10.35892
+way/935525703,Condominio Cabo Velas,populated_place,,-85.80923,10.35901
+way/1530940935,,populated_place,,-84.87511,10.35947
+node/3293498798,El Llano,populated_place,hamlet,-85.74739,10.36003
+node/4301187536,Los Mangos,populated_place,hamlet,-85.78687,10.3606
+node/1241797206,Lorena,populated_place,hamlet,-85.70848,10.36134
+node/732218820,Matapalo,populated_place,village,-85.81039,10.36149
+way/1530936838,,populated_place,,-85.45872,10.36169
+way/1530937943,,populated_place,,-85.80966,10.36178
+node/1350984636,Bolsón,populated_place,village,-85.44935,10.36225
+node/1226743656,Coyolito,populated_place,hamlet,-85.6469,10.3639
+way/1149977680,Residencial Hidden Valley,populated_place,,-85.76787,10.36489
+way/1270906893,Campamentos Ingenio Taboga,populated_place,,-85.19102,10.36734
+node/1351016981,Puerto Ballena,populated_place,hamlet,-85.43618,10.36808
+node/957694852,Bebedero,populated_place,village,-85.19263,10.36861
+way/1530940284,,populated_place,,-85.19492,10.37118
+way/392691094,,populated_place,,-85.12248,10.37494
+node/3946713742,Hotel,populated_place,hamlet,-85.12231,10.37532
+way/1270907608,Urb. Bebedero,populated_place,,-85.19223,10.37614
+node/3946713774,Libertad,populated_place,hamlet,-85.11324,10.379
+way/392691097,,populated_place,,-85.11341,10.37926
+node/3946735599,San Juan,populated_place,hamlet,-85.03799,10.38143
+way/1530937582,,populated_place,,-85.67582,10.38193
+node/1226701966,Cartagena,populated_place,village,-85.67511,10.38204
+way/269115521,Residencial Conchalito,populated_place,,-85.68044,10.38266
+node/471775707,El Dos,populated_place,hamlet,-84.90182,10.38288
+way/1149921247,Cond. Reserva Conchal,populated_place,,-85.80043,10.38639
+node/986617225,San José,populated_place,hamlet,-84.96805,10.38895
+way/468813210,Urbanización Santa Paula,populated_place,,-85.6237,10.38961
+node/1226743617,Santa Ana,populated_place,hamlet,-85.62021,10.38982
+node/3946643033,Paso Lajas,populated_place,hamlet,-85.09263,10.39142
+way/1135849243,Residencial Montañas de Conchal,populated_place,,-85.82026,10.39124
+way/659464334,JOBO,populated_place,,-85.80617,10.39256
+node/3658494215,Hacienda El Viejo,populated_place,hamlet,-85.45552,10.39312
+way/1498879096,Sweet Conchal,populated_place,,-85.79171,10.39478
+node/471775708,Florida,populated_place,hamlet,-84.90108,10.39886
+way/90456372,,populated_place,,-85.80393,10.39913
+way/388488246,Casas Ejecutivas,populated_place,,-85.79422,10.39924
+node/986617235,Jabilla Arriba,populated_place,hamlet,-85.07925,10.40073
+way/112435444,Resid. Villas Marcel,populated_place,,-85.59598,10.4008
+way/1135849240,Residencial Catalina Cove,populated_place,,-85.78791,10.40412
+node/11200935541,Campo de Oro Abajo,populated_place,hamlet,-84.94865,10.40626
+way/659439927,Casas de  Empleados Reserva Conchal,populated_place,,-85.79722,10.4064
+node/4633950978,Bagatzi,populated_place,hamlet,-85.30876,10.40648
+node/1049965081,Brasilito,populated_place,hamlet,-85.79667,10.40725
+node/279298467,Belén,populated_place,village,-85.58682,10.40859
+way/1530936410,,populated_place,,-85.58878,10.40835
+node/471775710,San Miguel,populated_place,hamlet,-84.92652,10.40956
+way/1498877573,Dulce Brasilito Eco Village,populated_place,,-85.78196,10.41011
+node/9108993782,Concepción,populated_place,hamlet,-85.06542,10.41031
+way/1530937382,,populated_place,,-85.7202,10.4129
+node/1795749044,Santo Domingo,populated_place,hamlet,-85.60332,10.41361
+node/1226713737,Tempate,populated_place,village,-85.71982,10.41457
+way/1150731614,Cond. Dos Río de la Paz,populated_place,,-85.77204,10.4159
+node/983432487,Líbano,populated_place,village,-84.98494,10.41633
+way/1530940938,,populated_place,,-84.98573,10.41695
+node/1226813113,Los Planes,populated_place,hamlet,-85.6232,10.41939
+node/2056867975,La Guinea,populated_place,hamlet,-85.49007,10.42113
+way/195218554,,populated_place,,-85.49037,10.4212
+way/770031927,,populated_place,,-85.09174,10.42198
+way/285166194,Villa Las Brisas,populated_place,,-85.78482,10.4253
+way/935472259,Cond. Villas Mediterráneo,populated_place,,-85.72587,10.42662
+node/3626084809,San Francisco,populated_place,hamlet,-85.53058,10.42757
+node/365508690,El Castillo,populated_place,hamlet,-84.7519,10.42873
+way/471615136,Urbanización Los Espaveles,populated_place,,-85.57196,10.42902
+node/332767034,Cañas,populated_place,town,-85.09328,10.42962
+node/869743655,Quebrada Grande,populated_place,village,-84.94457,10.43022
+way/1530940941,,populated_place,,-84.94779,10.43011
+node/1304240607,Falconia,populated_place,hamlet,-85.26247,10.43168
+way/1150732372,Cond. Altos de Flamingo,populated_place,,-85.78073,10.43198
+node/1049965078,Flamenco,populated_place,hamlet,-85.78242,10.43204
+way/1150731613,Resid. Estado Flamenco,populated_place,,-85.78506,10.43476
+way/1006189777,Resid. Carolina,populated_place,,-85.07861,10.43562
+way/1150734115,Resd. Lomas de Flamingo,populated_place,,-85.77771,10.43647
+node/11200924085,Chiripa,populated_place,hamlet,-84.90121,10.43646
+node/1247364692,El Bambú,populated_place,hamlet,-85.55528,10.43866
+node/5007053123,Castilla de Oro,populated_place,hamlet,-85.59893,10.4402
+node/4633980632,Vergel,populated_place,hamlet,-85.04567,10.44314
+node/279298465,Filadelfia,populated_place,town,-85.55263,10.44537
+node/4913205773,Playitas,populated_place,hamlet,-85.35776,10.44538
+node/4255156556,Ojochal,populated_place,hamlet,-85.6049,10.44881
+way/1530936409,,populated_place,,-85.55352,10.44948
+node/859225808,Corobicí,populated_place,hamlet,-85.13094,10.45314
+node/979327697,Sandillal,populated_place,hamlet,-85.10525,10.45522
+way/485293381,Condominio Villaggio 5,populated_place,,-85.76923,10.45613
+way/485293380,Condominio Villaggio 3,populated_place,,-85.76756,10.45787
+way/1282308504,Condominio Villaggio 6,populated_place,,-85.76815,10.45791
+way/485293379,Condominio Villaggio 4,populated_place,,-85.76639,10.45864
+way/485293378,Condominio Villaggio 2,populated_place,,-85.76538,10.45873
+way/485293377,Condominio Villaggio 1,populated_place,,-85.76456,10.45944
+node/1231975496,Potrero,populated_place,hamlet,-85.77082,10.45976
+way/485293375,Condominio Casa del Sol,populated_place,,-85.7731,10.46056
+way/1315448456,Urb. Vistas del Bosque,populated_place,,-84.97535,10.46131
+way/485293376,Condominio El Potrero,populated_place,,-85.76392,10.46095
+way/1118546218,Lomas del Carmen,populated_place,,-84.96611,10.46184
+way/900797554,Residencial Las Brisas,populated_place,,-84.96988,10.46364
+node/4702239089,Agua Caliente,populated_place,hamlet,-85.2247,10.46536
+node/4137356817,Viejo Arenal,populated_place,hamlet,-84.84896,10.46546
+way/485296192,Condominio Villas Catalina,populated_place,,-85.77456,10.46556
+node/4715667178,Pilas,populated_place,hamlet,-85.69419,10.46739
+node/4634063761,Cedros,populated_place,hamlet,-85.10468,10.4701
+way/1530940970,,populated_place,,-84.96334,10.47098
+node/184032796,Tilarán,populated_place,town,-84.96764,10.4712
+node/1231949504,Lourdes,populated_place,hamlet,-85.75021,10.47122
+way/468971865,Residencial El Ensueño,populated_place,,-85.05126,10.47088
+way/1032474465,Residencial Lomas del Sol,populated_place,,-84.96191,10.47243
+way/1032474466,Urb. Tamajov,populated_place,,-84.95152,10.47355
+way/1032474467,Urb. Quebrada Azul,populated_place,,-84.97427,10.47507
+node/859265384,Montenegro,populated_place,hamlet,-85.21075,10.47541
+way/1545973589,Residencial Buenavista 6,populated_place,,-84.89874,10.48297
+node/440505058,San Blas,populated_place,hamlet,-85.61625,10.48409
+way/463324368,Cond. Los Llanos de Las Palmas,populated_place,,-85.57786,10.48665
+node/2382863122,El Chalaco,populated_place,hamlet,-85.56985,10.4877
+node/332766917,Los Ángeles,populated_place,village,-85.0208,10.49045
+way/1530940939,,populated_place,,-85.02058,10.49123
+node/4913204657,San Ramón,populated_place,hamlet,-85.38267,10.49125
+way/1545973588,Residencial Vistas del Lago,populated_place,,-84.90217,10.49231
+node/2382862968,La Libertad,populated_place,hamlet,-85.63472,10.49334
+way/1032474464,Residencial Monte Bello,populated_place,,-84.95475,10.49606
+node/4634063764,San Isidro,populated_place,hamlet,-85.14026,10.49865
+node/4251319404,Zapotal,populated_place,hamlet,-85.7918,10.49919
+node/869743296,Tronadora,populated_place,village,-84.92305,10.50039
+way/1530940940,,populated_place,,-84.92307,10.50061
+node/1226846639,Paso Tempisque,populated_place,hamlet,-85.57194,10.50116
+node/943767575,Nuevo Colón,populated_place,hamlet,-85.72156,10.50383
+node/4251437490,Paso Real,populated_place,hamlet,-85.70147,10.50418
+way/392690538,,populated_place,,-85.34587,10.50614
+way/475386184,Residencial Artola Estates,populated_place,,-85.70325,10.50737
+way/1118546219,Residencial Los Sueños,populated_place,,-84.95939,10.50888
+way/468820301,Condominio El Paso,populated_place,,-85.57416,10.51005
+node/1231936928,Artola,populated_place,hamlet,-85.68412,10.51069
+way/983283152,Resid. Quintas Villa Verde,populated_place,,-85.23213,10.5116
+way/1530936424,,populated_place,,-85.64745,10.51293
+way/1362335717,Urb. Patricia,populated_place,,-85.24771,10.51379
+node/9080812544,Llanos de Cortés,populated_place,hamlet,-85.29245,10.51446
+way/1530936408,,populated_place,,-85.57454,10.51569
+way/1003802631,Resid. Lomas del Mar,populated_place,,-85.73616,10.51614
+node/1994600359,Palmira,populated_place,village,-85.57304,10.51628
+node/440504910,Sardinal,populated_place,village,-85.64676,10.51691
+node/9091712771,La Cofradía,populated_place,hamlet,-85.20984,10.51796
+way/1530936416,Cond. Casa Solé,populated_place,,-85.64125,10.51769
+way/1563706606,Residencial Rainbow Ridge,populated_place,,-84.84135,10.5185
+way/1073633199,Resid. Bella Vista,populated_place,,-84.82177,10.5193
+way/983278283,Urb. Vistas del Miravalles,populated_place,,-85.24367,10.52166
+way/473652671,Proyecto Pénjamo,populated_place,,-85.64781,10.52213
+way/934445988,Cond. La Joya,populated_place,,-85.63831,10.52406
+node/9108517501,Panales,populated_place,hamlet,-85.13797,10.52514
+way/1530940107,,populated_place,,-85.25217,10.52607
+node/4702239121,Montano,populated_place,hamlet,-85.19014,10.52623
+way/992031404,VP Land,populated_place,,-85.78363,10.52614
+node/859265390,Bagaces,populated_place,town,-85.25479,10.52662
+way/473666273,Residencial Mediterráneo,populated_place,,-85.66517,10.52885
+node/1231921303,Matapalo,populated_place,hamlet,-85.75366,10.5293
+way/475955820,Condominio Horizon Lounge,populated_place,,-85.69111,10.52958
+way/1164324773,Residencial Los Canales,populated_place,,-85.70086,10.52802
+way/1004072878,Resid. Ladera del Mar,populated_place,,-85.67415,10.53084
+way/502511321,Lake Arenal Condos,populated_place,,-84.98166,10.53131
+way/475919540,Condominio Vista Marina,populated_place,,-85.6936,10.53316
+way/475919538,Condominio Colinas Turquesa,populated_place,,-85.69236,10.53378
+way/475919539,Cond. Okeanos,populated_place,,-85.69388,10.53396
+way/475919537,Condominio Coco Cliffs,populated_place,,-85.69251,10.53415
+way/475919536,Condominio Vista Perfecta,populated_place,,-85.69308,10.53434
+way/1004063308,Cond. Vista Marina,populated_place,,-85.69757,10.53452
+way/1004063309,Cond. Jardines de Vista Marina,populated_place,,-85.69516,10.53467
+way/1070047810,Urbanización Villa Tucán,populated_place,,-85.68794,10.53447
+node/6033982881,La Palma,populated_place,hamlet,-85.00836,10.53499
+way/476138487,Cond. Monte Hermoso,populated_place,,-85.6778,10.53571
+way/1004054589,Cond. Bahía Coco,populated_place,,-85.70582,10.53849
+way/475377260,Condominio Azul Paraíso,populated_place,,-85.73345,10.53928
+way/475377262,Cond. Corona del Mar,populated_place,,-85.72476,10.53928
+way/468475984,Condominio Turquoise,populated_place,,-85.69096,10.5402
+way/385630858,Resid. Kuna,populated_place,,-85.69763,10.54084
+way/1040961694,Urbanización Las Palmas,populated_place,,-85.59999,10.54104
+way/1530940936,,populated_place,,-84.89323,10.54076
+way/474896530,Condominio Villa Mar,populated_place,,-85.68578,10.54164
+way/1004050936,Resid. El Ocotal,populated_place,,-85.72386,10.54209
+way/474909791,Condominio Villa Hermosa,populated_place,,-85.67834,10.54221
+way/550520415,Residencial Mossy Rock,populated_place,,-85.70224,10.5426
+node/9264384741,Ocotal,populated_place,hamlet,-85.72393,10.54269
+node/1278233881,Pijije,populated_place,village,-85.35145,10.543
+way/475377258,Condominio Bahía Pez Vela,populated_place,,-85.72883,10.54298
+way/475334411,Condominio Arrecifes,populated_place,,-85.69367,10.54322
+node/332765169,Arenal,populated_place,village,-84.89599,10.54357
+way/1530940012,,populated_place,,-85.34808,10.54335
+way/475358276,Condominio Loma del Atardecer,populated_place,,-85.71835,10.54378
+way/1530940282,,populated_place,,-85.08759,10.54368
+node/859538316,Palmira,populated_place,village,-85.08819,10.54417
+way/468472207,Cond. Dolce Vita,populated_place,,-85.71496,10.54427
+way/468472209,Cond. Serena Suites,populated_place,,-85.71023,10.5445
+way/468472208,Cond. El Peñón del Sol,populated_place,,-85.71156,10.54496
+way/1040933099,Residencial Don Miguel,populated_place,,-85.26256,10.5452
+way/475377257,Hotel Cond. Los Almendros,populated_place,,-85.7202,10.54572
+way/475916064,Cond. La Isabella,populated_place,,-85.68936,10.54573
+way/475337495,,populated_place,,-85.69778,10.54629
+way/476115685,Condominio Casas de Pueblo,populated_place,,-85.69019,10.54683
+way/466453459,Condominio Prados del Río,populated_place,,-85.58769,10.54697
+way/379777913,Cond. Pacífico Lifestyle,populated_place,,-85.69158,10.54716
+way/468472210,Cond. Cocomarindo,populated_place,,-85.70363,10.54779
+node/1226846635,Comunidad,populated_place,hamlet,-85.58826,10.54853
+way/475119214,Condominio Agua de Lechuga,populated_place,,-85.69238,10.54916
+way/475119213,Condominio Paradizio,populated_place,,-85.6942,10.55024
+way/476113872,Condominio Coco Joya,populated_place,,-85.69209,10.55046
+way/474914938,Condominio Costa Marina,populated_place,,-85.71021,10.55057
+way/475119215,Condominio Los Tucanes,populated_place,,-85.69208,10.55105
+node/4247299329,El Coco,populated_place,hamlet,-85.6969,10.55129
+way/476114984,Condominio Tortuga Verde,populated_place,,-85.69097,10.55139
+way/476114985,Condominio Tropical Waves,populated_place,,-85.69015,10.55143
+way/1032414467,Residencial Lago Cueva de Tortugas y Club de Yates,populated_place,,-84.93799,10.55152
+way/475330254,Condominio El Morpho,populated_place,,-85.69175,10.5515
+way/391268167,Condominio Tropical Dreams,populated_place,,-85.68952,10.55173
+way/1070047804,Condominio Pacífico,populated_place,,-85.68772,10.55178
+way/476103689,Condominio Valle Verde,populated_place,,-85.69025,10.55192
+way/476103696,Condominio Green Life,populated_place,,-85.69133,10.55205
+way/476103697,Condominio Aquamarine,populated_place,,-85.69183,10.5521
+way/476114986,Condominio Villa del Mar,populated_place,,-85.68947,10.55219
+way/476103694,Condominio La Riviera,populated_place,,-85.69093,10.55205
+way/391295563,Condominio Sombras,populated_place,,-85.69287,10.55237
+way/476114987,Condominio Sea Bird,populated_place,,-85.68944,10.55256
+way/476103690,Condominio Valle del Sol,populated_place,,-85.69021,10.55257
+way/476103698,Condominio Flamingo Rosa 3,populated_place,,-85.69186,10.55277
+way/476103695,Condominio Oasis Feliz,populated_place,,-85.69132,10.55262
+way/476114988,Condominio Marine Sunset,populated_place,,-85.68945,10.55283
+way/476113343,Condominio Valle Escondido,populated_place,,-85.69023,10.55301
+way/1546874438,Residencial Bahía Arco Iris,populated_place,,-84.90809,10.55287
+way/476103699,Condominio Flamingo Rosa 2,populated_place,,-85.69192,10.55309
+way/476103693,Condominio Jade,populated_place,,-85.69125,10.55324
+way/476113344,Condominio Valle Grande,populated_place,,-85.69049,10.55332
+way/476113345,Condominio Valle Azul,populated_place,,-85.69,10.55332
+way/506570361,Residencial Buenavista 5,populated_place,,-84.9882,10.55341
+way/476103700,Condominio Flamingo Rosa 1,populated_place,,-85.69205,10.55357
+way/476102921,Condominio Cormorán,populated_place,,-85.6904,10.55398
+way/476112540,Condominio El Pueblito,populated_place,,-85.69246,10.554
+way/475313131,Condominio Torres del Coco,populated_place,,-85.69156,10.5539
+way/475319149,Condominio Colibrí,populated_place,,-85.69082,10.55426
+way/476102919,Condominio Cotorritas,populated_place,,-85.6911,10.55424
+way/1546874433,,populated_place,,-84.91856,10.5554
+way/475313129,Condominio Playas de Las Palmas,populated_place,,-85.69205,10.55517
+way/379813086,Bahía Turquesa Residences,populated_place,,-85.69039,10.55518
+way/476112169,Condominio Villa San Ángel,populated_place,,-85.69132,10.55518
+way/1546874432,Urbanización Las Flores,populated_place,,-84.92084,10.55516
+way/476102917,Condominio Coco Arenas,populated_place,,-85.69077,10.55569
+way/476102916,Condominio Big Daddy,populated_place,,-85.69031,10.55564
+way/476102918,Condominio Las Bromelias,populated_place,,-85.69117,10.55578
+way/1546874441,Residencial Granja Verde,populated_place,,-84.8961,10.55561
+way/1070047806,Residencial Altos del Cacique,populated_place,,-85.68377,10.55551
+way/1546874439,Fraccionamiento Colinas El Tucán,populated_place,,-84.90699,10.55641
+way/1546874440,Residencial Vista Sureña,populated_place,,-84.89136,10.55666
+way/1546874435,Urbanización La Vista,populated_place,,-84.9151,10.55704
+way/1547149131,Urbanización Valle Encantado,populated_place,,-84.92636,10.55929
+way/1546874430,Residencial Arenal,populated_place,,-84.93283,10.56049
+node/332766195,Rio Piedras,populated_place,hamlet,-84.96955,10.56091
+node/6896490589,Santa Fe,populated_place,hamlet,-85.15157,10.56139
+node/2337756128,El Aguacate,populated_place,hamlet,-84.93935,10.56155
+way/379777897,Residencial Monte Paraíso,populated_place,,-85.67848,10.56443
+way/468829020,Residencial Vista Del Mar,populated_place,,-85.67135,10.56391
+way/1546874436,Urbanización Atardecer,populated_place,,-84.92021,10.56569
+way/1546874431,Residencial Santa Elena,populated_place,,-84.92747,10.5652
+way/1546874429,Residencial Villas,populated_place,,-84.93316,10.56524
+node/440504909,Guardia,populated_place,village,-85.58678,10.5655
+way/1530933299,,populated_place,,-85.58851,10.56656
+way/1070047805,Condominio Punta Cacique,populated_place,,-85.68578,10.56691
+way/468828521,Residencial Hermosa Heights,populated_place,,-85.66962,10.56728
+node/2632271754,El Salto,populated_place,hamlet,-85.38641,10.56787
+way/475903819,Condominio Hermosa Montañita,populated_place,,-85.68077,10.56858
+way/475903821,Condominio Villa Cáseres,populated_place,,-85.67998,10.56872
+way/468828520,Residencial Alta Vista,populated_place,,-85.67092,10.56903
+way/468829023,Condominio Graceland,populated_place,,-85.67694,10.5694
+way/475903817,Condominio Marines Point,populated_place,,-85.68138,10.56937
+way/475903823,Condominio Brezze Ocean,populated_place,,-85.67804,10.56969
+way/475903824,Condominio Los Jardines,populated_place,,-85.67856,10.5697
+way/1217922476,Residencial Colinas Escondidas,populated_place,,-84.96531,10.56998
+way/391109570,Condominio Villa Hermosa,populated_place,,-85.67442,10.56998
+way/1530940937,,populated_place,,-85.02471,10.5704
+way/468829022,Condominio El Oasis,populated_place,,-85.67909,10.57035
+way/477907939,Condominio La Tejona,populated_place,,-85.59722,10.5708
+node/965321542,Tierras Morenas,populated_place,village,-85.02436,10.57138
+way/468828519,Residencial Monte Bello,populated_place,,-85.67078,10.57131
+way/1546874428,Residencial The Preserve,populated_place,,-84.93349,10.57166
+node/1362310231,Cote,populated_place,hamlet,-84.91537,10.57334
+way/475916062,Condominio Gaviota del Sol,populated_place,,-85.67668,10.57343
+way/475916063,Condominio Sol y Mar,populated_place,,-85.67857,10.57397
+node/440504904,Hermosa,populated_place,hamlet,-85.67419,10.5745
+way/379679313,The Palms en Hermosa,populated_place,,-85.67601,10.57497
+way/474877967,Condominio Hermosa del Mar,populated_place,,-85.67387,10.57591
+way/468828518,Residencial Palo Alto,populated_place,,-85.66896,10.5766
+node/4251056137,Panamá,populated_place,hamlet,-85.65428,10.57809
+way/379677929,Condominio Villa Sol,populated_place,,-85.67126,10.57949
+way/467019299,Resid. La Caraña,populated_place,,-85.40353,10.57964
+way/1546874444,Parcelas Coopetilarán,populated_place,,-85.01214,10.57966
+way/1003762690,Cond. La Punta,populated_place,,-85.67251,10.58325
+way/507582538,Residencial Hacienda Morenas,populated_place,,-85.0075,10.58481
+way/1003763927,Cond. Monarca,populated_place,,-85.66487,10.58927
+way/379676664,Residencial Hacienda Del Mar,populated_place,,-85.64217,10.58964
+way/379676668,Urbanización Vistas Del Pacífico,populated_place,,-85.63603,10.59211
+way/507582537,Residencial El Paraíso de Tierras Morenas,populated_place,,-85.03321,10.59296
+way/464189453,Quintas Ecológicas Country Village,populated_place,,-85.46306,10.59339
+node/4702355496,Salitral,populated_place,hamlet,-85.24329,10.59512
+node/9091775194,Coyota,populated_place,hamlet,-85.10061,10.59522
+way/464460790,Cond. Akir,populated_place,,-85.42744,10.59711
+way/464461091,Cond. Amanecer Pampero,populated_place,,-85.42485,10.59912
+way/464790501,Resid. El Real Liberiano,populated_place,,-85.42752,10.59914
+way/464460792,Cond. La Pampa,populated_place,,-85.4287,10.59996
+way/1078654651,Cond. Atardecer Pampero,populated_place,,-85.42535,10.60058
+way/1003740183,,populated_place,,-85.593,10.6032
+node/4251155332,La Cascada (María Auristela),populated_place,hamlet,-85.6085,10.60383
+way/464795891,Proyecto Santa Lucía,populated_place,,-85.43905,10.60397
+node/4251155331,Monte Galán,populated_place,hamlet,-85.59303,10.60442
+way/1361011323,Proyecto El Golfo,populated_place,,-85.44697,10.60587
+way/1361532752,,populated_place,,-85.44164,10.60633
+way/477951971,Condominio Altos Los Robles,populated_place,,-85.62087,10.60716
+way/1361532751,Resid. Don Carlos,populated_place,,-85.43965,10.6084
+way/463524878,Condominio Vista Guanacaste,populated_place,,-85.46998,10.60851
+way/463526353,Condominio Senderos de Guanacaste,populated_place,,-85.47226,10.60841
+way/681140074,Resid. Santa Luisa,populated_place,,-85.42441,10.61001
+node/2539343525,Hacienda Tenorio,populated_place,hamlet,-85.08569,10.61011
+node/4251155333,Alto Roble,populated_place,hamlet,-85.62101,10.61026
+way/463526351,Condominio Hacienda Tayacán,populated_place,,-85.47533,10.61112
+way/464461093,Cond.,populated_place,,-85.43499,10.61143
+way/100583957,Condominio Chorotega,populated_place,,-85.50248,10.61211
+way/179073620,Cond. Colonia Blanca,populated_place,,-85.431,10.61193
+node/4634064050,Paraíso,populated_place,hamlet,-85.04423,10.61239
+way/1078333124,Condominio Santa Rosa,populated_place,,-85.47065,10.61323
+way/1078662401,Resid. Daniel Oduber,populated_place,,-85.42826,10.61416
+way/1361034855,Residencial La América,populated_place,,-85.47182,10.61759
+way/179073540,Cond. Casa Blanca,populated_place,,-85.43114,10.61756
+way/464788668,Residencial Roble de Sabana,populated_place,,-85.47734,10.61819
+node/4295101279,Casavieja,populated_place,hamlet,-85.18666,10.6184
+way/464388812,Cond. Luna Liberiana,populated_place,,-85.4432,10.62192
+way/464388811,Cond. El Sitio,populated_place,,-85.447,10.62266
+way/464404242,Condominio Rancho Grande,populated_place,,-85.44,10.62304
+node/4945897722,Martirio,populated_place,hamlet,-85.0513,10.62327
+way/464388810,Residencial Malinche,populated_place,,-85.44421,10.62423
+way/473825557,Las Terrazas,populated_place,,-85.68021,10.62541
+way/464352096,Residencial Camino Luna,populated_place,,-85.45619,10.62624
+node/9970721751,"Bosque del Parabó,",populated_place,,-85.42651,10.62682
+way/464188474,Cond. del Río,populated_place,,-85.45316,10.6272
+node/4251281029,Nacascolo,populated_place,hamlet,-85.67641,10.62852
+way/1078320765,Cond. Veredas del Río,populated_place,,-85.45804,10.62882
+way/1492735894,,populated_place,,-85.44484,10.62951
+way/721201788,Urb. Nova Liberia 1,populated_place,,-85.4484,10.62965
+way/1078867807,Urb. Villa Margarita,populated_place,,-85.44905,10.63003
+node/13232412266,Liberia,populated_place,city,-85.43932,10.63198
+node/4634064051,Agua Caliente,populated_place,hamlet,-85.0339,10.63405
+way/464354799,Condominio Luz de Luna,populated_place,,-85.42377,10.63436
+way/464360309,Condominio Encino Rey,populated_place,,-85.43838,10.63658
+way/1361278683,,populated_place,,-85.48492,10.63727
+way/467205326,Urbanización San Agustín de la Ciudad Blanca,populated_place,,-85.45659,10.63733
+node/1219356747,San Bernardo,populated_place,hamlet,-85.19913,10.63761
+node/1416522939,Torno,populated_place,hamlet,-85.22838,10.63828
+node/3659589775,Nueva Guatemala,populated_place,hamlet,-85.05737,10.63884
+way/392691646,,populated_place,village,-85.05718,10.63861
+node/440504907,Puerto Culebra,populated_place,hamlet,-85.63963,10.63937
+way/1361278682,,populated_place,,-85.4856,10.63941
+way/464340191,Cond. Parque del Encino,populated_place,,-85.45075,10.64237
+node/12599292232,El Coyol,populated_place,hamlet,-85.65482,10.64382
+way/466749203,Condominio Vista Real,populated_place,,-85.42784,10.64643
+way/464610395,Residencial Los Almendrales,populated_place,,-85.43915,10.64646
+way/464810274,Residencial Don Álvaro,populated_place,,-85.449,10.65027
+way/850585840,Precario,populated_place,,-85.43569,10.65083
+way/361116074,Precario,populated_place,,-85.43622,10.65118
+way/463690737,Parcelas Las Delicias (Enrique Montiel),populated_place,,-85.45795,10.65087
+way/1118552316,Resid. Nacume,populated_place,,-85.46959,10.65515
+node/4251231122,Bahía,populated_place,hamlet,-85.61529,10.66
+node/4702373791,San Isidro de Limonal,populated_place,hamlet,-85.26529,10.66373
+way/992027154,VP Property,populated_place,,-85.65578,10.66401
+node/2539343778,Río Chiquito,populated_place,hamlet,-85.09785,10.66459
+node/4295146954,San Pedro,populated_place,hamlet,-85.23504,10.66544
+way/465439512,Resid. Aroma del Campo,populated_place,,-85.47704,10.66831
+node/3934593982,Cuipilapa,populated_place,hamlet,-85.16044,10.66981
+way/1361441846,Resid.,populated_place,,-85.45671,10.6734
+node/924941446,La Fortuna,populated_place,village,-85.20093,10.6748
+way/463750265,Resid. Cañón del Sol,populated_place,,-85.46084,10.67565
+node/4251232563,La Culebra,populated_place,hamlet,-85.60182,10.67802
+way/1530940010,,populated_place,,-85.20448,10.67791
+way/497215146,Urb. Las Palmas,populated_place,,-85.20376,10.67835
+way/1361441843,Resid. Río Curudandé,populated_place,,-85.4655,10.67951
+way/1361450847,Cond. Paraíso Río Colorado,populated_place,,-85.45249,10.67994
+way/1530940011,,populated_place,,-85.08598,10.68061
+way/983405434,Urb. Las Margaritas,populated_place,,-85.20362,10.68182
+node/1362289114,Río Naranjo,populated_place,village,-85.09126,10.6827
+way/1078560794,Cond.,populated_place,,-85.60197,10.68987
+way/1078886955,Resd. Doña Raquel,populated_place,,-85.50043,10.69415
+node/3934651333,Limonal,populated_place,hamlet,-85.26278,10.69627
+way/500473116,Quintas Villas Tenorio,populated_place,,-85.07558,10.69905
+way/499948872,Urbanización Brisas del Miravalles,populated_place,,-85.22422,10.70017
+node/924941328,Guayabo,populated_place,village,-85.22401,10.70763
+way/1530940003,,populated_place,,-85.2265,10.70799
+node/4251232562,El Triunfo,populated_place,hamlet,-85.6284,10.71197
+way/1078560796,Resd. Arroyo de Luz,populated_place,,-85.61299,10.71226
+way/1360954468,Resid. Los Guayacanes,populated_place,,-85.50219,10.71496
+node/1362280407,La Unión,populated_place,hamlet,-85.19504,10.71549
+way/499948871,Residencial Roble Sabana,populated_place,,-85.22975,10.71564
+way/1355187767,,populated_place,,-85.41045,10.72023
+node/3270599369,Curubandé,populated_place,village,-85.40981,10.72039
+node/3269961991,Irigaray,populated_place,hamlet,-85.50949,10.72284
+way/726555738,Resid. Vistas del Miravalles,populated_place,,-85.20346,10.7236
+way/1454803967,,populated_place,,-85.05603,10.72891
+node/859538130,Bijagua,populated_place,village,-85.05764,10.73113
+node/3939507262,San Jorge,populated_place,hamlet,-85.29871,10.73195
+node/9890298328,Agua Fría,populated_place,hamlet,-85.42124,10.73294
+node/3269953180,Cañas Dulces,populated_place,village,-85.47941,10.73473
+way/1078908930,Resid.,populated_place,,-85.46235,10.73578
+way/1530933300,,populated_place,,-85.48034,10.73718
+way/1078908932,Resid.,populated_place,,-85.45368,10.73727
+node/4617038387,Santa María,populated_place,hamlet,-85.3282,10.74065
+node/4702046955,El Cedro,populated_place,hamlet,-85.45351,10.74228
+way/1078908927,Resid.,populated_place,,-85.44579,10.74395
+node/3883802671,Buenavista,populated_place,hamlet,-85.47093,10.74933
+node/4474606379,Rincón de La Cruz,populated_place,hamlet,-85.2192,10.75947
+node/2563895667,Las Pailas,populated_place,hamlet,-85.36033,10.76026
+node/1362279311,Guayabal (El Carmen),populated_place,hamlet,-85.19274,10.76183
+node/4587728448,Santa Clara,populated_place,hamlet,-85.48771,10.81647
+node/3883602551,Las Lilas,populated_place,hamlet,-85.4518,10.83074
+node/2406351738,García Flamenco,populated_place,village,-85.49214,10.84388
+way/1530933301,,populated_place,,-85.49121,10.84551
+node/4475602416,Los Ángeles,populated_place,hamlet,-85.4201,10.86536
+node/6703072286,El Encanto,populated_place,hamlet,-85.5118,10.8737
+node/3276106468,Rabo de Mico,populated_place,hamlet,-85.65424,10.92738
+node/3276110824,Puerto Castilla,populated_place,hamlet,-85.71101,10.9334
+way/1528625125,,populated_place,,-85.67988,10.9409
+node/1230339460,Cuajiniquil,populated_place,village,-85.67997,10.94171
+way/1271220608,Urb. Nueva Esperanza,populated_place,,-85.67069,10.94262
+node/3275959062,Bello Horizonte,populated_place,hamlet,-85.65334,10.99246
+node/3275833551,Punta Manzanillo,populated_place,hamlet,-85.73209,11.00787
+node/856049988,Soley,populated_place,hamlet,-85.66653,11.00931
+way/383568910,,populated_place,,-85.72472,11.01656
+node/856049982,El Jobo,populated_place,hamlet,-85.72503,11.01679
+way/1491285068,San Bosco,populated_place,,-85.25184,11.01798
+relation/20358687,San Bosco,populated_place,hamlet,-85.25184,11.01798
+node/3275986933,San Buenaventura,populated_place,hamlet,-85.69204,11.02293
+node/3658141367,San Rafael,populated_place,hamlet,-85.2681,11.02692
+node/3276055598,Tempatal,populated_place,hamlet,-85.66602,11.027
+node/1216941127,Playa Rajada,populated_place,hamlet,-85.74298,11.03133
+node/1216940411,Puerto Soley,populated_place,hamlet,-85.6677,11.03856
+way/483120153,Urbanización El Naranjal,populated_place,,-85.49205,11.04018
+node/1216941430,Bahía Bolaños,populated_place,hamlet,-85.72452,11.04455
+node/3658241591,Belice,populated_place,hamlet,-85.27753,11.05475
+way/1491285065,Belice,populated_place,,-85.27671,11.05493
+relation/20358686,Belice,populated_place,hamlet,-85.27671,11.05493
+node/4627485993,Alemania,populated_place,hamlet,-85.43537,11.06
+way/1528625124,,populated_place,,-85.41457,11.06047
+node/859511990,Santa Cecilia,populated_place,village,-85.41402,11.06154
+way/608132400,,populated_place,,-85.42234,11.06219
+way/480875298,Urb.Santa Cecilia,populated_place,,-85.41084,11.06292
+way/302480033,,populated_place,,-85.64215,11.06373
+node/3846033174,La Cruz,populated_place,town,-85.63063,11.07209
+way/1528625696,,populated_place,,-85.63166,11.07214
+node/3658146008,Las Marías,populated_place,hamlet,-85.2752,11.07504
+node/3271104083,Conventillos,populated_place,hamlet,-85.68246,11.07747
+way/467849142,Residencial Del Oro,populated_place,,-85.63631,11.07806
+node/11444809823,Los Mojones,populated_place,isolated_dwelling,-85.69271,11.08002
+way/468200712,Urbanización Caoba,populated_place,,-85.31135,11.08273
+node/3658116159,San Antonio,populated_place,hamlet,-85.39566,11.08222
+way/412586418,,populated_place,,-85.5421,11.08159
+way/480908970,Residencial Valle Verde,populated_place,,-85.61837,11.0847
+way/480930286,Urb. Bella Vista,populated_place,,-85.55703,11.08512
+node/1216938799,La Garita,populated_place,village,-85.55205,11.08749
+node/3658116160,Bella Vista,populated_place,hamlet,-85.35324,11.09231
+node/3658153621,Armenia,populated_place,hamlet,-85.34019,11.10697
+node/3378351145,Santa Elena,populated_place,hamlet,-85.42177,11.10744
+node/3378357414,San Vicente,populated_place,hamlet,-85.36569,11.10908
+node/3378353578,La Virgen,populated_place,hamlet,-85.38305,11.11093
+node/1257550353,Sonzapote,populated_place,hamlet,-85.60763,11.1129
+way/381159356,,populated_place,,-85.60693,11.11326
+node/3378327419,Guapinol,populated_place,hamlet,-85.57466,11.11398
+node/3378212078,Monteplata,populated_place,isolated_dwelling,-85.65208,11.11883
+node/3378364294,Pueblo Nuevo,populated_place,hamlet,-85.36283,11.1217
+node/3378332833,El Gallo,populated_place,hamlet,-85.57982,11.12802
+node/11341601174,Cañitas Sur,populated_place,isolated_dwelling,-85.44768,11.14094
+node/3378333709,El Porvenir,populated_place,hamlet,-85.56407,11.1412
+node/3378323280,San Fernando,populated_place,hamlet,-85.53757,11.15267
+node/3276147368,Copalchí,populated_place,hamlet,-85.61991,11.15476
+way/381159357,,populated_place,,-85.61559,11.16579
+node/3378323279,La Chanchita,populated_place,hamlet,-85.53035,11.16634
+way/371537124,,populated_place,,-85.61618,11.17288
+node/1216931868,Las Vueltas,populated_place,hamlet,-85.61484,11.17483
+way/383507035,,populated_place,,-85.59778,11.17556
+node/3378298528,La Libertad,populated_place,hamlet,-85.54144,11.17766
+way/381159359,,populated_place,,-85.61528,11.17738
+node/1257533072,San Dimas,populated_place,hamlet,-85.6011,11.17794
+way/371537123,,populated_place,,-85.61662,11.18423
+node/1216929318,Peñas Blancas,populated_place,hamlet,-85.6159,11.20619
+node/8636170375,Paso Vigas,populated_place,hamlet,-85.2278,9.74293
+node/4636392487,Pencal,populated_place,hamlet,-85.24495,9.74668
+node/8644393208,Caño Seco Abajo,populated_place,hamlet,-85.19234,9.75166
+node/4635979791,Caletas,populated_place,hamlet,-85.2716,9.76025
+node/9807630144,Bongo,populated_place,hamlet,-85.2008,9.76496
+node/4635979792,Quebrada Nando,populated_place,hamlet,-85.22708,9.77046
+way/931459502,Cond. Punta Dakota,populated_place,,-85.25835,9.77512
+node/4170299004,Puerto Coyote,populated_place,hamlet,-85.25758,9.77639
+node/4635964315,Coyote,populated_place,hamlet,-85.28345,9.79695
+node/3658409950,Triunfo,populated_place,hamlet,-85.19638,9.8008
+way/1145145396,,populated_place,,-85.24495,9.80465
+node/834947723,San Francisco de Coyote,populated_place,hamlet,-85.24395,9.80513
+node/8635618912,Milagro,populated_place,hamlet,-85.27532,9.80729
+node/4635967344,Candelillo,populated_place,hamlet,-85.22811,9.81137
+node/4170303086,San Miguel,populated_place,hamlet,-85.30904,9.8124
+node/4635933871,La Jabilla,populated_place,hamlet,-85.29466,9.81649
+node/4635967345,Mono,populated_place,hamlet,-85.2428,9.82863
+node/3658409949,Zapote,populated_place,hamlet,-85.19037,9.83546
+node/4635967346,Millal,populated_place,hamlet,-85.24838,9.84244
+way/1145145395,,populated_place,,-85.33008,9.84285
+node/4636385786,I Griega,populated_place,hamlet,-85.23022,9.84383
+node/3954334764,Bejuco,populated_place,village,-85.32856,9.85228
+node/4635906149,Pilas de Bejuco,populated_place,hamlet,-85.34776,9.85249
+way/1007781841,Resid. Villas Playa El Roble,populated_place,,-85.47006,9.85337
+way/931564454,Cond. Lomas de Islita,populated_place,,-85.40691,9.85872
+node/4170333000,Islita,populated_place,hamlet,-85.3958,9.85995
+node/1188514683,Corozalito,populated_place,hamlet,-85.36773,9.86139
+way/1147093679,Hacienda Punta Indio,populated_place,,-85.50467,9.86482
+way/1528624135,,populated_place,,-85.47896,9.86477
+way/931561109,,populated_place,,-85.43868,9.86531
+way/931561108,,populated_place,,-85.44633,9.8664
+node/953289161,Puerto Carrillo,populated_place,village,-85.4783,9.86628
+node/4297713303,Camaronal,populated_place,hamlet,-85.4422,9.86753
+relation/12590446,Resid. La Reserva - Camaronal,populated_place,,-85.44413,9.87124
+node/3658419150,Jabillos,populated_place,hamlet,-85.22696,9.86946
+way/488513477,Condominio Montelaguna,populated_place,,-85.50327,9.86938
+way/1007781842,Condominios y Hotel Loma Verde,populated_place,,-85.4642,9.87193
+way/1096443568,Residencial Bosque del Lago,populated_place,,-85.4683,9.87449
+way/492641930,Urbanización Paraíso,populated_place,,-85.50859,9.87507
+node/3659606192,Pampas,populated_place,hamlet,-85.20515,9.87597
+node/4297608641,Maicillal,populated_place,hamlet,-85.30903,9.87726
+way/1147128335,Resid. Loma Verde,populated_place,,-85.54679,9.87752
+way/1147128336,Resid. Loma Verde,populated_place,,-85.54238,9.87772
+way/1096443567,Residencial Convar,populated_place,,-85.47173,9.87843
+way/1147128337,Resid. Cristina,populated_place,,-85.54358,9.88062
+node/953290688,Torito,populated_place,hamlet,-85.50914,9.88101
+node/4297694208,Altos de Mora,populated_place,hamlet,-85.41652,9.88166
+way/669010124,Casa Hutton,populated_place,,-85.51551,9.88191
+node/3954334828,Colonia del Valle,populated_place,hamlet,-85.33339,9.88208
+way/1530939161,,populated_place,,-85.5251,9.88219
+way/669010130,Casa Carrando,populated_place,,-85.51719,9.88253
+node/3658419149,Quebrada Grande,populated_place,hamlet,-85.27471,9.88263
+way/1147088682,Cond. Sámara Reefs,populated_place,,-85.51413,9.88313
+node/953289168,Estrada,populated_place,hamlet,-85.45155,9.8831
+node/360265177,Sámara,populated_place,village,-85.5289,9.88342
+way/1147089833,Cond. Proyecto Paraíso,populated_place,,-85.52198,9.88465
+node/4297694207,El Carmen,populated_place,hamlet,-85.435,9.88595
+way/1147087726,Cond. Altos de Sámara,populated_place,,-85.50571,9.88737
+way/489940097,Condominio Ventana del Mar,populated_place,,-85.48314,9.8879
+node/4297624188,Chompipe,populated_place,hamlet,-85.26094,9.88926
+node/3954334834,San Grabriel,populated_place,hamlet,-85.33643,9.89613
+way/494027670,Residencial AirPark,populated_place,,-85.55077,9.89858
+node/3659602688,Juan de León,populated_place,hamlet,-85.21036,9.90027
+node/4837396489,Santo Domingo,populated_place,hamlet,-85.4996,9.90088
+way/494268662,Residencial Roads,populated_place,,-85.52421,9.90149
+node/1239464138,Barco Quebrado,populated_place,hamlet,-85.58814,9.90186
+node/3658419327,Los Ángeles,populated_place,hamlet,-85.28124,9.90266
+node/1241375665,San Martín,populated_place,hamlet,-85.42629,9.90513
+way/488320893,Cond. Prados del Sol,populated_place,,-85.59509,9.9065
+node/1239464102,Panamá,populated_place,hamlet,-85.59565,9.90683
+node/1241309432,Buenos Aires,populated_place,hamlet,-85.48149,9.90788
+node/8656756681,San Miguel,populated_place,hamlet,-85.22803,9.90863
+way/1148593223,Cond. Prados del Sol,populated_place,,-85.57791,9.90876
+node/4297694209,San Pedro,populated_place,hamlet,-85.3778,9.90999
+node/4297640412,San Josecito,populated_place,hamlet,-85.27496,9.9104
+node/3292991671,Garza,populated_place,hamlet,-85.64597,9.91095
+node/4303712437,Buenavista,populated_place,hamlet,-85.53979,9.91147
+way/497505481,Residencial Quintas Blue Beach,populated_place,,-85.65101,9.9166
+node/4297682320,Cabeceras de Bejuco,populated_place,hamlet,-85.29812,9.91729
+node/8656756888,El Mora,populated_place,hamlet,-85.26258,9.92041
+way/497467429,Residencial Puesta del Sol,populated_place,,-85.65796,9.92219
+node/4303714852,El Silencio,populated_place,hamlet,-85.56621,9.92227
+node/1241305881,Chinampas,populated_place,hamlet,-85.49372,9.92516
+node/4297694210,Soledad,populated_place,hamlet,-85.34828,9.92595
+node/1241702520,Santa Marta,populated_place,hamlet,-85.43187,9.92649
+node/2513242096,Las Delicias,populated_place,hamlet,-85.61466,9.92768
+way/1147077882,Resid. San Tierra Estates,populated_place,,-85.50729,9.93027
+way/1148559329,Cond. Montaña Sámara,populated_place,,-85.54119,9.93416
+node/8629254498,Angostura,populated_place,hamlet,-85.46614,9.93426
+way/1442203834,,populated_place,,-85.2999,9.93442
+node/1241316684,Terciopelo,populated_place,hamlet,-85.51617,9.9352
+node/8656756369,Bajo Mora,populated_place,hamlet,-85.25662,9.93716
+node/3292982980,La Esperanza,populated_place,hamlet,-85.64988,9.93716
+node/1241378153,Cerro Azul,populated_place,village,-85.29786,9.93767
+way/1147146735,Cond. El Bosque,populated_place,,-85.65636,9.93797
+node/1241376665,Los Loros,populated_place,hamlet,-85.39909,9.94544
+node/8632630973,Delicias,populated_place,hamlet,-85.28024,9.94645
+node/1241377847,Río de Ora,populated_place,hamlet,-85.33431,9.94652
+way/497456953,Residencial Huacas,populated_place,,-85.66054,9.94883
+node/4303706157,Pueblo Nuevo,populated_place,hamlet,-85.57307,9.95068
+node/3658415798,Bellavista,populated_place,hamlet,-85.27971,9.95378
+node/10673979068,San Francisco,populated_place,hamlet,-85.49954,9.95381
+way/1459167611,Proyecto Vainilla,populated_place,,-85.19958,9.95489
+node/1241312144,Naranjalito,populated_place,hamlet,-85.54275,9.95827
+node/1241377454,Altos del Socorro,populated_place,hamlet,-85.39873,9.95905
+way/496137526,Villas Río Mar,populated_place,,-85.67284,9.95923
+way/495553391,Condominio Paseo del Sol,populated_place,,-85.65657,9.95934
+node/9297344775,Concepción,populated_place,hamlet,-85.48012,9.96098
+node/1374094213,Vainilla,populated_place,hamlet,-85.1944,9.9613
+node/1241372302,Jobo,populated_place,hamlet,-85.44406,9.96301
+node/3658414214,Limones,populated_place,hamlet,-85.26957,9.96334
+node/8630559884,Manzanales,populated_place,hamlet,-85.35376,9.96445
+node/1241377806,Palmares,populated_place,hamlet,-85.37012,9.96446
+node/1241310038,Maquenco,populated_place,hamlet,-85.51715,9.96617
+node/3659602685,Pilas de Canjel,populated_place,hamlet,-85.21656,9.96914
+way/1086827420,Residencial Bosque Verde,populated_place,,-85.63066,9.96845
+node/4297694211,Cabeceras de Río Ora,populated_place,hamlet,-85.30874,9.9715
+node/3659602686,Canjel,populated_place,hamlet,-85.1962,9.97169
+node/4303749061,Portal de Garza,populated_place,hamlet,-85.60079,9.97277
+node/4303575097,Zaragoza,populated_place,hamlet,-85.56505,9.97349
+node/4635802669,San Rafael,populated_place,hamlet,-85.26474,9.9751
+relation/7935185,,populated_place,,-85.54525,9.97567
+way/1287161436,,populated_place,,-85.17355,9.97577
+node/4303744704,Santa Marta,populated_place,hamlet,-85.66676,9.97584
+way/1530939162,,populated_place,,-85.64669,9.97561
+node/1374042045,El Golfo,populated_place,hamlet,-85.1699,9.97619
+node/1241372354,San Miguel,populated_place,hamlet,-85.45814,9.97718
+node/1241377750,San Isidro,populated_place,hamlet,-85.40232,9.97746
+node/10673978823,San Josecito,populated_place,hamlet,-85.489,9.9785
+node/853180015,Bocas de Nosara,populated_place,village,-85.65284,9.97995
+node/8630572286,Cuesta Bijagua,populated_place,hamlet,-85.31262,9.98169
+node/8623883403,Bajo Saltos,populated_place,hamlet,-85.38344,9.98174
+node/8632543830,Corozal Oeste,populated_place,hamlet,-85.1734,9.98331
+way/1147172174,Cond. La Colonia Secret Getaway,populated_place,,-85.66693,9.98352
+node/8629809734,Camas,populated_place,hamlet,-85.2793,9.98401
+way/1365620042,Finca Animales,populated_place,,-85.66682,9.98717
+node/3293752130,Las Mercedes,populated_place,hamlet,-85.36806,9.98763
+node/4303749060,Santa Teresa,populated_place,hamlet,-85.61716,9.99156
+node/1241372451,Lajas,populated_place,hamlet,-85.44966,9.99327
+way/627433698,,populated_place,,-85.37792,9.99336
+node/1146377252,Carmona,populated_place,town,-85.25199,9.99366
+node/1241560297,Vista de Mar,populated_place,hamlet,-85.28583,9.99449
+node/1241380438,Guapinol,populated_place,hamlet,-85.42322,9.99766
+node/3293736069,Río de Oro,populated_place,hamlet,-85.35144,9.99772
+node/1241373915,Balsar,populated_place,hamlet,-85.52124,9.99798
+node/4635768132,Pavones,populated_place,hamlet,-85.20713,9.99802
+node/1241379342,Monte Romo,populated_place,village,-85.38141,9.99828
+node/1537554252,Ostional,populated_place,hamlet,-85.70307,9.99855
+node/1241560304,Zapotal,populated_place,village,-85.30244,9.99877
+node/4303752072,Quebrada Bonita,populated_place,hamlet,-85.47466,9.9992
+way/930846546,,populated_place,,-85.30435,9.99996
+way/1144965287,,populated_place,,-85.38386,10.0001
+way/1436726314,,populated_place,,-85.25197,9.99997
+node/4297713304,Río Blanco Este,populated_place,hamlet,-85.32199,10.00053
+node/1241373652,Cuesta Grande,populated_place,hamlet,-85.50386,10.00172
+node/1374131275,Canjelito,populated_place,hamlet,-85.17877,10.0029
+node/8630550631,Angostura,populated_place,hamlet,-85.28513,10.00508
+node/4303752071,Santa Elena,populated_place,hamlet,-85.47029,10.00776
+node/3953985301,San Rafael,populated_place,hamlet,-85.43933,10.01072
+node/4300014145,Rayo,populated_place,hamlet,-85.71725,10.01118
+way/1096443572,Residencial Altamira,populated_place,,-85.69156,10.013
+node/4303752073,Juntas,populated_place,hamlet,-85.53485,10.0149
+way/555881333,,populated_place,,-85.53409,10.01552
+node/4297238642,Guastomatal,populated_place,hamlet,-85.27102,10.01576
+way/1096443570,Residencial Lara Hills,populated_place,,-85.70394,10.0191
+way/1096443571,Residencial Black Beauty,populated_place,,-85.69822,10.01891
+node/4833014971,Maravilla,populated_place,hamlet,-85.42433,10.0194
+node/4303590798,Pilas Blancas,populated_place,hamlet,-85.58395,10.01984
+way/1144962968,,populated_place,,-85.36416,10.02211
+node/3293676565,Huacas,populated_place,village,-85.36481,10.02254
+node/3293748261,Barrio Los Ángeles,populated_place,hamlet,-85.35573,10.02293
+node/1241572206,Santa Rita,populated_place,village,-85.26206,10.02445
+way/1066966876,Ciudadela Benito Viales,populated_place,,-85.20724,10.02448
+way/1150218541,Resid. Quebrada Palo,populated_place,,-85.72906,10.02476
+node/3293752897,Barrio Las Prendas,populated_place,hamlet,-85.36659,10.02562
+node/1374150164,Puerto Thiel,populated_place,hamlet,-85.20094,10.02598
+way/1442203410,,populated_place,,-85.26245,10.02639
+way/1287161432,,populated_place,,-85.23489,10.02812
+node/3293752373,Avellana,populated_place,hamlet,-85.3516,10.02941
+node/4635804482,Tacaní,populated_place,hamlet,-85.31575,10.02964
+node/1374150066,San Pablo,populated_place,village,-85.23377,10.02966
+node/3293095063,Belén,populated_place,village,-85.5033,10.02991
+node/3955346948,Pilanagosta,populated_place,hamlet,-85.40344,10.03002
+node/8632498401,Matadero,populated_place,hamlet,-85.15855,10.03188
+way/1530937648,,populated_place,,-85.74012,10.03474
+node/3293512908,San Juanillo,populated_place,village,-85.73929,10.03529
+node/3293098187,Nosarita,populated_place,hamlet,-85.48486,10.03554
+node/4303752070,Cuajiniquil,populated_place,hamlet,-85.52159,10.03554
+node/4170240940,San Pablo Viejo,populated_place,hamlet,-85.2028,10.03898
+node/3658405707,Río Nosara,populated_place,hamlet,-85.41025,10.03943
+node/3293687969,Pita Rayada,populated_place,hamlet,-85.38302,10.04036
+node/4303798119,Progreso,populated_place,hamlet,-85.67007,10.04273
+way/1150817304,Cond. Costa Brava 43,populated_place,,-85.7382,10.0444
+way/1150817305,Cond. Costa Brava 80,populated_place,,-85.74308,10.04715
+node/4303578097,Río Montaña,populated_place,hamlet,-85.59959,10.04871
+relation/7935186,,populated_place,,-85.54288,10.04903
+node/4303752076,Virginia,populated_place,hamlet,-85.54316,10.04985
+node/4635583090,Cacao,populated_place,hamlet,-85.28587,10.05018
+node/3293104461,El Portal,populated_place,hamlet,-85.49701,10.05051
+way/555881331,,populated_place,,-85.49715,10.05079
+node/1489908668,San Gerardo,populated_place,hamlet,-85.44099,10.0523
+node/8630581740,Guaria,populated_place,hamlet,-85.3174,10.05343
+node/3293531946,Cuajiniquil,populated_place,hamlet,-85.74095,10.05504
+way/903915100,Urb. Hojancha,populated_place,,-85.41579,10.05539
+node/3293689563,Arena,populated_place,hamlet,-85.40229,10.05631
+node/4303752078,Gamalotal,populated_place,hamlet,-85.50759,10.05674
+node/4635582682,Chumico,populated_place,hamlet,-85.26308,10.05684
+node/1241403543,Hojancha,populated_place,town,-85.41819,10.05708
+node/8630507586,Morote,populated_place,hamlet,-85.25339,10.05772
+way/1528624136,,populated_place,,-85.42105,10.05805
+node/4635582683,Roxana,populated_place,hamlet,-85.27384,10.05914
+node/3293105186,Caimitalito,populated_place,hamlet,-85.49348,10.0592
+node/3293528972,Veracruz,populated_place,hamlet,-85.75253,10.05948
+node/3293105799,Caimital,populated_place,hamlet,-85.4748,10.06848
+node/3626154390,Iguanita,populated_place,hamlet,-85.35208,10.07041
+node/3626154391,Matina,populated_place,hamlet,-85.37031,10.07146
+node/8630578842,Uvita,populated_place,hamlet,-85.3173,10.07274
+node/8630517694,Yerbabuena,populated_place,hamlet,-85.24336,10.07276

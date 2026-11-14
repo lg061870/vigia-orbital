@@ -215,3 +215,25 @@ Not yet in it: fire counts and rolling features (days since rain, 30/60/90-day r
 | reason_landcover | VARCHAR | WorldCover class (forest = higher priority; cropland or pasture = lower). |
 | reason_season | VARCHAR | Date relative to the dry season and to that cell's usual burn dates. |
 | message_text | VARCHAR | Plain-text alert for brigades, ≤ 5 KB. |
+
+---
+
+## Additions (14 Nov 2026)
+
+**`detection`:** 157,918 rows; sources `modis`, `viirs-snpp`, `viirs-jpss1` (NOAA-20), `viirs-jpss2` (NOAA-21, from Mar 2023). New column `processing` VARCHAR(3): `SP` standard (archive quality) or `NRT` near-real-time. `type` is NULL for NRT rows. `version` is now VARCHAR (e.g. `6.1NRT`).
+
+**`ndmi_canton_8day`** (14,641 rows): `date`, `sensor` (MOD/MYD), `canton`, `canton_id`, `ndmi_mean` DOUBLE, `valid_share` DOUBLE.
+NDMI = (NIR − SWIR1) / (NIR + SWIR1), NIR = MODIS band 2 (0.86 µm), SWIR1 = band 6 (1.64 µm), from MOD09A1/MYD09A1 (500 m, 8-day). Clear pixel = state bits 0–1 = 00 (no cloud), bit 2 = 0 (no shadow), bit 10 = 0 (no internal cloud). Higher = more water in the leaves.
+
+**`terrain_canton`** (11 rows) and new `cell` columns, from NASADEM at 90 m:
+
+| Field | Type | Formula |
+|---|---|---|
+| elevation_m | DOUBLE | mean elevation, m |
+| slope_deg | DOUBLE | mean of degrees(arctan(√((∂z/∂x)² + (∂z/∂y)²))), central differences, x/y in metres |
+| northness | DOUBLE | mean of cos(aspect)·sin(slope); +1 = steep north-facing, −1 = steep south-facing, 0 = flat |
+| eastness | DOUBLE | mean of sin(aspect)·sin(slope); +1 = steep east-facing |
+
+**`canton_day`** adds `ndmi_date`, `ndmi_mean` (latest clear NDMI composite, same as-of rule as NDVI) and `elevation_m`, `slope_deg`, `northness`, `eastness` (constant per canton). It runs to 11 Nov 2026.
+
+**CSV:** every table and view is in `data/csv/<name>.csv`. `geom_wkb` is replaced by `centroid_lon`, `centroid_lat`.
