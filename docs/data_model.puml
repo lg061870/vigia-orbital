@@ -47,6 +47,10 @@ package "Places" {
     dist_road_km : DOUBLE
     dist_fire_station_km : DOUBLE
     dist_populated_place_km : DOUBLE
+    elevation_m : DOUBLE
+    slope_deg : DOUBLE
+    northness : DOUBLE
+    eastness : DOUBLE
     geom_wkb : BLOB
   }
   entity facility {
@@ -72,7 +76,10 @@ package "Observations" {
   entity detection {
     * detection_id : BIGINT <<PK>>
     --
-    source : VARCHAR  ' modis | viirs-snpp | viirs-jpss1
+    source : VARCHAR  ' modis | viirs-snpp | viirs-jpss1 (NOAA-20) | viirs-jpss2 (NOAA-21)
+    processing : VARCHAR  ' SP | NRT
+    type : BIGINT  ' 0 = vegetation fire; NULL for NRT
+    version : VARCHAR
     acq_datetime_utc : TIMESTAMP
     latitude : DOUBLE
     longitude : DOUBLE
@@ -105,6 +112,22 @@ package "Observations" {
     nbr_mean : DOUBLE
     valid_share : DOUBLE
   }
+  entity ndmi_canton_8day {
+    * canton_id : VARCHAR <<FK>>
+    * date : DATE
+    * sensor : VARCHAR  ' MOD | MYD
+    --
+    ndmi_mean : DOUBLE
+    valid_share : DOUBLE
+  }
+  entity terrain_canton {
+    * canton_id : VARCHAR <<PK, FK>>
+    --
+    elevation_m : DOUBLE
+    slope_deg : DOUBLE
+    northness : DOUBLE
+    eastness : DOUBLE
+  }
   entity oni {
     * year : INTEGER
     * season : VARCHAR
@@ -129,7 +152,9 @@ package "Model" {
     --
     weather (T2M … GWETTOP)
     vi_date, ndvi_mean, nbr_mean
+    ndmi_date, ndmi_mean
     oni_anomaly
+    elevation_m, slope_deg, northness, eastness
   }
   entity cell_day <<planned>> {
     * h3 : VARCHAR <<FK>>
@@ -175,6 +200,10 @@ facility }o..o{ cell : "spatial (distance)"
 weather_day ||--|| canton_day
 vi_canton_8day |o..o{ canton_day : "as-of join"
 oni |o..o{ canton_day : "month"
+canton ||--o{ ndmi_canton_8day : canton_id
+canton ||--|| terrain_canton : canton_id
+ndmi_canton_8day |o..o{ canton_day : "as-of join"
+terrain_canton ||--o{ canton_day : canton_id
 canton ||--o{ forecast : canton_id
 canton_day ..> forecast : trains
 detection ||--o| alert : detection_id
