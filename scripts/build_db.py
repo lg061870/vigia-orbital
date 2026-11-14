@@ -97,7 +97,13 @@ def main() -> None:
     con.execute("CREATE TABLE protected_area AS SELECT * FROM pa_df")
 
     # detections
-    d = pd.read_csv(DATA / "vigia_orbital_firms_costa_rica_2012_2025.csv", dtype={"acq_time": str, "confidence": str})
+    d = pd.concat([
+        pd.read_csv(DATA / "vigia_orbital_firms_costa_rica_2012_2025.csv",
+                    dtype={"acq_time": str, "confidence": str, "version": str}).assign(processing="SP"),
+        pd.read_csv(DATA / "vigia_orbital_firms_costa_rica_2026.csv",
+                    dtype={"acq_time": str, "confidence": str, "version": str}),
+    ], ignore_index=True)
+    d["type"] = d["type"].astype("Int64")  # NULL for near-real-time rows (FIRMS NRT has no type)
     d.insert(0, "detection_id", np.arange(1, len(d) + 1))
     d["acq_datetime_utc"] = pd.to_datetime(d.acq_date + " " + d.acq_time.str.zfill(4), format="%Y-%m-%d %H%M")
     pts = gpd.GeoDataFrame(d[["detection_id"]], geometry=gpd.points_from_xy(d.longitude, d.latitude), crs=4326)
@@ -124,6 +130,7 @@ def main() -> None:
     cell["dist_road_km"] = km_to_nearest(cent, roads)
     cell["dist_fire_station_km"] = km_to_nearest(cent, fire)
     cell["dist_populated_place_km"] = km_to_nearest(cent, places)
+    cell = cell.merge(pd.read_csv(DATA / "terrain_cell.csv"), on="h3", how="left")
     cell_df = wkb(cell)
     con.execute("CREATE TABLE cell AS SELECT * FROM cell_df")
 
@@ -135,16 +142,27 @@ def main() -> None:
     ], ignore_index=True)
     con.execute("CREATE TABLE facility AS SELECT * FROM fac")
 
-    w = pd.read_csv(DATA / "nasa_power_guanacaste_daily_2012_2025.csv")
+    w = pd.concat([pd.read_csv(DATA / "nasa_power_guanacaste_daily_2012_2025.csv"),
+                   pd.read_csv(DATA / "nasa_power_guanacaste_daily_2026.csv")], ignore_index=True)
     w["date"] = pd.to_datetime(w.YEAR.astype(str), format="%Y") + pd.to_timedelta(w.DOY - 1, unit="D")
     w["canton_id"] = w.canton.map(name_to_id)  # reference points (Puntarenas, San Jose ref) keep NULL
     w_df = w
     con.execute("CREATE TABLE weather_day AS SELECT * FROM w_df")
 
-    vi = pd.read_csv(DATA / "modis_ndvi_nbr_canton_8day_2012_2025.csv", parse_dates=["date"])
+    vi = pd.read_csv(DATA / "modis_ndvi_nbr_canton_8day.csv", parse_dates=["date"])
     vi["canton_id"] = vi.canton.map(name_to_id)
     vi_df = vi
     con.execute("CREATE TABLE vi_canton_8day AS SELECT * FROM vi_df")
+
+    ndmi = pd.read_csv(DATA / "modis_ndmi_canton_8day.csv", parse_dates=["date"])
+    ndmi["canton_id"] = ndmi.canton.map(name_to_id)
+    ndmi_df = ndmi
+    con.execute("CREATE TABLE ndmi_canton_8day AS SELECT * FROM ndmi_df")
+
+    terr = pd.read_csv(DATA / "terrain_canton.csv")
+    terr["canton_id"] = terr.canton.map(name_to_id)
+    terr_df = terr.drop(columns="canton")
+    con.execute("CREATE TABLE terrain_canton AS SELECT * FROM terr_df")
 
     oni = pd.read_csv(DATA / "noaa_oni_2012_2026.csv")
     oni["center_month"] = oni.season.map(ONI_MONTH)
@@ -157,7 +175,9 @@ def main() -> None:
 
     cat = [{"path": f"data/modis_season/season_{y}.tif", "kind": "modis_season", "season_year": y,
             "bands": "NDVI_pre,NBR_pre,NDVI_peak,NBR_post,dNBR,dNBR_anom", "scale": 1e-4}
-           for y in range(2012, 2026)]
+           for y in range(2012, 2027)]
+    cat.append({"path": "data/terrain_guanacaste_nasadem_90m.tif", "kind": "terrain", "season_year": None,
+                "bands": "elevation_m,slope_deg,aspect_deg", "scale": 1})
     cat.append({"path": "data/esa_worldcover_2021_guanacaste_~35m.tif", "kind": "landcover", "season_year": None,
                 "bands": "class", "scale": 1})
     cat_df = pd.DataFrame(cat)
@@ -168,17 +188,22 @@ def main() -> None:
         SELECT w.canton_id, w.canton, w.date,
                w.T2M, w.T2M_MAX, w.T2M_MIN, w.PRECTOTCORR, w.RH2M, w.WS2M, w.GWETTOP,
                v.date AS vi_date, v.ndvi_mean, v.nbr_mean, v.valid_share AS vi_valid_share,
-               o.oni_anomaly
+               n.date AS ndmi_date, n.ndmi_mean,
+               o.oni_anomaly,
+               t.elevation_m, t.slope_deg, t.northness, t.eastness
         FROM weather_day w
         ASOF LEFT JOIN (SELECT * FROM vi_canton_8day WHERE valid_share >= 0.3) v
           ON w.canton_id = v.canton_id AND w.date >= v.date
+        ASOF LEFT JOIN (SELECT * FROM ndmi_canton_8day WHERE valid_share >= 0.3) n
+          ON w.canton_id = n.canton_id AND w.date >= n.date
+        LEFT JOIN terrain_canton t ON t.canton_id = w.canton_id
         LEFT JOIN oni o
           ON o.year = year(w.date) AND o.center_month = month(w.date)
         WHERE w.canton_id IS NOT NULL
     """)
 
     for t in ["canton", "conservation_area", "protected_area", "detection", "cell", "facility",
-              "weather_day", "vi_canton_8day", "oni", "population_district", "raster_catalog", "canton_day"]:
+              "weather_day", "vi_canton_8day", "ndmi_canton_8day", "terrain_canton", "oni", "population_district", "raster_catalog", "canton_day"]:
         print(f"{t:20s} {con.execute(f'SELECT count(*) FROM {t}').fetchone()[0]:>8,}")
     con.close()
     print(f"{DB.name}: {DB.stat().st_size/1e6:.1f} MB")

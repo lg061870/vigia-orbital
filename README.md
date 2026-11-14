@@ -48,7 +48,7 @@ python3 -m venv .venv
 | `guanacaste_poblados_hotosm.geojson` | Populated places as points (1,027). Columns `id`, `name`, `place`, `population` | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
 | `guanacaste_salud_hotosm.geojson` | Health facilities as points (311: clinics, pharmacies, doctors, dentists, hospitals) | OpenStreetMap via HOT export, 2026-11-03 (ODbL), via HDX |
 | `guanacaste_bomberos_hotosm.geojson` | Fire stations (`amenity=fire_station`) as points: 13 in Guanacaste plus Monteverde's, just over the border | OpenStreetMap via HOT points-of-interest export, 2026-11-03 (ODbL), via HDX |
-| `modis_ndvi_nbr_canton_8day_2012_2025.csv` | Mean NDVI and NBR per Guanacaste canton for every MODIS composite (Terra + Aqua, one every 8 days, Nov 2011–Dec 2025; 628 composites), plus the share of valid (cloud-free) pixels | MODIS MOD13Q1/MYD13Q1 v061 via Planetary Computer; `scripts/build_modis_indices.py` |
+| `modis_ndvi_nbr_canton_8day.csv` | Mean NDVI and NBR per Guanacaste canton for every MODIS composite (Terra + Aqua, one every 8 days, Nov 2011–Dec 2025; 628 composites), plus the share of valid (cloud-free) pixels | MODIS MOD13Q1/MYD13Q1 v061 via Planetary Computer; `scripts/build_modis_indices.py` |
 | `modis_season/season_<YEAR>.tif` | One raster per dry season, 2012–2025, ~275 m, EPSG:4326, int16 ×10000. Bands: NDVI_pre (Dec–Jan), NBR_pre, NDVI_peak (March), NBR_post (16 Apr–May), dNBR (pre − post), and dNBR_anom (dNBR minus the 2012–2025 per-pixel median, i.e. change beyond normal dry-season leaf loss) | same |
 
 Not in the repo: `osm_areas_protegidas_costa_rica_overpass.json` is the raw Overpass backup of the protected areas. It stays in the project Drive folder and isn't needed, because the GeoJSON above has the same content.

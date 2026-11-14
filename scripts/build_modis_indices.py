@@ -1,6 +1,6 @@
 """Precompute MODIS NDVI and NBR for Guanacaste, 2012-2025 (data prep).
 
-Source: MOD13Q1 / MYD13Q1 v061 (Terra / Aqua 16-day vegetation indices, 250 m),
+Source (2011-11 to today): MOD13Q1 / MYD13Q1 v061 (Terra / Aqua 16-day vegetation indices, 250 m),
 read as cloud-optimized GeoTIFFs from Microsoft Planetary Computer (no login).
 Terra and Aqua composites are offset by 8 days, so together they give one
 composite every 8 days. Tiles h09v07 + h09v08 cover Guanacaste.
@@ -12,7 +12,7 @@ EPSG:4326 over the WorldCover bbox (lon -86.0..-84.7, lat 9.6..11.25), 0.0025 de
 
 Outputs:
   data/raw_modis/<date>_<sensor>.tif     2-band int16 stack (NDVI, NBR x 10000), git-ignored
-  data/modis_ndvi_nbr_canton_8day_2012_2025.csv   mean / valid share per canton and composite
+  data/modis_ndvi_nbr_canton_8day.csv   mean / valid share per canton and composite (Nov 2011 - today)
   data/modis_season/season_<Y>.tif       per season year Y (see seasonal())
 """
 import json
@@ -42,6 +42,7 @@ RES = 0.0025
 WIDTH, HEIGHT = round((E - W) / RES), round((N - S) / RES)
 TRANSFORM = from_bounds(W, S, E, N, WIDTH, HEIGHT)
 NODATA = -32768
+LAST_YEAR = 2026  # composites are fetched up to today
 ASSETS = {"ndvi": "250m_16_days_NDVI", "nir": "250m_16_days_NIR_reflectance",
           "mir": "250m_16_days_MIR_reflectance", "rel": "250m_16_days_pixel_reliability"}
 
@@ -117,7 +118,7 @@ def download():
     RAW.mkdir(parents=True, exist_ok=True)
     token = Token()
     groups = {}
-    for year in range(2011, 2026):  # 2011 for the Dec 2011 pre-season of 2012
+    for year in range(2011, LAST_YEAR + 1):  # 2011 for the Dec 2011 pre-season of 2012
         for f in search_items(year):
             sensor = f["id"].split(".")[0][:3]  # MOD or MYD
             date = f["properties"]["start_datetime"][:10]
@@ -132,26 +133,32 @@ def download():
                 print(f"{done}/{len(keys)}", flush=True)
 
 
-def canton_series():
+def canton_zones():
+    """Raster of Guanacaste canton ids (1..11) on the common grid, plus canton names."""
     prov = gpd.read_file(DATA / "costa_rica_provincias_geoboundaries.geojson")
     cant = gpd.read_file(DATA / "costa_rica_cantones_geoboundaries.geojson")
     gte = prov.loc[prov.shapeISO == "CR-G"].geometry.union_all()
     cant = cant.loc[cant.geometry.representative_point().within(gte)].reset_index(drop=True)
     zones = rasterize(((g, i + 1) for i, g in enumerate(cant.geometry)), out_shape=(HEIGHT, WIDTH),
                       transform=TRANSFORM, fill=0, dtype="int16")
+    return zones, list(cant.shapeName)
+
+
+def canton_series():
+    zones, names = canton_zones()
     rows = []
     for f in sorted(RAW.glob("*.tif")):
         date, sensor = f.stem.split("_")
         with rasterio.open(f) as src:
             ndvi, nbr = src.read(1), src.read(2)
-        for i, name in enumerate(cant.shapeName):
+        for i, name in enumerate(names):
             z = zones == i + 1
             v = z & (ndvi != NODATA)
             rows.append({"date": date, "sensor": sensor, "canton": name,
                          "ndvi_mean": round(float(ndvi[v].mean()) / 1e4, 4) if v.any() else None,
                          "nbr_mean": round(float(nbr[v].mean()) / 1e4, 4) if v.any() else None,
                          "valid_share": round(float(v.sum() / z.sum()), 3)})
-    out = DATA / "modis_ndvi_nbr_canton_8day_2012_2025.csv"
+    out = DATA / "modis_ndvi_nbr_canton_8day.csv"
     pd.DataFrame(rows).to_csv(out, index=False)
     print(out.name, len(rows), "rows")
 
@@ -183,14 +190,14 @@ def seasonal():
         return [f for d, f in by_date if pd.Timestamp(a) <= d <= pd.Timestamp(b)]
 
     per_year = {}
-    for y in range(2012, 2026):
+    for y in range(2012, LAST_YEAR + 1):
         pre = pick(f"{y-1}-12-01", f"{y}-01-31")
         peak = pick(f"{y}-03-01", f"{y}-03-31")
         post = pick(f"{y}-04-16", f"{y}-05-31")
         nbr_pre, nbr_post = median_stack(pre, 2), median_stack(post, 2)
         per_year[y] = dict(ndvi_pre=median_stack(pre, 1), nbr_pre=nbr_pre,
                            ndvi_peak=median_stack(peak, 1), nbr_post=nbr_post, dnbr=nbr_pre - nbr_post)
-    dnbr_median = np.nanmedian(np.stack([v["dnbr"] for v in per_year.values()]), axis=0)
+    dnbr_median = np.nanmedian(np.stack([v["dnbr"] for y, v in per_year.items() if y <= 2025]), axis=0)  # baseline 2012-2025
     names = ["NDVI_pre", "NBR_pre", "NDVI_peak", "NBR_post", "dNBR", "dNBR_anom"]
     for y, v in per_year.items():
         bands = [v["ndvi_pre"], v["nbr_pre"], v["ndvi_peak"], v["nbr_post"], v["dnbr"], v["dnbr"] - dnbr_median]
