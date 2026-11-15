@@ -220,3 +220,8 @@ h1, h2, h3 { font-family: 'Barlow', Arial, sans-serif; }
 .result .t { font-family: 'Barlow', Arial, sans-serif; font-size: 34px; font-weight: 700; color: var(--night); }
 .result .m { font-size: 36px; }
 .result .d { font-size: 26px; color: var(--night); }
+
+/* Impact slide: click-paced forecast cards */
+.imp-strip { top: 704px; left: 56px; width: 1808px; }
+.card.fragment { opacity: 0; transform: translateY(28px); transition: opacity 450ms ease-out, transform 450ms ease-out; }
+.card.fragment.visible { opacity: 1; transform: none; }
