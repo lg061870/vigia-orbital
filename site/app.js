@@ -13,11 +13,26 @@ async function load() {
   const get = f => fetch("data/" + f).then(r => r.json());
   const [geo, latest, demo, meta] = await Promise.all([get("cantons.geojson"), get("latest.json"), get("demo.json"), get("meta.json")]);
   S.data = {latest, demo}; S.meta = meta;
+  await tryLiveApi();
   initMap(geo); renderLegend(); renderMetrics();
   document.getElementById("m-latest").onclick = () => setMode("latest");
   document.getElementById("m-demo").onclick = () => setMode("demo");
   const q = new URLSearchParams(location.search);
   setMode(q.get("mode") === "demo" ? "demo" : "latest");
+}
+
+// If an API is configured, the "Latest" view is computed live by FastAPI; otherwise the static file is used.
+async function tryLiveApi() {
+  const api = (window.VIGIA_API || "").replace(/\/$/, "");
+  if (!api) return;
+  try {
+    const r = await fetch(api + "/forecast/all", {signal: AbortSignal.timeout(20000)});
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json(), cantons = {};
+    for (const c of j.cantons) cantons[c.canton_id] = {name: c.canton, eve: c.eve, days: c.days, conditions: c.conditions};
+    S.data.latest = {eve: j.eve, cantons};
+    S.live = api;
+  } catch (e) { console.warn("Live API unavailable, using static forecast", e); }
 }
 
 function initMap(geo) {
@@ -50,7 +65,8 @@ function render() {
     `Issued on the evening of ${fmtDay(eve, {weekday: "long", day: "numeric", month: "long", year: "numeric"})} · map shows ${fmtDay(day.date, {weekday: "long", day: "numeric", month: "short"})}`;
   document.getElementById("note").innerHTML = S.mode === "demo"
     ? "Demo: a real past week. The model used here was trained <b>without any 2018 data</b>, so this is an honest back-test. ✓ = fire detected by satellite that day."
-    : "Latest eve with complete NASA inputs in the dataset. November is the end of the rainy season, so risk is low across the province.";
+    : (S.live ? `<b>Live:</b> computed just now by the <a href="${S.live}/docs">Vigía Orbital API</a> (FastAPI). ` : "") +
+      "Latest eve with complete NASA inputs in the dataset. November is the end of the rainy season, so risk is low across the province.";
 
   S.layer.eachLayer(l => {
     const c = D.cantons[l.feature.properties.canton_id];

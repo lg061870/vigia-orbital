@@ -14,7 +14,7 @@ from pathlib import Path
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import PlainTextResponse, RedirectResponse
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -57,6 +57,19 @@ def _forecast(cid: str, eve: date | None) -> pd.DataFrame:
         raise HTTPException(404, str(e))
 
 
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse("/docs")
+
+
+def _conditions(cid: str, eve: str) -> dict:
+    x = DAILY[(DAILY.canton_id == cid) & (DAILY.date == pd.Timestamp(eve))].iloc[0]
+    r = lambda v, n=1: None if pd.isna(v) else round(float(v), n)  # noqa: E731
+    return {"t_max_c": r(x.T2M_MAX), "t_min_c": r(x.T2M_MIN), "humidity_pct": r(x.RH2M, 0),
+            "wind_kmh": r(x.WS2M * 3.6), "rain_mm": r(x.PRECTOTCORR), "days_without_rain": int(x.dias_sin_lluvia),
+            "ndvi": r(x.ndvi_mean, 2), "ndmi": r(x.ndmi_mean, 2)}
+
+
 @app.get("/health")
 def health():
     return {"status": "ok", "run_id": OFFICIAL["run_id"], "data_until": str(DAILY.date.max().date())}
@@ -82,7 +95,9 @@ def forecast_one(canton: str = Query("Liberia", description="Canton name or id, 
     """5-day forecast for one canton issued on the evening of `eve`."""
     cid, name = _resolve(canton)
     f = _forecast(cid, eve)
-    return {"canton_id": cid, "canton": name, "eve": str(f.eve.iloc[0]), "run_id": OFFICIAL["run_id"],
+    e = str(f.eve.iloc[0])
+    return {"canton_id": cid, "canton": name, "eve": e, "run_id": OFFICIAL["run_id"],
+            "conditions": _conditions(cid, e),
             "days": [{k: (str(v) if k == "date" else v) for k, v in r.items() if k != "eve"}
                      for r in f.to_dict("records")]}
 
