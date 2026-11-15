@@ -179,3 +179,30 @@ h1, h2, h3 { font-family: 'Barlow', Arial, sans-serif; }
 .farrow { width: 70px; display: flex; align-items: center; justify-content: center; }
 .farrow x-shape { width: 46px; height: 30px; }
 .fbottom { position: absolute; left: 48px; top: 952px; width: 1824px; font-family: 'Barlow', Arial, sans-serif; font-size: 34px; font-weight: 600; color: var(--night); text-align: center; }
+
+/* Content slides (6+) */
+.body { position: absolute; left: 56px; top: 184px; width: 1808px; display: flex; gap: 24px; }
+.wbox { background: #FFFFFF; border-radius: 22px; padding: 20px 24px; box-shadow: 0 4px 14px rgba(15, 34, 54, 0.12); display: flex; flex-direction: column; gap: 10px; }
+.wbox h3 { font-size: 34px; font-weight: 700; color: var(--night); }
+.wbox p, .wbox li { font-size: 26px; color: var(--night); line-height: 1.3; }
+.wbox ul { padding-left: 28px; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.muted { color: var(--muted); }
+.stats { position: absolute; left: 56px; top: 852px; width: 1808px; display: flex; gap: 20px; }
+.stat { flex: 1; background: var(--night); border-radius: 18px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; }
+.stat .num { font-family: 'Barlow', Arial, sans-serif; font-size: 52px; font-weight: 700; color: #F5B971; }
+.stat .lab { font-size: 24px; color: #DCE3EA; }
+.chip { background: #EEF2F5; border-radius: 16px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px; }
+.chip .num { font-family: 'Barlow', Arial, sans-serif; font-size: 44px; font-weight: 700; }
+.chip .lab { font-size: 24px; color: var(--night); }
+.up { color: #C4471A; }
+.down { color: #1F7A54; }
+.flat { color: #5B6B7B; }
+.formula { font-family: 'Barlow', Arial, sans-serif; font-size: 30px; font-weight: 600; color: var(--night); background: #FFF1C2; border-radius: 12px; padding: 10px 18px; }
+.phone { width: 470px; background: #0F2236; border-radius: 44px; padding: 22px 18px; display: flex; flex-direction: column; gap: 12px; }
+.phone .bar { font-family: 'Barlow', Arial, sans-serif; font-size: 26px; font-weight: 700; color: #FAF8F3; padding: 4px 8px; }
+.bubble { background: #FAF8F3; border-radius: 18px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.bubble p { font-size: 24px; color: #0F2236; line-height: 1.3; }
+.bubble .tag { font-family: 'Barlow', Arial, sans-serif; font-weight: 700; color: #C4471A; }
+.reply { align-self: flex-end; background: #D6EFE0; border-radius: 18px; padding: 8px 18px; font-size: 26px; color: #0F2236; }
+.cols2 { display: flex; gap: 24px; }
+.srcs td, .srcs th { font-size: 24px; }

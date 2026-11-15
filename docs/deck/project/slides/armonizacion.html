@@ -1,0 +1,34 @@
+<section id="armonizacion" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">Harmonizing <span class="accent">MODIS + VIIRS</span></h1>
+<p class="top-sub">Four satellites, one consistent fire record (Guanacaste, 2012–2026)</p>
+</div>
+</div>
+<div class="body">
+<div class="wbox" style="flex:1.25">
+<h3>Vegetation-fire detections per year, by satellite</h3>
+<img src="/_blob/35dafac49a2f27eb514227b02f50d91b" alt="Line chart of yearly vegetation-fire detections in Guanacaste: MODIS lowest (about 300 to 1,300 per year); VIIRS S-NPP, NOAA-20 and NOAA-21 close to each other (for example 4,024, 4,012 and 3,904 in 2024)" style="width:1000px; height:495px; object-fit:contain">
+<p class="muted">Source: NASA FIRMS, standard processing (near-real-time after Jul/Aug 2026), vegetation fires only</p>
+</div>
+<div class="wbox" style="flex:1">
+<h3>The problem</h3>
+<ul>
+<li>VIIRS (375 m) sees 3.5–5.4× more fires than MODIS (1 km), and the ratio changes by year and canton: <b>no single conversion factor works</b>.</li>
+<li>From 2018 a second VIIRS satellite, from 2023 a third: <b>more satellites, not more fire</b>.</li>
+</ul>
+<h3>Our harmonized measure</h3>
+<ul>
+<li>One <b>reference satellite</b> per period: S-NPP (2012–2025), then NOAA-20.</li>
+<li>Count <b>fire days per canton</b> (yes/no), not raw detections.</li>
+<li>Checked: NOAA-21 ÷ S-NPP = 1.01, 0.96, 0.97 (2023–25). The record continues after S-NPP ended (Nov 2026).</li>
+</ul>
+</div>
+</div>
+<aside>This is the heart of the challenge. Four satellites have watched Guanacaste’s fires: MODIS since 2000, with one-kilometre pixels, and three VIIRS instruments with 375-metre pixels: Suomi NPP from 2012, NOAA-20 from 2018 and NOAA-21 from 2023. VIIRS sees three and a half to more than five times as many fires as MODIS, and that ratio changes from year to year and from canton to canton, so there is no single conversion factor. And every time a satellite joins, the raw counts jump — more satellites, not more fire. Our solution: one reference satellite per period, S-NPP until 2025 and NOAA-20 after, and we count fire days per canton instead of raw detections. We checked the hand-over: NOAA-21 matches S-NPP within plus or minus four percent per year, so the record continues even after Suomi NPP stopped in November 2026. Ratios: VIIRS S-NPP ÷ MODIS by year, Costa Rica 2012–2025 (3.5 in 2023 to 5.4 in 2019); NOAA-21 ÷ S-NPP, Costa Rica, 2023–2025.</aside>
+</section>

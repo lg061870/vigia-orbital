@@ -1,0 +1,44 @@
+<section id="modelo" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">The model in one idea</h1>
+<p class="top-sub">Start from a normal year, then adjust for today’s conditions</p>
+</div>
+</div>
+<div class="body" style="align-items:stretch">
+<div class="wbox" style="flex:1">
+<p class="fstep">1 · HISTORY</p>
+<h3>A normal year</h3>
+<p>The chance of fire for this canton and this week of the year, learned from 14 fire seasons (2012–2025).</p>
+<div class="chip"><p class="num">45 %</p><p class="lab">Liberia, 23 January</p></div>
+</div>
+<div class="farrow"><x-shape kind="arrow-right" style="background:#8A97A3"></x-shape></div>
+<div class="wbox" style="flex:1.7">
+<p class="fstep">2 · TODAY’S CONDITIONS (vs normal)</p>
+<h3>Adjust the odds</h3>
+<div class="cols2">
+<div class="chip" style="flex:1"><p class="num up">×1.68</p><p class="lab">Weather drier than normal (no rain, heat, wind, low humidity)</p></div>
+<div class="chip" style="flex:1"><p class="num down">×0.79</p><p class="lab">Vegetation greener than normal (NDVI, NDMI)</p></div>
+</div>
+<div class="cols2">
+<div class="chip" style="flex:1"><p class="num up">×1.16</p><p class="lab">Fire in the canton in the last 7 days</p></div>
+<div class="chip" style="flex:1"><p class="num flat">×1.00</p><p class="lab">Terrain (slope): no effect at canton level</p></div>
+</div>
+<p class="muted">Multipliers on the odds, per one standard deviation from normal</p>
+</div>
+<div class="farrow"><x-shape kind="arrow-right" style="background:#E4571B"></x-shape></div>
+<div class="wbox" style="flex:1">
+<p class="fstep">3 · FORECAST</p>
+<h3>Risk for each of the next 5 days</h3>
+<p>A probability from 0 to 1, one model per day ahead.</p>
+<div class="chip"><p class="num up">39 %</p><p class="lab">Liberia, 23 January 2018 · High · fire detected</p></div>
+</div>
+</div>
+<p class="formula" style="position:absolute; left:56px; top:880px; width:1808px; box-sizing:border-box">logit(risk) = β₀ + β₁·History + β₂·Weather + β₃·Vegetation + β₄·Recent fire + β₅·Terrain · logistic regression, maximum likelihood (Newton–Raphson)</p>
+<aside>How does the model think? Like a weather forecaster. It starts from history: in a normal year, what’s the chance of fire in this canton at this time of year? For Liberia on the 23rd of January, 45 percent. Then it adjusts for today’s conditions compared with normal. Weather drier than normal multiplies the odds by 1.68 for each standard deviation. Vegetation greener than normal lowers them, times 0.79. Fire nearby in the last week raises them, times 1.16. And terrain, surprisingly, adds nothing at canton level — its effect is already in the history. The result is a probability from 0 to 1 for each of the next five days. Under the hood it’s a logistic regression, estimated by maximum likelihood with our own Newton–Raphson code and verified with a standard library. The multipliers shown are from the main five-day model (final coefficients, 2012–2025); the Liberia example uses the day-5 model, trained without 2018.</aside>
+</section>

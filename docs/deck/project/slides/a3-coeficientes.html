@@ -1,0 +1,37 @@
+<section id="a3-coeficientes" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">Appendix · Model coefficients</h1>
+<p class="top-sub">One logistic regression per day ahead, trained on 2012–2025 (standardized inputs)</p>
+</div>
+</div>
+<div class="body">
+<div class="wbox" style="flex:1.5">
+<table>
+<tr><th style="width:34%">Coefficient</th><th style="width:13%">Day 1</th><th style="width:13%">Day 2</th><th style="width:13%">Day 3</th><th style="width:13%">Day 4</th><th style="width:14%">Day 5</th></tr>
+<tr><td>β₀ intercept</td><td>−0.253</td><td>−0.235</td><td>−0.219</td><td>−0.189</td><td>−0.174</td></tr>
+<tr><td>β₁ history (normal year)</td><td>1.042</td><td>1.034</td><td>1.033</td><td>1.041</td><td>1.044</td></tr>
+<tr><td>β₂ weather dryness</td><td>0.403</td><td>0.321</td><td>0.279</td><td>0.249</td><td>0.220</td></tr>
+<tr><td>β₃ vegetation greenness</td><td>−0.254</td><td>−0.279</td><td>−0.296</td><td>−0.313</td><td>−0.327</td></tr>
+<tr><td>β₄ recent fire (7 days)</td><td>0.219</td><td>0.202</td><td>0.187</td><td>0.164</td><td>0.152</td></tr>
+<tr><td>β₅ terrain (slope)</td><td>0.013</td><td>0.010</td><td>0.005</td><td>0.007</td><td>0.007</td></tr>
+</table>
+</div>
+<div class="wbox" style="flex:1">
+<h3>How to read them</h3>
+<ul>
+<li>History ≈ 1: the model trusts the normal year as its starting point.</li>
+<li>Weather matters most for tomorrow and fades with distance.</li>
+<li>Vegetation matters more the further ahead: a slow, seasonal signal.</li>
+<li>Terrain ≈ 0 at canton level.</li>
+<li>Estimated by maximum likelihood: our Newton–Raphson converged in 5 iterations and matches statsmodels exactly.</li>
+</ul>
+</div>
+</div>
+<aside>For the technical questions: these are the coefficients of the five models, one per day ahead, trained on 2012 to 2025 with standardized inputs. History stays close to one: the model starts from the normal year. Weather has its biggest effect on tomorrow and fades with distance, while vegetation becomes more important the further ahead we look — it’s a slow signal. Terrain is essentially zero at canton level. The estimation is maximum likelihood; our own Newton–Raphson converged in five iterations and matched the standard statsmodels result exactly. Source: notebook cells C15–C16 and C26.</aside>
+</section>

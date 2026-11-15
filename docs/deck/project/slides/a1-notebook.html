@@ -1,0 +1,31 @@
+<section id="a1-notebook" class="lightslide" data-section="Appendix: technical backup for questions">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">Appendix · <span class="accent">Run it yourself</span></h1>
+<p class="top-sub">Every number in this presentation comes from one reproducible notebook</p>
+</div>
+</div>
+<div class="body">
+<div class="wbox" style="flex:1.6">
+<h3>What’s inside</h3>
+<ul>
+<li>Step by step, in English: data → harmonized fire record → features → logistic regression (our own Newton–Raphson, checked with statsmodels) → validation → demo week.</li>
+<li>Open data only: NASA FIRMS, NASA POWER, MODIS, NASADEM, NOAA ONI.</li>
+<li>Re-run safe: with <b>PUBLISH = False</b> it saves nothing and compares its numbers with the official run.</li>
+<li>Same code as the daily system: <b>vigia/model.py</b> (train → parameters → daily forecast, never stored).</li>
+</ul>
+<p class="muted">github.com/lg061870/vigia-orbital · notebooks/vigia_orbital_modelo.ipynb</p>
+</div>
+<div class="wbox" style="flex:1; align-items:center">
+<h3>Open in Google Colab</h3>
+<img src="/_blob/102123eff5ca69c09b93e69411b3b567" alt="QR code linking to the Vigía Orbital notebook in Google Colab" style="width:420px; height:420px; object-fit:contain">
+<p class="muted" style="text-align:center">Scan to open the notebook</p>
+</div>
+</div>
+<aside>If you want to check any number, run it yourself. The notebook is public on GitHub and opens in Google Colab with this QR code. It goes step by step from raw NASA data to the forecast, uses only open data, and is safe to re-run: with PUBLISH set to False it saves nothing and simply compares its results with our official run. The same functions power the daily system. Link: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb</aside>
+</section>
