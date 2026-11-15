@@ -206,3 +206,17 @@ h1, h2, h3 { font-family: 'Barlow', Arial, sans-serif; }
 .reply { align-self: flex-end; background: #D6EFE0; border-radius: 18px; padding: 8px 18px; font-size: 26px; color: #0F2236; }
 .cols2 { display: flex; gap: 24px; }
 .srcs td, .srcs th { font-size: 24px; }
+
+/* Formula slide */
+.math { font-family: 'Times New Roman', Georgia, serif; font-style: italic; color: var(--night); }
+.eq-main { position: absolute; left: 56px; top: 184px; width: 1808px; box-sizing: border-box; background: #FFFFFF; border: 3px solid var(--night); border-radius: 22px; padding: 22px 30px; font-size: 52px; text-align: center; }
+.eq-row { position: absolute; left: 56px; top: 330px; width: 1808px; display: flex; gap: 24px; }
+.hdr { background: var(--night); color: #FAF8F3; border-radius: 16px 16px 0 0; padding: 10px 22px; font-family: 'Barlow', Arial, sans-serif; font-size: 32px; font-weight: 700; }
+.hbox { background: #FFFFFF; border-radius: 16px; box-shadow: 0 4px 14px rgba(15, 34, 54, 0.12); display: flex; flex-direction: column; }
+.hbody { padding: 16px 22px; display: flex; flex-direction: column; gap: 10px; }
+.hbody .math { font-size: 36px; }
+.hbody table { font-size: 24px; color: var(--night); }
+.result { position: absolute; left: 56px; top: 926px; width: 1808px; box-sizing: border-box; background: #FFF1C2; border-radius: 18px; padding: 14px 26px; display: flex; gap: 26px; align-items: center; }
+.result .t { font-family: 'Barlow', Arial, sans-serif; font-size: 34px; font-weight: 700; color: var(--night); }
+.result .m { font-size: 36px; }
+.result .d { font-size: 26px; color: var(--night); }

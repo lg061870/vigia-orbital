@@ -1,0 +1,44 @@
+<section id="formula" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">The <span class="accent">risk formula</span></h1>
+<p class="top-sub">One logistic model per day ahead (k = 1 … 5)</p>
+</div>
+</div>
+<p class="eq-main math">RISK<sub>k</sub>(x, t) = σ( β₀ + β₁·H<sub>k</sub>(x, t) + β₂·C(x, t) + β₃·V(x, t) + β₄·F(x, t) + β₅·T(x) )</p>
+<div class="eq-row">
+<div class="hbox" style="flex:0.75">
+<p class="hdr">Link function</p>
+<div class="hbody">
+<p class="math" style="font-size:44px; text-align:center">σ(z) = 1 / (1 + e<sup>−z</sup>)</p>
+<p style="font-size:26px; color:#5B6B7B">turns any score z into a probability between 0 and 1</p>
+<p class="math">z = β₀ + β₁H<sub>k</sub> + β₂C + β₃V + β₄F + β₅T</p>
+</div>
+</div>
+<div class="hbox" style="flex:1.65">
+<p class="hdr">Model terms</p>
+<div class="hbody">
+<table>
+<tr><th style="width:20%">Term</th><th style="width:80%">Meaning (x = canton, t = forecast day)</th></tr>
+<tr><td>H<sub>k</sub>(x, t)</td><td>History: log-odds of fire on day t+k for this canton and week of the year, 2012–2025 (“a normal year”)</td></tr>
+<tr><td>C(x, t)</td><td>Weather vs normal: days without rain, max temperature, wind, humidity, soil moisture, 30-day rain (NASA POWER)</td></tr>
+<tr><td>V(x, t)</td><td>Vegetation vs normal: NDVI and NDMI (NASA MODIS)</td></tr>
+<tr><td>F(x, t)</td><td>Recent fire: detected in the canton in the last 7 days (NASA FIRMS)</td></tr>
+<tr><td>T(x)</td><td>Terrain: mean slope of the canton (NASADEM)</td></tr>
+<tr><td>β₀ … β₅</td><td>Coefficients, estimated from 2012–2025 by maximum likelihood, one set per day ahead</td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="result">
+<p class="t">Result</p>
+<p class="math m">RISK<sub>k</sub>(x, t) ∈ [0, 1]</p>
+<p class="d">probability that satellites detect fire in canton x on day t + k, using only what is known on day t</p>
+</div>
+<aside>Here is the full formula. For each day ahead, k from one to five, the risk is the logistic function sigma of a weighted sum. H is history: the log-odds of fire on that day for this canton and week of the year, from 2012 to 2025 — our “normal year”. C is the weather compared with normal: days without rain, maximum temperature, wind, humidity, soil moisture and rain over the last 30 days, from NASA POWER. V is the vegetation compared with normal: NDVI and NDMI from MODIS. F is recent fire: whether the satellites detected fire in the canton in the last seven days. T is terrain: the canton’s mean slope from NASADEM. The betas are estimated from 2012 to 2025 by maximum likelihood, with one set for each day ahead. The result is a number between zero and one: the probability that satellites detect fire in that canton on that day, using only what we know the evening before. All inputs except H and F are standardized against normal. NBR is shown as a burn-scar indicator but is not a model input.</aside>
+</section>

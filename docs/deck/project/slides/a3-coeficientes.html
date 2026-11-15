@@ -6,32 +6,65 @@
 </div>
 <div class="brand-sep"></div>
 <div class="title-col">
-<h1 class="top-title">Appendix · Model coefficients</h1>
-<p class="top-sub">One logistic regression per day ahead, trained on 2012–2025 (standardized inputs)</p>
+<h1 class="top-title">Estimated <span class="accent">coefficients</span></h1>
+<p class="top-sub">Main model: fire in the next 5 days · trained on 2012–2025</p>
 </div>
 </div>
-<div class="body">
-<div class="wbox" style="flex:1.5">
+<div style="position:absolute; left:40px; top:172px; width:1840px; display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:20px">
+<div class="hbox">
+<p class="hdr">Model</p>
+<div class="hbody" style="align-items:center; gap:14px">
+<p class="math formula" style="font-size:34px">RISK = σ( β₀ + β₁H + β₂C + β₃V + β₄F + β₅T )</p>
+<p class="math" style="font-size:40px">σ(z) = 1 / (1 + e<sup>−z</sup>)</p>
+<p style="font-size:24px; color:#5B6B7B">H history (log-odds of a normal year) · C weather · V vegetation · F recent fire · T terrain (C, V, F, T standardized)</p>
+</div>
+</div>
+<div class="hbox">
+<p class="hdr">Estimated coefficients</p>
+<div class="hbody">
 <table>
-<tr><th style="width:34%">Coefficient</th><th style="width:13%">Day 1</th><th style="width:13%">Day 2</th><th style="width:13%">Day 3</th><th style="width:13%">Day 4</th><th style="width:14%">Day 5</th></tr>
-<tr><td>β₀ intercept</td><td>−0.253</td><td>−0.235</td><td>−0.219</td><td>−0.189</td><td>−0.174</td></tr>
-<tr><td>β₁ history (normal year)</td><td>1.042</td><td>1.034</td><td>1.033</td><td>1.041</td><td>1.044</td></tr>
-<tr><td>β₂ weather dryness</td><td>0.403</td><td>0.321</td><td>0.279</td><td>0.249</td><td>0.220</td></tr>
-<tr><td>β₃ vegetation greenness</td><td>−0.254</td><td>−0.279</td><td>−0.296</td><td>−0.313</td><td>−0.327</td></tr>
-<tr><td>β₄ recent fire (7 days)</td><td>0.219</td><td>0.202</td><td>0.187</td><td>0.164</td><td>0.152</td></tr>
-<tr><td>β₅ terrain (slope)</td><td>0.013</td><td>0.010</td><td>0.005</td><td>0.007</td><td>0.007</td></tr>
+<tr><th style="width:36%">Parameter</th><th style="width:17%">Estimate</th><th style="width:15%">Std. error</th><th style="width:14%">z</th><th style="width:18%">p-value</th></tr>
+<tr><td>β₀ intercept</td><td>−0.034</td><td>0.018</td><td>−1.9</td><td>0.06</td></tr>
+<tr><td>β₁ history, H</td><td>1.072</td><td>0.012</td><td>89.4</td><td>&lt; 0.001</td></tr>
+<tr><td>β₂ weather, C</td><td>0.516</td><td>0.017</td><td>30.2</td><td>&lt; 0.001</td></tr>
+<tr><td>β₃ vegetation, V</td><td>−0.236</td><td>0.015</td><td>−16.2</td><td>&lt; 0.001</td></tr>
+<tr><td>β₄ recent fire, F</td><td>0.146</td><td>0.017</td><td>8.4</td><td>&lt; 0.001</td></tr>
+<tr><td>β₅ terrain, T</td><td>0.000</td><td>0.017</td><td>0.0</td><td>0.99</td></tr>
 </table>
 </div>
-<div class="wbox" style="flex:1">
-<h3>How to read them</h3>
-<ul>
-<li>History ≈ 1: the model trusts the normal year as its starting point.</li>
-<li>Weather matters most for tomorrow and fades with distance.</li>
-<li>Vegetation matters more the further ahead: a slow, seasonal signal.</li>
-<li>Terrain ≈ 0 at canton level.</li>
-<li>Estimated by maximum likelihood: our Newton–Raphson converged in 5 iterations and matches statsmodels exactly.</li>
-</ul>
+</div>
+<div class="hbox">
+<p class="hdr">What each coefficient means (per standard deviation)</p>
+<div class="hbody" style="gap:6px">
+<p style="font-size:24px"><b>β₀ ≈ 0:</b> all normal → risk = the normal year.</p>
+<p style="font-size:24px"><b>β₁ ≈ 1:</b> starts from history (canton, week).</p>
+<p style="font-size:24px"><b>β₂ = +0.52:</b> drier weather → odds ×1.68.</p>
+<p style="font-size:24px"><b>β₃ = −0.24:</b> greener vegetation → odds ×0.79.</p>
+<p style="font-size:24px"><b>β₄ = +0.15:</b> fire in last 7 days → odds ×1.16.</p>
+<p style="font-size:24px"><b>β₅ = 0:</b> terrain adds nothing at canton level.</p>
 </div>
 </div>
-<aside>For the technical questions: these are the coefficients of the five models, one per day ahead, trained on 2012 to 2025 with standardized inputs. History stays close to one: the model starts from the normal year. Weather has its biggest effect on tomorrow and fades with distance, while vegetation becomes more important the further ahead we look — it’s a slow signal. Terrain is essentially zero at canton level. The estimation is maximum likelihood; our own Newton–Raphson converged in five iterations and matched the standard statsmodels result exactly. Source: notebook cells C15–C16 and C26.</aside>
+<div class="hbox">
+<p class="hdr">Performance (seasons never seen)</p>
+<div class="hbody">
+<div class="cols2">
+<table style="flex:1">
+<tr><th style="width:62%">Metric</th><th style="width:38%">Value</th></tr>
+<tr><td>AUC (ROC)</td><td>0.932</td></tr>
+<tr><td>AUC, average year</td><td>0.919</td></tr>
+<tr><td>Brier skill score</td><td>+8.4 %</td></tr>
+<tr><td>Seasons better</td><td>12 of 14</td></tr>
+<tr><td>Fire when ≥ 90 %</td><td>96 %</td></tr>
+</table>
+<div style="flex:0.85; display:flex; flex-direction:column; gap:8px">
+<p style="font-size:26px"><b>Data used</b></p>
+<p style="font-size:24px">Period: 2012–2025 (+ 2026 test)</p>
+<p style="font-size:24px">Regions: 11 cantons of Guanacaste, daily</p>
+<p style="font-size:24px">Events: NASA FIRMS (MODIS + VIIRS), harmonized</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside>These are the estimated coefficients of the main model, which forecasts fire in the next five days. Briefly: the intercept is close to zero, so when everything is normal, the risk is just the normal year. History has a coefficient close to one: the model starts from what usually happens in that canton at that time of year. Weather drier than normal raises the odds by 68 percent per standard deviation; vegetation greener than normal lowers them by 21 percent; fire in the last week raises them by 16 percent; and terrain adds nothing at canton level. On seasons it never saw, the model reaches an AUC of 0.932, against 0.919 for the average year, and its probabilities are 8.4 percent more accurate. Technical notes: standard errors and z are derived from the 95% confidence intervals of the statsmodels fit (notebook C19); they are optimistic because consecutive days overlap, which is why we rely on season-by-season validation. Accuracy, recall and F1 are not reported because the model outputs probabilities, evaluated with AUC and Brier skill. The five lead-day models have the same structure (coefficients in the notebook, C26).</aside>
 </section>
