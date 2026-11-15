@@ -11,21 +11,19 @@
 </div>
 </div>
 <div class="body">
-<div class="wbox" style="flex:1.6">
-<h3>What’s inside</h3>
-<ul>
-<li>Step by step, in English: data → harmonized fire record → features → logistic regression (our own Newton–Raphson, checked with statsmodels) → validation → demo week.</li>
-<li>Open data only: NASA FIRMS, NASA POWER, MODIS, NASADEM, NOAA ONI.</li>
-<li>Re-run safe: with <b>PUBLISH = False</b> it saves nothing and compares its numbers with the official run.</li>
-<li>Same code as the daily system: <b>vigia/model.py</b> (train → parameters → daily forecast, never stored).</li>
-</ul>
-<p class="muted">github.com/lg061870/vigia-orbital · notebooks/vigia_orbital_modelo.ipynb</p>
+<div class="wbox" style="flex:1.75; padding:14px">
+<img src="/_blob/bcfede4974ff4a689dab07a31a4971ee" alt="Screenshot of the Vigía Orbital notebook in Google Colab: title, run-control cell with PUBLISH = False and SEED = 2026, the cell that downloads the data from GitHub (commit b3d228c), and the libraries cell" style="width:1090px; height:770px; object-fit:contain; border-radius:12px">
 </div>
 <div class="wbox" style="flex:1; align-items:center">
 <h3>Open in Google Colab</h3>
-<img src="/_blob/102123eff5ca69c09b93e69411b3b567" alt="QR code linking to the Vigía Orbital notebook in Google Colab" style="width:420px; height:420px; object-fit:contain">
-<p class="muted" style="text-align:center">Scan to open the notebook</p>
+<img src="/_blob/102123eff5ca69c09b93e69411b3b567" alt="QR code linking to the Vigía Orbital notebook in Google Colab" style="width:380px; height:380px; object-fit:contain">
+<ul>
+<li>Open NASA data, step by step</li>
+<li><b>PUBLISH = False</b>: safe to re-run</li>
+<li>Same code as the daily system</li>
+</ul>
+<p class="muted" style="text-align:center">github.com/lg061870/vigia-orbital</p>
 </div>
 </div>
-<aside>If you want to check any number, run it yourself. The notebook is public on GitHub and opens in Google Colab with this QR code. It goes step by step from raw NASA data to the forecast, uses only open data, and is safe to re-run: with PUBLISH set to False it saves nothing and simply compares its results with our official run. The same functions power the daily system. Link: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb</aside>
+<aside>If you want to check any number, run it yourself. This is the actual notebook in Google Colab: the run-control cell, the cell that downloads our data straight from the public GitHub repository, and the libraries with their versions. The QR code opens it. It goes step by step from raw NASA data to the forecast, uses only open data, and is safe to re-run: with PUBLISH set to False it saves nothing and simply compares its results with our official run. The same functions power the daily system. Link: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb</aside>
 </section>
