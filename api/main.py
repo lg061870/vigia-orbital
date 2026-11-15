@@ -159,6 +159,10 @@ def _run(cid: str, eve: date | None) -> tuple[pd.DataFrame, dict]:
     except ValueError as e:
         raise HTTPException(404, str(e))
     info["conditions"] = _conditions(daily, cid, info["weather_as_of"])
+    # What the reference satellite saw afterwards, for dates already observed (None for the future)
+    obs = daily[daily.canton_id == cid].set_index("date").fire_ref_day
+    f["fire_observed"] = [int(obs[pd.Timestamp(d)]) if pd.Timestamp(d) in obs.index and pd.Timestamp(d) <= State.fire_through
+                          else None for d in f.date]
     return f, info
 
 
