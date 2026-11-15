@@ -15,6 +15,7 @@ downloads/
 eggs/
 .eggs/
 lib/
+!site/lib/
 lib64/
 parts/
 sdist/
@@ -168,6 +169,8 @@ venv.bak/
 
 # mkdocs/Zensical documentation
 /site
+!/site/
+!/site/**
 
 # mypy
 .mypy_cache/

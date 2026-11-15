@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vigía Orbital · Fire forecast</title>
+<meta name="description" content="5-day fire-risk forecast for the cantons of Guanacaste, Costa Rica, from harmonized NASA MODIS and VIIRS hot spots. NASA Space Apps 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 72'%3E%3Cpath d='M28 0c4 14 20 22 20 42a20 20 0 0 1-40 0c0-10 6-16 10-22 2 8 6 12 10 12C28 22 22 12 28 0z' fill='%23E4571B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="lib/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <svg width="44" height="44" viewBox="0 0 76 76" aria-hidden="true"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="24" y="36" width="28" height="4" fill="#9CC3E8"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#FAF8F3"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/></svg>
+    <div><h1>Vigía Orbital</h1><p>Fire-risk forecast · Guanacaste, Costa Rica</p></div>
+  </div>
+  <nav class="mode" role="tablist" aria-label="Forecast">
+    <button id="m-latest" role="tab" aria-selected="true">Latest forecast</button>
+    <button id="m-demo" role="tab" aria-selected="false">Demo week · Jan 2018</button>
+  </nav>
+</header>
+
+<main>
+  <section class="mapcol">
+    <p id="issued" class="issued"></p>
+    <div id="map" role="img" aria-label="Map of Guanacaste cantons coloured by fire risk"></div>
+    <div class="legend" id="legend"></div>
+    <p id="note" class="note"></p>
+  </section>
+
+  <section class="panel">
+    <h2 id="cname">Liberia</h2>
+    <p class="sub" id="csub"></p>
+    <div class="days" id="days"></div>
+    <div class="box">
+      <h3>Why this forecast? <span id="dlabel"></span></h3>
+      <p class="muted">The model starts from the normal risk for this canton and week of the year, then adjusts it with the current conditions.</p>
+      <div id="drivers"></div>
+    </div>
+    <div class="box">
+      <h3>Conditions on the eve</h3>
+      <div class="cond" id="cond"></div>
+    </div>
+  </section>
+</main>
+
+<section class="about">
+  <div class="box">
+    <h3>How good is it?</h3>
+    <div class="metrics" id="metrics"></div>
+    <p class="muted">Validated leave-one-season-out over 2013–2025: each season is forecast by a model that never saw it. Skill is measured against the climatology (the normal for that canton and week).</p>
+  </div>
+  <div class="box">
+    <h3>How it works</h3>
+    <ol>
+      <li><b>Harmonize</b> NASA FIRMS hot spots from MODIS and VIIRS (S-NPP, NOAA-20, NOAA-21) into one consistent record: one reference satellite per period, vegetation fires only, a fire-day flag per canton and local date.</li>
+      <li><b>Combine</b> with NASA POWER daily weather and MODIS vegetation indices (NDVI, NDMI).</li>
+      <li><b>Forecast</b> with one logistic model per lead day: the normal risk for the canton and week, adjusted by weather, vegetation dryness and recent fire.</li>
+    </ol>
+    <p class="muted">Run <span id="runid"></span> · <a href="https://github.com/lg061870/vigia-orbital">source code and data</a> · <a href="https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb">run the notebook in Colab</a></p>
+  </div>
+  <div class="box">
+    <h3>Sources</h3>
+    <ul class="src">
+      <li>NASA FIRMS — MODIS and VIIRS active fire / hot spots</li>
+      <li>NASA POWER — daily weather (temperature, humidity, wind, rain, soil wetness)</li>
+      <li>NASA MODIS MOD13Q1 / MYD13Q1 (NDVI) and MOD09A1 / MYD09A1 (NDMI) via Microsoft Planetary Computer</li>
+      <li>geoBoundaries — canton boundaries · SINAC — conservation areas</li>
+    </ul>
+    <p class="muted">Vigía Orbital · NASA Space Apps Challenge 2026, San José, Costa Rica · Harmonization of MODIS and VIIRS Hot Spots. A research prototype, not an official warning.</p>
+  </div>
+</section>
+
+<script src="lib/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -17,7 +17,37 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 | `offline_libs/` | `leaflet-1.9.4-dist.zip` (Leaflet JS/CSS/images for the no-internet map). |
 | `scripts/` | Data checks and processing scripts. |
 | `outputs/` | Generated summaries (CSV). |
+| `vigia/model.py` | Shared model code: training and the daily 5-day forecast. |
+| `site/` | Static website (GitHub Pages). Data built by `scripts/build_site_data.py`. |
+| `api/` | FastAPI forecast service (`Dockerfile` at the root). |
 | `docs/pitch.md` | 2-minute pitch outline (Spanish), with the source of every number. |
+
+## Website and API
+
+**Website** (`site/`, deployed to GitHub Pages by `.github/workflows/pages.yml`): a map of the Guanacaste cantons coloured by risk, the 5-day cards, and why each day's risk is what it is. It has two views: the latest forecast, and the demo week (eve 18 Jan 2018, from a model trained without 2018). Rebuild its data after a new official run:
+
+```bash
+.venv/bin/python scripts/build_site_data.py
+```
+
+**API** (`api/main.py`): computes the forecast on request with the official parameters (`data/results/OFFICIAL_RUN.json`) and `vigia/model.py`. Nothing is stored.
+
+```bash
+.venv/bin/pip install -r api/requirements.txt
+.venv/bin/uvicorn api.main:app --reload        # docs at http://127.0.0.1:8000/docs
+docker build -t vigia-api . && docker run -p 8000:8000 vigia-api
+```
+
+| Endpoint | Returns |
+|---|---|
+| `GET /health` | Status, official run id, last date with data |
+| `GET /cantons` | The 11 cantons (id and name) |
+| `GET /model` | Validation metrics, coefficients, risk levels |
+| `GET /forecast?canton=Liberia&eve=2026-11-12` | 5 days: probability, level, normal probability, drivers (×odds) |
+| `GET /forecast/all?eve=` | All cantons |
+| `GET /sms?canton=Liberia&eve=2018-01-18` | Plain-text message for brigades (under 1 KB) |
+
+`/forecast` and `/sms` use the official model (trained on 2012–2025). The website's demo week uses a model trained without 2018, so for 2018 dates the two can differ slightly.
 
 ## Setup
 

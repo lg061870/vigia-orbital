@@ -1,0 +1,6 @@
+.venv
+.git
+site
+notebooks
+docs
+*.duckdb
