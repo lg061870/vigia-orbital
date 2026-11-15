@@ -226,3 +226,9 @@ __marimo__/
 data/raw_hdx/
 data/raw_modis/
 data/raw_modis_ndmi/
+
+# Video renders and narration audio (kept out of the repository)
+video/*.mp4
+video/out/
+video/public/
+video/node_modules/
