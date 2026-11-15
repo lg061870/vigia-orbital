@@ -26,13 +26,13 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 
 **Live:** website https://lg061870.github.io/vigia-orbital/ · API https://lg061870-vigia-orbital-api.hf.space/api (docs at `/api/docs`)
 
-**Website** (`site/`, deployed to GitHub Pages by `.github/workflows/pages.yml`): a map of the Guanacaste cantons coloured by risk, the 5-day cards, and why each day's risk is what it is. It has two views: the latest forecast, and the demo week (eve 18 Jan 2018, from a model trained without 2018). Rebuild its data after a new official run:
+**Website** (`site/`, deployed to GitHub Pages by `.github/workflows/pages.yml`): a map of the Guanacaste cantons coloured by risk, the 5-day cards, and why each day's risk is what it is. It has two views: the latest forecast, and the demo week (eve 18 Jan 2018, from a model trained without 2018). Every morning (05:17 Costa Rica) the Pages workflow runs `scripts/daily_forecast.py`, which issues that day's forecast with the same code as the API and saves it as the site's fallback (`site/data/latest.json`); set the repository secret `FIRMS_MAP_KEY` so it gets fresh fire data. Rebuild the demo and map data after a new official run:
 
 ```bash
 .venv/bin/python scripts/build_site_data.py
 ```
 
-**API** (`api/main.py`): computes the forecast on request with the official parameters (`data/results/OFFICIAL_RUN.json`) and `vigia/model.py`. Nothing is stored.
+**API** (`api/main.py`): issues the forecast for **today** by default. At most once an hour it downloads the newest NASA FIRMS (VIIRS NOAA-20 near-real-time, needs `FIRMS_MAP_KEY`) and NASA POWER data (`vigia/live.py`); weather comes from the newest day POWER has published (a few days' lag) and vegetation from the newest MODIS composite. Each response lists the date of every input. It computes the forecast on request with the official parameters (`data/results/OFFICIAL_RUN.json`) and `vigia/model.py`. Nothing is stored.
 
 ```bash
 .venv/bin/pip install -r api/requirements.txt

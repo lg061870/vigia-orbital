@@ -83,6 +83,7 @@ class State:
     today = DATA_END
     refreshed = 0.0
     sources: dict = {"mode": "repository data only"}
+    fire_through = DATA_END
 
     @classmethod
     def get(cls):
@@ -113,6 +114,7 @@ class State:
         else:
             src["nasa_firms"] = "no FIRMS_MAP_KEY set: recent fire from repository data only"
         cdd, det = live.extend(CDD0, DET0, today, power, firms, firms_start if firms is not None else None)
+        cls.fire_through = today if firms is not None else DATA_END
         cls.daily, cls.today, cls.sources, cls.refreshed = prepare_daily(cdd, det), today, src, time.time()
 
 
@@ -149,6 +151,7 @@ def _run(cid: str, eve: date | None) -> tuple[pd.DataFrame, dict]:
         if eve is None or pd.Timestamp(eve) >= daily[daily.T2M_MAX.notna()].date.max():
             f, info = forecast_now(daily, PARAMS, cid, today if eve is None else pd.Timestamp(eve))
             info["live"] = State.sources
+            info["recent_fire_through"] = str(min(State.fire_through, pd.Timestamp(info["recent_fire_through"])).date())
         else:
             f = forecast(daily, PARAMS, cid, eve)
             e = str(f.eve.iloc[0])
