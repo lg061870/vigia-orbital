@@ -24,6 +24,8 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 
 ## Website and API
 
+**Live:** website https://lg061870.github.io/vigia-orbital/ · API https://lg061870-vigia-orbital-api.hf.space/api (docs at `/api/docs`)
+
 **Website** (`site/`, deployed to GitHub Pages by `.github/workflows/pages.yml`): a map of the Guanacaste cantons coloured by risk, the 5-day cards, and why each day's risk is what it is. It has two views: the latest forecast, and the demo week (eve 18 Jan 2018, from a model trained without 2018). Rebuild its data after a new official run:
 
 ```bash
@@ -38,6 +40,8 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 docker build -t vigia-api . && docker run -p 8000:8000 vigia-api
 ```
 
+All paths below are relative to the API base: `…hf.space/api` on the live Space, or `http://127.0.0.1:8000` when running locally.
+
 | Endpoint | Returns |
 |---|---|
 | `GET /health` | Status, official run id, last date with data |
@@ -46,6 +50,8 @@ docker build -t vigia-api . && docker run -p 8000:8000 vigia-api
 | `GET /forecast?canton=Liberia&eve=2026-11-12` | 5 days: probability, level, normal probability, drivers (×odds) |
 | `GET /forecast/all?eve=` | All cantons |
 | `GET /sms?canton=Liberia&eve=2018-01-18` | Plain-text message for brigades (under 1 KB) |
+
+**Hosting.** The live API runs in the public Hugging Face Space `lg061870/vigia-orbital-api`. Free accounts only offer Gradio Spaces now, so the Space's `app.py` downloads `vigia/`, `api/main.py`, the data and the official run's parameters from this repo, and mounts the unchanged FastAPI app under `/api` on its Gradio server. Free Spaces sleep when idle; the website then falls back to the static forecast in `site/data/`. `deploy/huggingface/Dockerfile` is the alternative for any Docker host (Hugging Face Docker Spaces on paid plans, Render, Cloud Run). The website reads the API address from `site/config.js`.
 
 `/forecast` and `/sms` use the official model (trained on 2012–2025). The website's demo week uses a model trained without 2018, so for 2018 dates the two can differ slightly.
 
