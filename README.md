@@ -137,6 +137,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 - **Kontur Population** (2023), CC BY; **UNFPA** Subnational Population Statistics (2021), CC BY-IGO; **Humanitarian OpenStreetMap Team** exports of OpenStreetMap data, ODbL. All via the Humanitarian Data Exchange (data.humdata.org).
 - **ESA WorldCover**: Zanaga, D. et al. (2022). ESA WorldCover 10 m 2021 v200. CC BY 4.0.
 - **NASA GIBS / Worldview**: imagery from NASA's Global Imagery Browse Services (GIBS), part of EOSDIS.
+- **NASA ARSET**, online course “Using the Fire Mapping Tools to Map Fires” (NASA Applied Remote Sensing Training): reference for the manual NBR/dNBR burn-mapping workflow that Vigía Orbital automates.
 - **Leaflet** 1.9.4 (BSD-2-Clause).
 
 ## License
