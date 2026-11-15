@@ -1,0 +1,48 @@
+{
+  "run_id": "20261115T152753Z",
+  "seed": 2026,
+  "horizon_days": 5,
+  "features": [
+    "H_norm",
+    "V",
+    "C",
+    "fuego_7d_z",
+    "T"
+  ],
+  "train_years": "2012-2025",
+  "validation": "leave-one-season-out 2013-2025 + 2026 test",
+  "inputs_sha256": {
+    "canton_day.csv": "e70992a6f328177a92fb808a51401c91dfd542f79d4e870ab676894b8c80b298",
+    "detection.csv": "e46d609a3581f0130b8c833ac03aa122813e1fb361a21bac56bcf71ffd274a12"
+  },
+  "repo_commit": "7e602d1dac9df32a8a8babeaf8d1734adf14f65d",
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "statsmodels": "0.15.0",
+    "scikit-learn": "1.6.1"
+  },
+  "coefficients": {
+    "const": -0.0341,
+    "H_norm": 1.0721,
+    "V": -0.2358,
+    "C": 0.516,
+    "fuego_7d_z": 0.1459,
+    "T": 0.0001
+  },
+  "metrics": {
+    "auc_model_2013_2025": 0.932,
+    "auc_ref_2013_2025": 0.9191,
+    "bss_2013_2025": 0.0841,
+    "bss_2026_test": 0.006,
+    "years_bss_positive": "12 of 14",
+    "lead_bss": {
+      "1": 0.0784,
+      "2": 0.0681,
+      "3": 0.0632,
+      "4": 0.0583,
+      "5": 0.0541
+    }
+  }
+}
