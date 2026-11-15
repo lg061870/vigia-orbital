@@ -1,0 +1,62 @@
+<section id="flujo" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">From a manual workflow to a <span class="accent">daily forecast</span></h1>
+<p class="top-sub">The same indicators, computed automatically, with machine learning on top</p>
+</div>
+</div>
+<div class="flow">
+<div class="fpanel manual">
+<p class="fstep">1 · TODAY, BY HAND</p>
+<p class="fhead">NASA ARSET Fire Mapping Tools</p>
+<p class="fnote">From the course “Using the Fire Mapping Tools to Map Fires” · QGIS + Landsat, one fire at a time</p>
+<ol class="flist">
+<li>Choose the study area</li>
+<li>Find pre- and post-fire images</li>
+<li>Download and prepare the bands</li>
+<li>Mask clouds, clip the area</li>
+<li>Calculate NBR before and after</li>
+<li>dNBR = NBR before − NBR after</li>
+<li>Classify burn severity, review, export</li>
+</ol>
+<p class="fnote">Answers: how badly did it burn, after the fire.</p>
+</div>
+<div class="farrow"><x-shape kind="arrow-right" style="background:#8A97A3"></x-shape></div>
+<div class="fpanel auto">
+<p class="fstep">2 · VIGÍA ORBITAL AUTOMATES IT</p>
+<p class="fhead">Every image, every canton, since 2012</p>
+<ul class="flist">
+<li>Finds and downloads each new MODIS image</li>
+<li>Keeps only cloud-free pixels</li>
+<li>Computes NDVI, NDMI, NBR and dNBR</li>
+<li>Compares each value with “normal for the date”</li>
+<li>Adds NASA FIRMS fires and NASA POWER weather</li>
+</ul>
+<div class="fbig">
+<div><p class="num">~2,000</p><p class="lab">MODIS composites processed</p></div>
+<div><p class="num">157,918</p><p class="lab">fire detections</p></div>
+</div>
+</div>
+<div class="farrow"><x-shape kind="arrow-right" style="background:#1F5A6B"></x-shape></div>
+<div class="fpanel ml">
+<p class="fstep">3 · MACHINE LEARNING ON TOP</p>
+<p class="fhead">A forecast for the next 5 days</p>
+<ul class="flist">
+<li>Learns from 14 seasons of history, canton by canton</li>
+<li>Starts from “a normal year”, then adjusts for today’s weather, vegetation and recent fire</li>
+<li>Tested on seasons it never saw</li>
+</ul>
+<div class="fbig">
+<div><p class="num">+8 %</p><p class="lab">better than an average year (tomorrow)</p></div>
+<div><p class="num">+5 %</p><p class="lab">still better on day 5</p></div>
+</div>
+</div>
+</div>
+<p class="fbottom">Answers: <span class="accent">where and when</span> is fire likely, before it happens.</p>
+<aside>How do people compute these indicators today? NASA’s ARSET program teaches it in its online course “Using the Fire Mapping Tools to Map Fires”: a manual workflow in QGIS, with Landsat images, one fire at a time. You pick the area, find the images before and after the fire, mask the clouds, calculate NBR before and after, subtract them to get dNBR, and classify the burn severity. It’s powerful, but it answers one question: how badly did it burn, after the fact. Vigía Orbital automates that whole chain: every new MODIS image, cloud-free pixels only, NDVI, NDMI, NBR and dNBR for every canton since 2012, each compared with what’s normal for that date, together with NASA FIRMS fire detections and NASA POWER weather. About 2,000 MODIS image composites and almost 158,000 fire detections. And on top of all that data, a machine-learning model that learns from 14 fire seasons and forecasts the next five days. Tested on seasons it never saw, it beats an average year by 8% for tomorrow and still by 5% on day five. So the question changes from “how badly did it burn?” to “where and when is fire likely, before it happens?”</aside>
+</section>
