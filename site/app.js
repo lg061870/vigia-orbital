@@ -29,6 +29,7 @@ async function tryLiveApi() {
     const r = await fetch(api + "/forecast/all", {signal: AbortSignal.timeout(30000)});
     if (!r.ok) throw new Error(r.status);
     const j = await r.json(), cantons = {};
+    if (S.data.latest && j.eve < S.data.latest.eve) throw new Error("API forecast older than the saved one");
     for (const c of j.cantons) cantons[c.canton_id] = {name: c.canton, eve: c.eve, days: c.days, conditions: c.conditions};
     S.data.latest = {eve: j.eve, cantons, inputs: j.inputs};
     S.live = api;
@@ -65,13 +66,15 @@ function render() {
     `Issued on the evening of ${fmtDay(eve, {weekday: "long", day: "numeric", month: "long", year: "numeric"})} · map shows ${fmtDay(day.date, {weekday: "long", day: "numeric", month: "short"})}`;
   document.getElementById("note").innerHTML = S.mode === "demo"
     ? "Demo: a real past week. The model used here was trained <b>without any 2018 data</b>, so this is an honest back-test. ✓ = fire detected by satellite that day."
+    : S.live && !D.inputs
+      ? `<b>Live:</b> computed just now by the <a href="${S.live}/docs">Vigía Orbital API</a> (FastAPI).`
     : S.live
       ? `<b>Live:</b> computed just now by the <a href="${S.live}/docs">Vigía Orbital API</a> (FastAPI) with the newest NASA data. ` +
         `Fire detections (NASA FIRMS, VIIRS NOAA-20): through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}. ` +
         `Weather (NASA POWER, published a few days late): ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}. ` +
         `Vegetation (MODIS composites): ${fmtDay(D.inputs.ndmi_composite || D.inputs.ndvi_composite, {day: "numeric", month: "short"})}.`
-      : `Saved forecast, issued ${fmtDay(D.eve, {day: "numeric", month: "short"})} (refreshed every morning; the live API is not responding right now).` +
-        (D.inputs ? ` Fire detections through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}; weather from ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}.` : "");
+      : `Saved forecast, issued ${fmtDay(D.eve, {day: "numeric", month: "short"})} (refreshed every morning; the live API is asleep or out of date right now).` +
+        (D.inputs && D.inputs.recent_fire_through ? ` Fire detections through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}; weather from ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}.` : "");
 
   S.layer.eachLayer(l => {
     const c = D.cantons[l.feature.properties.canton_id];
