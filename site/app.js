@@ -26,11 +26,11 @@ async function tryLiveApi() {
   const api = (window.VIGIA_API || "").replace(/\/$/, "");
   if (!api) return;
   try {
-    const r = await fetch(api + "/forecast/all", {signal: AbortSignal.timeout(20000)});
+    const r = await fetch(api + "/forecast/all", {signal: AbortSignal.timeout(30000)});
     if (!r.ok) throw new Error(r.status);
     const j = await r.json(), cantons = {};
     for (const c of j.cantons) cantons[c.canton_id] = {name: c.canton, eve: c.eve, days: c.days, conditions: c.conditions};
-    S.data.latest = {eve: j.eve, cantons};
+    S.data.latest = {eve: j.eve, cantons, inputs: j.inputs};
     S.live = api;
   } catch (e) { console.warn("Live API unavailable, using static forecast", e); }
 }
@@ -65,8 +65,12 @@ function render() {
     `Issued on the evening of ${fmtDay(eve, {weekday: "long", day: "numeric", month: "long", year: "numeric"})} · map shows ${fmtDay(day.date, {weekday: "long", day: "numeric", month: "short"})}`;
   document.getElementById("note").innerHTML = S.mode === "demo"
     ? "Demo: a real past week. The model used here was trained <b>without any 2018 data</b>, so this is an honest back-test. ✓ = fire detected by satellite that day."
-    : (S.live ? `<b>Live:</b> computed just now by the <a href="${S.live}/docs">Vigía Orbital API</a> (FastAPI). ` : "") +
-      "Latest eve with complete NASA inputs in the dataset. November is the end of the rainy season, so risk is low across the province.";
+    : S.live
+      ? `<b>Live:</b> computed just now by the <a href="${S.live}/docs">Vigía Orbital API</a> (FastAPI) with the newest NASA data. ` +
+        `Fire detections (NASA FIRMS, VIIRS NOAA-20): through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}. ` +
+        `Weather (NASA POWER, published a few days late): ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}. ` +
+        `Vegetation (MODIS composites): ${fmtDay(D.inputs.ndmi_composite || D.inputs.ndvi_composite, {day: "numeric", month: "short"})}.`
+      : "Saved forecast from the latest day with complete NASA inputs in the dataset (the live API is not responding). November is the end of the rainy season, so risk is low across the province.";
 
   S.layer.eachLayer(l => {
     const c = D.cantons[l.feature.properties.canton_id];
@@ -101,6 +105,7 @@ function render() {
     }).join("") +
     `<p class="muted">Each factor multiplies the odds of fire: above ×1 raises the risk (orange), below ×1 lowers it (blue).</p>`;
 
+  document.getElementById("cdate").textContent = "· " + fmtDay(sel.conditions.date || D.eve, {weekday: "short", day: "numeric", month: "short", year: "numeric"});
   const c = sel.conditions, v = (x, u = "") => x == null ? "–" : x + u;
   document.getElementById("cond").innerHTML = [
     ["Max temp", v(c.t_max_c, " °C")], ["Min temp", v(c.t_min_c, " °C")], ["Humidity", v(c.humidity_pct, " %")], ["Wind", v(c.wind_kmh, " km/h")],

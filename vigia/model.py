@@ -179,3 +179,45 @@ def forecast(cd: pd.DataFrame, params: dict, canton: str, eve: str | pd.Timestam
                     "x_vegetation": round(float(np.exp(b["V"] * x.V)), 2),
                     "x_recent_fire": round(float(np.exp(b["fuego_7d_z"] * x.fuego_7d_z)), 2)})
     return pd.DataFrame(out)
+
+
+def forecast_now(cd: pd.DataFrame, params: dict, canton: str, today: str | pd.Timestamp) -> tuple[pd.DataFrame, dict]:
+    """5-day forecast issued on the evening of `today` (days today+1 … today+5).
+
+    Recent fire (F) and the normal for the week (H) use `today`. Weather (C) and vegetation (V)
+    come from the newest day with complete inputs, because NASA POWER publishes a few days late
+    and MODIS composites weeks late: their anomalies are carried forward to `today`.
+    Returns the forecast table and a dict with the dates of each input.
+    """
+    today = pd.Timestamp(today).normalize()
+    feats = apply_features(cd, params)
+    rows = feats[feats.canton.eq(canton) | feats.canton_id.eq(canton)]
+    comp = rows[rows.date <= today].dropna(subset=FEATS)
+    if comp.empty:
+        raise ValueError(f"No complete data for {canton}")
+    w = comp.iloc[-1]
+    t = rows[rows.date == today]
+    if t.empty:
+        raise ValueError(f"No row for {canton} on {today.date()}")
+    t = t.iloc[0]
+    x = w.copy()
+    x["fuego_7d_z"], x["semana"], x["date"] = t.fuego_7d_z, t.semana, today
+    out = []
+    for k in LEADS:
+        lp = params["leads"][str(k)]
+        b = lp["coef"]
+        hn = pd.DataFrame(lp["h_norm"])
+        h = hn[(hn.canton_id == x.canton_id) & (hn.semana == x.semana)].H_norm
+        h_norm = float(h.iloc[0]) if len(h) else lp["h_fill"]
+        eta = b["const"] + b["H_norm"] * h_norm + sum(b[f] * float(x[f]) for f in FEATS)
+        p = 1 / (1 + np.exp(-eta))
+        out.append({"eve": today.date(), "lead": k, "date": (today + pd.Timedelta(days=k)).date(),
+                    "prob": round(float(p), 3), "level": level(float(p)),
+                    "normal_prob": round(float(1 / (1 + np.exp(-h_norm))), 3),
+                    "x_weather": round(float(np.exp(b["C"] * x.C)), 2),
+                    "x_vegetation": round(float(np.exp(b["V"] * x.V)), 2),
+                    "x_recent_fire": round(float(np.exp(b["fuego_7d_z"] * x.fuego_7d_z)), 2)})
+    dt = lambda c: str(pd.Timestamp(w[c]).date()) if c in w and pd.notna(w[c]) else None  # noqa: E731
+    info = {"weather_as_of": str(w.date.date()), "ndvi_composite": dt("vi_date"), "ndmi_composite": dt("ndmi_date"),
+            "recent_fire_through": str(today.date())}
+    return pd.DataFrame(out), info
