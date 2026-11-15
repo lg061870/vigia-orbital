@@ -70,7 +70,8 @@ function render() {
         `Fire detections (NASA FIRMS, VIIRS NOAA-20): through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}. ` +
         `Weather (NASA POWER, published a few days late): ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}. ` +
         `Vegetation (MODIS composites): ${fmtDay(D.inputs.ndmi_composite || D.inputs.ndvi_composite, {day: "numeric", month: "short"})}.`
-      : "Saved forecast from the latest day with complete NASA inputs in the dataset (the live API is not responding). November is the end of the rainy season, so risk is low across the province.";
+      : `Saved forecast, issued ${fmtDay(D.eve, {day: "numeric", month: "short"})} (refreshed every morning; the live API is not responding right now).` +
+        (D.inputs ? ` Fire detections through ${fmtDay(D.inputs.recent_fire_through, {day: "numeric", month: "short"})}; weather from ${fmtDay(D.inputs.weather_as_of, {day: "numeric", month: "short"})}.` : "");
 
   S.layer.eachLayer(l => {
     const c = D.cantons[l.feature.properties.canton_id];

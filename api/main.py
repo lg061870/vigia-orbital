@@ -45,7 +45,11 @@ _ensure("vigia/live.py")
 try:
     from vigia.model import forecast_now  # noqa: F401
 except ImportError:                       # an older copy of vigia/model.py: fetch the current one
+    import importlib
+
+    import vigia.model
     _ensure("vigia/model.py", refresh=True)
+    importlib.reload(vigia.model)
 from vigia import live  # noqa: E402
 from vigia.model import LEVELS, forecast, forecast_now, load_params, prepare_daily  # noqa: E402,F811
 

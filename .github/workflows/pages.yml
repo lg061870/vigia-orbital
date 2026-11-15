@@ -2,7 +2,9 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/pages.yml"]
+    paths: ["site/**", "vigia/**", "api/**", "scripts/daily_forecast.py", ".github/workflows/pages.yml"]
+  schedule:
+    - cron: "17 11 * * *"     # every day 05:17 Costa Rica (11:17 UTC): today's forecast
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +21,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r api/requirements.txt
+      - name: Issue today's forecast with the newest NASA data
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: python scripts/daily_forecast.py || echo "Daily forecast failed; deploying the last saved forecast"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
