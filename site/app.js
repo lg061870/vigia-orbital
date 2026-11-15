@@ -41,7 +41,7 @@ function initMap(geo) {
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
     {maxZoom: 12, opacity: 0.55, attribution: "© OpenStreetMap contributors · boundaries: geoBoundaries"}).addTo(map);
   S.layer = L.geoJSON(geo, {
-    style: () => ({weight: 1.2, color: "#0F2236", fillOpacity: 0.45}),
+    style: () => ({weight: 1.2, color: "#0F2236", fillOpacity: 0.25}),
     onEachFeature: (f, l) => {
       l.on("click", () => { S.canton = f.properties.canton_id; render(); });
       l.bindTooltip("", {sticky: true});
