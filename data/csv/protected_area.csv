@@ -1,0 +1,133 @@
+osm_id,name,boundary,leisure,protect_class,protection_title,centroid_lon,centroid_lat
+1308865,Parque Nacional Corcovado,national_park,,2,,-83.573442,8.547114
+2175048,Parque Nacional Manuel Antonio,national_park,,2,,-84.228972,9.096236
+7888685,Reserva Biológica Islas Negritos,protected_area,nature_reserve,1a,,-84.848332,9.821678
+8010592,Reserva Biológica Isla Guayabo,protected_area,nature_reserve,1a,,-84.878542,9.911662
+10312542,Parque Nacional Volcán Arenal,national_park,,2,,-84.735036,10.42313
+10312737,Parque Nacional Tortuguero,national_park,,2,,-83.414922,10.487674
+10313715,Parque Nacional Chirripó,national_park,,2,,-83.508533,9.501542
+10313716,Parque Internacional La Amistad,national_park,,2,,-83.163614,9.406649
+10316240,Parque Nacional Braulio Carrillo,national_park,,2,,-84.019875,10.176179
+10316799,Parque Nacional Piedras Blancas,national_park,,2,,-83.260456,8.70765
+10316865,Refugio de Vida Silvestre Bahía Junquillal,protected_area,,4,,-85.681922,10.96431
+10316874,Parque Nacional Santa Rosa,national_park,,2,,-85.766707,10.816521
+10316875,Parque Nacional Guanacaste,national_park,,2,,-85.525896,10.954042
+10322859,Parque Nacional Volcán Poás,national_park,,2,,-84.228401,10.209657
+10322860,Reserva Forestal Grecia,protected_area,,6,,-84.26312,10.15976
+10323071,Zona Protectora Las Tablas,protected_area,,6,,-82.824012,8.971054
+10323072,Reserva Forestal Río Macho,protected_area,,6,,-83.560459,9.696328
+10323073,Parque Nacional Tapantí - Macizo Cerro de la Muerte,national_park,,2,,-83.709725,9.673568
+10323074,Reserva Biológica Cerro Las Vueltas,protected_area,nature_reserve,1a,,-83.859147,9.615365
+10323075,Reserva Forestal Los Santos,protected_area,,6,,-83.874634,9.54204
+10323076,Parque Nacional Los Quetzales,national_park,,2,,-83.831682,9.585613
+10323115,Parque Nacional Volcán Turrialba,national_park,,1b,,-83.764788,10.018455
+10323116,Reserva Forestal Cordillera Volcánica Central,protected_area,,6,,-83.893278,10.107999
+10323117,Zona Protectora La Selva,protected_area,,6,,-84.031062,10.399172
+10323118,Parque nacional Volcán Irazú,national_park,,2,,-83.860229,9.974836
+10323153,Reserva Forestal Río Pacuare,protected_area,,6,,-83.472576,10.026859
+10323154,Parque Nacional Barbilla,national_park,,2,,-83.420335,9.940789
+10323871,Reserva Natural Absoluta Cabo Blanco,protected_area,,1a,,-85.112804,9.569196
+10323872,Refugio de Vida Silvestre Romelia,protected_area,,4,,-85.043973,9.677349
+10323873,Area Marina de Manejo Cabo Blanco,protected_area,,,,-85.118662,9.55802
+10323874,Reserva Natural Absoluta Nicolas Wessberg,protected_area,,,,-85.058923,9.666228
+10323875,Refugio de Vida Silvestre Caletas Ario,protected_area,,4,,-85.309088,9.663587
+10323889,Refugio de Vida Silvestre Hacienda El Viejo,protected_area,,4,,-85.415571,10.389534
+10323890,Parque Nacional Palo Verde,national_park,nature_reserve,2,,-85.308469,10.343768
+10323891,Humedal Palustrino Corral de Piedra,protected_area,,,,-85.309532,10.27687
+10323892,Reserva Biológica Lomas de Barbudal,protected_area,nature_reserve,1a,,-85.337915,10.461851
+10323893,Refugio de Vida Silvestre Cipanci,protected_area,,4,,-85.286787,10.274934
+10323974,Refugio de Vida Silvestre Saimiri,protected_area,,4,,-83.453246,8.445093
+10323975,Refugio de Vida Silvestre Carate,protected_area,,4,,-83.467496,8.447694
+10323976,Humedal Térraba Sierpe,protected_area,,,,-83.52235,8.864311
+10323977,Refugio Nacional de Vida Silvestre Osa,protected_area,nature_reserve,4,,-83.3301,8.413588
+10323978,Refugio de Vida Silvestre Golfito,protected_area,,4,,-83.191327,8.648574
+10323979,Reserva Forestal Golfo Dulce,protected_area,,6,,-83.474818,8.645565
+10323980,Refugio de Vida Silvestre Punta Río Claro,protected_area,,4,,-83.706176,8.677366
+10326052,Reserva Forestal Zona de Emergencia Volcán Arenal,protected_area,,6,,-84.717542,10.494267
+10326143,Refugio de Vida Silvestre Portalón,protected_area,,4,,-83.984395,9.349399
+10326160,Refugio de Vida Silvestre Fernando Castro Cervantes,protected_area,,4,,-84.511443,9.783329
+10326161,Parque nacional Carara,national_park,,2,,-84.564691,9.78171
+10326258,Area Marina de Manejo Bahía Santa Elena,protected_area,,,,-85.802714,10.925547
+10326316,Refugio de Vida Silvestre Corredor Fronterizo,protected_area,,4,,-84.594243,10.94389
+10326317,Refugio de Vida Silvestre Barra del Colorado,protected_area,,4,,-83.720026,10.675705
+10326318,Humedal Nacional Cariari,protected_area,,,,-83.255848,10.181414
+10326319,Refugio de Vida Silvestre Archie Carr,protected_area,,4,,-83.51759,10.574182
+10326320,Refugio de Vida Silvestre Maquenque,protected_area,,4,,-84.148076,10.683421
+10326321,Reserva Forestal Pacuare Matina,protected_area,,6,,-83.250451,10.180304
+10327203,Refugio Nacional de Vida Silvestre Isla Chora,protected_area,,4,,-85.514574,9.861738
+10327206,Reserva Biológica Isla Pájaros,protected_area,nature_reserve,1a,,-84.996532,10.093868
+10327209,Humedal Lacustrino Bonilla Bonillita,protected_area,,,,-83.602281,9.99705
+10327210,Refugio de Vida Silvestre Río General,protected_area,,4,,-83.495079,9.211958
+10329714,Refugio de Vida Silvestre Curú,protected_area,,4,,-84.91711,9.792725
+10329715,Refugio de Vida Silvestre Finca Baru del Pacifico,protected_area,,4,,-83.874331,9.266523
+11805655,Zona Protectora Cerros de La Carpintera,protected_area,,6,,-83.989097,9.883042
+11805693,Zona Protectora Cerro de Escazú,protected_area,,6,,-84.171546,9.874299
+11805698,Zona Protectora Caraigres,protected_area,,6,,-84.144544,9.725437
+11805901,Reserva Forestal Taboga,protected_area,,6,,-85.142131,10.329195
+11805953,Reserva Biológica Isla del Caño,protected_area,nature_reserve,1a,,-83.879727,8.706861
+11805954,Reserva Biológica Hitoy Cerere,protected_area,nature_reserve,1a,,-83.083711,9.646675
+11805956,Reserva Biológica Alberto Manuel Brenes,protected_area,nature_reserve,1a,,-84.63097,10.240441
+11805959,Refugio Nacional de Vida Silvestre Pejeperro,protected_area,,4,,-83.401633,8.414827
+11805962,Refugio Nacional de Vida Silvestre Mata Redonda,protected_area,,4,,-85.41366,10.316066
+11805965,"Refugio Nacional de Vida Silvestre Gandoca - Manzanillo, Jairo Mora Sandoval",protected_area,,4,,-82.635371,9.618555
+11805966,Refugio Nacional de Vida Silvestre Curi-Cancha,protected_area,,4,,-84.800626,10.307339
+11808208,Refugio de Vida Silvestre Cerro Redondo,protected_area,,4,,-84.182652,9.598724
+11808209,Refugio de Vida Silvestre Werner Sauter,protected_area,,4,,-85.518776,9.893858
+11808210,Refugio de Vida Silvestre Transilvania,protected_area,,4,,-83.936805,9.340096
+11808226,Refugio de Vida Silvestre Rancho La Merced,protected_area,,4,,-83.761286,9.183244
+11808229,Refugio de Vida Silvestre Quillotro,protected_area,,4,,-83.718123,8.642857
+11808230,Refugio de Vida Silvestre Preciosa Platanares,protected_area,,4,,-83.290878,8.526691
+11808231,Refugio de Vida Silvestre Playa Hermosa-Punta Mala,protected_area,,4,,-84.56267,9.535693
+11808235,Refugio de Vida Silvestre Peñas Blancas,protected_area,,4,,-84.675421,10.138462
+11808236,Refugio de Vida Silvestre Ostional,protected_area,,4,,-85.71037,9.956018
+11808238,Refugio de Vida Silvestre Montaña de El Tigre,protected_area,,4,,-83.425385,9.158017
+11808239,Refugio de Vida Silvestre Longo Mai,protected_area,,4,,-83.481579,9.269947
+11808241,Refugio de Vida Silvestre Limoncito,protected_area,,4,,-83.034673,9.953649
+11808346,Refugio de Vida Silvestre Lapa Verde,protected_area,,1b,,-84.058875,10.480608
+11808351,Refugio de Vida Silvestre Lagunas las Camelias,protected_area,,4,,-85.101102,10.962364
+11808361,Refugio de Vida Silvestre La Tirimbina,protected_area,,4,,-84.114051,10.410781
+11808389,Refugio de Vida Silvestre Iguanita,protected_area,,4,,-85.625855,10.625437
+11808404,Refugio de Vida Silvestre Caño Negro,protected_area,,4,,-84.765977,10.874042
+11808411,Refugio de Vida Silvestre Conchal,protected_area,,4,,-85.814273,10.396081
+11808434,Refugio de Vida Silvestre Duaru,protected_area,,4,,-84.579252,10.563177
+11808442,Refugio de Vida Silvestre Camaronal,protected_area,,4,,-85.435484,9.754617
+11808632,Refugio de Vida Silvestre Bosque Alegre,protected_area,,4,,-84.214274,10.306095
+11808677,Refugio de Vida Silvestre Ara Macao,protected_area,,4,,-84.667426,9.676386
+11808684,Zona Protectora Miravalles,national_park,,,,-85.128477,10.727902
+11808689,Monumento nacional Guayabo,protected_area,,22,,-83.694241,9.972584
+11808781,Humedal Marino Playa Blanca,protected_area,,,,-84.672698,9.697767
+11808815,Humedal Laguna Madrigal,protected_area,,,,-85.161393,10.286795
+11808853,Humedal Lacustrino Río Cañas,protected_area,,,,-85.612426,10.334636
+11808858,Humedal Lacustrino Laguna del Paraguas,protected_area,,,,-82.987531,8.787944
+11808863,Humedal Estero Puntarenas y Manglares Asociados,protected_area,,,,-84.852471,10.010508
+11808888,Humedal De San Vito,protected_area,,,,-82.951077,8.827224
+11814236,Parque Nacional Marino Ballena,protected_area,,2,Parque Nacional,-83.74474,9.121763
+11814371,Parque Nacional Diriá,national_park,,2,,-85.594359,10.160747
+11814893,Parque Nacional Isla San Lucas,national_park,,2,,-84.905228,9.939156
+11829341,Parque Nacional Miravalles-Jorge Manuel Dengo,protected_area,,2,,-85.135337,10.731667
+11849725,Zona Protectora Río Grande,protected_area,,6,,-84.395301,10.034868
+11849733,Zona Protectora Cerro Atenas,protected_area,,6,,-84.425562,9.957397
+12209654,Parque Nacional Rincón de la Vieja,national_park,,2,,-85.319939,10.795857
+12209655,Estación Experimental Forestal Horizontes,,nature_reserve,,,-85.572216,10.741494
+12209656,Área de Conservación Guanacaste,protected_area,nature_reserve,98,world_heritage_convention,-85.646214,10.844128
+12581795,Parque nacional Barra Honda,national_park,,2,,-85.344706,10.184291
+12581797,Parque Nacional Juan Castro Blanco,national_park,,2,,-84.329551,10.284726
+12582065,Parque Nacional Marino Las Baulas,national_park,,2,,-85.952631,10.319934
+12582073,Parque nacional Cahuita,national_park,,2,,-82.737404,9.780881
+12582130,Parque Nacional Volcán Tenorio,national_park,,2,,-84.981458,10.656362
+12582137,Parque Nacional la Cangreja,national_park,,2,,-84.375967,9.71365
+13999852,Reserva Nacional Río Reventado,,nature_reserve,,,-83.934293,9.871339
+14576455,field station property (approximate),protected_area,,,,-83.865738,9.278522
+14709725,Parque Natural Urbano Lorne Ross,,nature_reserve,,,-84.196144,9.941155
+15619700,"Plantación forestal de teca, Finca Figuero",protected_area,,,,-83.552194,8.922171
+16339033,Refugio de Vida Silvestre Los Guatuzos,protected_area,,,,-84.928342,11.037591
+19964548,Refugio de Vida Silvestre La Ensenada,protected_area,,4,,-85.043671,10.144103
+20813596,Zona Protectora Cuenca Río Abangares,protected_area,,6,,-84.901545,10.308466
+20813865,Zona Protectora Tivives,protected_area,,6,,-84.698064,9.899587
+20962572,Zona Protectora Cerros de Turrubares,protected_area,,6,,-84.49222,9.81619
+20962678,Zona Protectora Península de Nicoya,protected_area,,6,,-85.08181,9.840623
+20963254,Zona Protectora Monte Alto,protected_area,,6,,-85.402097,10.017118
+21256319,Reserva Natural Caracara,protected_area,,,,-83.660304,9.106687
+21256321,Parque Natural,protected_area,,,,-83.658329,9.107473
+21290749,Parque Nacional Marino Ballena - Sector Terrestre,protected_area,,2,Area terrestre protegida,-83.73697,9.145459
+21290750,Parque Nacional Marino Ballena - Sector Marino,protected_area,,2,Area marina protegida,-83.745004,9.120955

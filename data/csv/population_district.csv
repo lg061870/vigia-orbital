@@ -1,0 +1,479 @@
+ADM1_ES,ADM1_PCODE,ADM2_ES,ADM2_PCODE,ADM3_ES,ADM3_PCODE,F_TL,M_TL,T_TL
+San José,CR1,San José,CR101,Carmen,CR10101,1521,1452,2973
+San José,CR1,San José,CR101,Merced,CR10102,7773,7536,15309
+San José,CR1,San José,CR101,Hospital,CR10103,12065,11794,23859
+San José,CR1,San José,CR101,Catedral,CR10104,7910,7729,15639
+San José,CR1,San José,CR101,Zapote,CR10105,11139,10790,21929
+San Jose,CR1,San Jose,CR101,San Francisco de Dos Rios,CR10106,11982,11714,23696
+San José,CR1,San José,CR101,Uruca,CR10107,21131,21170,42301
+San José,CR1,San José,CR101,Mata Redonda,CR10108,5107,4990,10097
+San José,CR1,San José,CR101,Pavas,CR10109,44579,44037,88616
+San José,CR1,San José,CR101,Hatillo,CR10110,30455,29861,60316
+San Jose,CR1,San Jose,CR101,San Sebastián,CR10111,22659,22284,44943
+San Jose,CR1,Escazu,CR102,Escazu,CR10201,6974,6764,13738
+San José,CR1,Escazú,CR102,San Antonio,CR10202,14154,13878,28032
+San José,CR1,Escazú,CR102,San Rafael,CR10203,14695,14177,28872
+San José,CR1,Desamparados,CR103,Desamparados,CR10301,18757,18654,37411
+San José,CR1,Desamparados,CR103,San Miguel,CR10302,19195,19132,38327
+San José,CR1,Desamparados,CR103,San Juan de Dios,CR10303,12107,12109,24216
+San José,CR1,Desamparados,CR103,San Rafael Arriba,CR10304,9169,9074,18243
+San José,CR1,Desamparados,CR103,San Antonio,CR10305,5699,5578,11277
+San José,CR1,Desamparados,CR103,Frailes,CR10306,2280,2275,4555
+San Jose,CR1,Desamparados,CR103,Patarrá,CR10307,7383,7365,14748
+San Jose,CR1,Desamparados,CR103,San Cristobal,CR10308,2378,2356,4734
+San José,CR1,Desamparados,CR103,Rosario,CR10309,1886,1867,3753
+San José,CR1,Desamparados,CR103,Damas,CR10310,7792,7780,15572
+San José,CR1,Desamparados,CR103,San Rafael Abajo,CR10311,13309,13357,26666
+San José,CR1,Desamparados,CR103,Gravilias,CR10312,8639,8506,17145
+San José,CR1,Desamparados,CR103,Los Guido,CR10313,15348,15337,30685
+San José,CR1,Puriscal,CR104,Santiago,CR10401,6219,6333,12552
+San José,CR1,Puriscal,CR104,Mercedes Sur,CR10402,3494,3546,7040
+San José,CR1,Puriscal,CR104,Barbacoas,CR10403,2207,2226,4433
+San José,CR1,Puriscal,CR104,Grifo Alto,CR10404,732,744,1476
+San José,CR1,Puriscal,CR104,San Rafael,CR10405,989,1008,1997
+San José,CR1,Puriscal,CR104,Candelaria,CR10406,864,871,1735
+San José,CR1,Puriscal,CR104,Desamparaditos,CR10407,390,396,786
+San José,CR1,Puriscal,CR104,San Antonio,CR10408,2311,2357,4668
+San José,CR1,Puriscal,CR104,Chires,CR10409,1808,1803,3611
+San José,CR1,Tarrazú,CR105,San Marcos,CR10501,5568,5718,11286
+San José,CR1,Tarrazú,CR105,San Lorenzo,CR10502,2542,2680,5222
+San José,CR1,Tarrazú,CR105,San Carlos,CR10503,1066,1092,2158
+San Jose,CR1,Aserri,CR106,Aserri,CR10601,15036,15166,30202
+San José,CR1,Aserrí,CR106,Tarbaca,CR10602,841,824,1665
+San José,CR1,Aserrí,CR106,Vuelta de Jorco,CR10603,3637,3645,7282
+San José,CR1,Aserrí,CR106,San Gabriel,CR10604,3405,3466,6871
+San José,CR1,Aserrí,CR106,Legua,CR10605,863,875,1738
+San José,CR1,Aserrí,CR106,Monterrey,CR10606,276,277,553
+San José,CR1,Aserrí,CR106,Salitrillos,CR10607,7834,7877,15711
+San Jose,CR1,Mora,CR107,Colon,CR10701,8702,8648,17350
+San José,CR1,Mora,CR107,Guayabo,CR10702,2690,2664,5354
+San José,CR1,Mora,CR107,Tabarcia,CR10703,2574,2530,5104
+San José,CR1,Mora,CR107,Piedras Negras,CR10704,235,261,496
+San José,CR1,Mora,CR107,Picagres,CR10705,445,446,891
+San José,CR1,Mora,CR107,Jaris,CR10706,689,662,1351
+San José,CR1,Goicoechea,CR108,Guadalupe,CR10801,11402,11013,22415
+San José,CR1,Goicoechea,CR108,San Francisco,CR10802,1215,1193,2408
+San José,CR1,Goicoechea,CR108,Calle Blancos,CR10803,11760,11520,23280
+San Jose,CR1,Goicoechea,CR108,Mata de Plátano,CR10804,10676,10353,21029
+San Jose,CR1,Goicoechea,CR108,Ipis,CR10805,16061,15693,31754
+San José,CR1,Goicoechea,CR108,Rancho Redondo,CR10806,1608,1579,3187
+San José,CR1,Goicoechea,CR108,Purral,CR10807,17966,17639,35605
+San José,CR1,Santa Ana,CR109,Santa Ana,CR10901,6498,6423,12921
+San José,CR1,Santa Ana,CR109,Salitral,CR10902,2749,2759,5508
+San José,CR1,Santa Ana,CR109,Pozos,CR10903,10199,10183,20382
+San José,CR1,Santa Ana,CR109,Uruca,CR10904,4551,4464,9015
+San José,CR1,Santa Ana,CR109,Piedades,CR10905,5098,5041,10139
+San José,CR1,Santa Ana,CR109,Brasil,CR10906,1608,1589,3197
+San José,CR1,Alajuelita,CR110,Alajuelita,CR11001,6587,6676,13263
+San José,CR1,Alajuelita,CR110,San Josecito,CR11002,6416,6486,12902
+San José,CR1,Alajuelita,CR110,San Antonio,CR11003,2942,2982,5924
+San José,CR1,Alajuelita,CR110,Concepción,CR11004,11488,11663,23151
+San José,CR1,Alajuelita,CR110,San Felipe,CR11005,20051,20577,40628
+San José,CR1,Vásquez de Coronado,CR111,San Isidro,CR11101,9423,9168,18591
+San José,CR1,Vásquez de Coronado,CR111,San Rafael,CR11102,4314,4241,8555
+San Jose,CR1,Vásquez de Coronado,CR111,Dulce Nombre de Jesus,CR11103,6029,5984,12013
+San José,CR1,Vásquez de Coronado,CR111,Patalillo,CR11104,12422,12235,24657
+San José,CR1,Vásquez de Coronado,CR111,Cascajal,CR11105,4251,4244,8495
+San José,CR1,Acosta,CR112,San Ignacio,CR11201,4589,4846,9435
+San José,CR1,Acosta,CR112,Guaitil,CR11202,1307,1359,2666
+San José,CR1,Acosta,CR112,Palmichal,CR11203,2526,2729,5255
+San José,CR1,Acosta,CR112,Cangrejal,CR11204,1030,1074,2104
+San José,CR1,Acosta,CR112,Sabanillas,CR11205,1293,1361,2654
+San José,CR1,Tibás,CR113,San Juan,CR11301,13323,12596,25919
+San José,CR1,Tibás,CR113,Cinco Esquinas,CR11302,4252,4261,8513
+San José,CR1,Tibás,CR113,Anselmo Llorente,CR11303,6589,6261,12850
+San Jose,CR1,Tibás,CR113,Leon XIII,CR11304,10214,10019,20233
+San José,CR1,Tibás,CR113,Colima,CR11305,9152,8819,17971
+San José,CR1,Moravia,CR114,San Vicente,CR11401,16420,15678,32098
+San Jose,CR1,Moravia,CR114,San Jeronimo,CR11402,3743,3642,7385
+San José,CR1,Moravia,CR114,Trinidad,CR11403,11931,11564,23495
+San José,CR1,Montes de Oca,CR115,San Pedro,CR11501,14879,14066,28945
+San José,CR1,Montes de Oca,CR115,Sabanilla,CR11502,7204,6807,14011
+San José,CR1,Montes de Oca,CR115,Mercedes,CR11503,3111,2952,6063
+San José,CR1,Montes de Oca,CR115,San Rafael,CR11504,6986,6708,13694
+San José,CR1,Turrubares,CR116,San Pablo,CR11601,755,811,1566
+San José,CR1,Turrubares,CR116,San Pedro,CR11602,399,453,852
+San José,CR1,Turrubares,CR116,San Juan de Mata,CR11603,733,793,1526
+San José,CR1,Turrubares,CR116,San Luis,CR11604,333,376,709
+San José,CR1,Turrubares,CR116,Carara,CR11605,1102,1196,2298
+San Jose,CR1,Dota,CR117,Santa Maria,CR11701,2590,2626,5216
+San Jose,CR1,Dota,CR117,Jardin,CR11702,342,360,702
+San José,CR1,Dota,CR117,Copey,CR11703,1031,1051,2082
+San José,CR1,Curridabat,CR118,Curridabat,CR11801,16667,15950,32617
+San José,CR1,Curridabat,CR118,Granadilla,CR11802,9644,9367,19011
+San Jose,CR1,Curridabat,CR118,Sánchez,CR11803,3470,3314,6784
+San José,CR1,Curridabat,CR118,Tirrases,CR11804,10974,10756,21730
+San José,CR1,Pérez Zeledón,CR119,San Isidro de El General,CR11901,24320,24025,48345
+San José,CR1,Pérez Zeledón,CR119,General,CR11902,3439,3428,6867
+San José,CR1,Pérez Zeledón,CR119,Daniel Flores,CR11903,17769,17754,35523
+San José,CR1,Pérez Zeledón,CR119,Rivas,CR11904,3660,3650,7310
+San José,CR1,Pérez Zeledón,CR119,San Pedro,CR11905,4718,4671,9389
+San José,CR1,Pérez Zeledón,CR119,Platanares,CR11906,3783,3730,7513
+San José,CR1,Pérez Zeledón,CR119,Pejibaye,CR11907,4078,3950,8028
+San Jose,CR1,Perez Zeledon,CR119,Cajon,CR11908,4543,4516,9059
+San Jose,CR1,Perez Zeledon,CR119,Baru,CR11909,1424,1424,2848
+San Jose,CR1,Perez Zeledon,CR119,Rio Nuevo,CR11910,1753,1732,3485
+San Jose,CR1,Perez Zeledon,CR119,Páramo,CR11911,2451,2404,4855
+San José,CR1,León Cortés,CR120,San Pablo,CR12001,2344,2285,4629
+San Jose,CR1,Leon Cortes,CR120,San Andres,CR12002,859,875,1734
+San José,CR1,León Cortés,CR120,Llano Bonito,CR12003,1102,1150,2252
+San José,CR1,León Cortés,CR120,San Isidro,CR12004,933,921,1854
+San José,CR1,León Cortés,CR120,Santa Cruz,CR12005,1003,1139,2142
+San José,CR1,León Cortés,CR120,San Antonio,CR12006,592,671,1263
+Alajuela,CR2,Alajuela,CR201,Alajuela,CR20101,23786,24428,48214
+Alajuela,CR2,Alajuela,CR201,San José,CR20102,25715,26305,52020
+Alajuela,CR2,Alajuela,CR201,Carrizal,CR20103,4373,4497,8870
+Alajuela,CR2,Alajuela,CR201,San Antonio,CR20104,15441,15779,31220
+Alajuela,CR2,Alajuela,CR201,Guácima,CR20105,12885,13351,26236
+Alajuela,CR2,Alajuela,CR201,San Isidro,CR20106,10981,11284,22265
+Alajuela,CR2,Alajuela,CR201,Sabanilla,CR20107,6011,6182,12193
+Alajuela,CR2,Alajuela,CR201,San Rafael,CR20108,16617,17116,33733
+Alajuela,CR2,Alajuela,CR201,Rio Segundo,CR20109,6595,6800,13395
+Alajuela,CR2,Alajuela,CR201,Desamparados,CR20110,16315,16877,33192
+Alajuela,CR2,Alajuela,CR201,Turrucares,CR20111,4596,4686,9282
+Alajuela,CR2,Alajuela,CR201,Tambor,CR20112,6961,7162,14123
+Alajuela,CR2,Alajuela,CR201,Garita,CR20113,4656,4720,9376
+Alajuela,CR2,Alajuela,CR201,Sarapiqui,CR20114,1946,2022,3968
+Alajuela,CR2,San Ramon,CR202,San Ramon,CR20201,4538,4568,9106
+Alajuela,CR2,San Ramón,CR202,Santiago,CR20202,2793,2827,5620
+Alajuela,CR2,San Ramón,CR202,San Juan,CR20203,6574,6690,13264
+Alajuela,CR2,San Ramón,CR202,Piedades Norte,CR20204,4710,4755,9465
+Alajuela,CR2,San Ramón,CR202,Piedades Sur,CR20205,2265,2288,4553
+Alajuela,CR2,San Ramón,CR202,San Rafael,CR20206,5380,5403,10783
+Alajuela,CR2,San Ramón,CR202,San Isidro,CR20207,2940,2929,5869
+Alajuela,CR2,San Ramón,CR202,Angeles,CR20208,4849,4848,9697
+Alajuela,CR2,San Ramón,CR202,Alfaro,CR20209,4141,4167,8308
+Alajuela,CR2,San Ramón,CR202,Volio,CR20210,1342,1356,2698
+Alajuela,CR2,San Ramón,CR202,Concepción,CR20211,1372,1381,2753
+Alajuela,CR2,San Ramón,CR202,Zapotal,CR20212,255,260,515
+Alajuela,CR2,San Ramón,CR202,Peñas Blancas,CR20213,6046,6166,12212
+Alajuela,CR2,Grecia,CR203,Grecia,CR20301,7969,8157,16126
+Alajuela,CR2,Grecia,CR203,San Isidro,CR20302,3586,3624,7210
+Alajuela,CR2,Grecia,CR203,San José,CR20303,4987,5114,10101
+Alajuela,CR2,Grecia,CR203,San Roque,CR20304,6649,6856,13505
+Alajuela,CR2,Grecia,CR203,Tacares,CR20305,4925,4997,9922
+Alajuela,CR2,Grecia,CR203,Rio Cuarto,CR20306,8024,8136,16160
+Alajuela,CR2,Grecia,CR203,Puente de Piedra,CR20307,6485,6618,13103
+Alajuela,CR2,Grecia,CR203,Bolivar,CR20308,4407,4498,8905
+Alajuela,CR2,San Mateo,CR204,San Mateo,CR20401,1472,1586,3058
+Alajuela,CR2,San Mateo,CR204,Desmonte,CR20402,593,594,1187
+Alajuela,CR2,San Mateo,CR204,Jesus Maria,CR20403,723,773,1496
+Alajuela,CR2,San Mateo,CR204,Labrador,CR20404,721,746,1467
+Alajuela,CR2,Atenas,CR205,Atenas,CR20501,3948,4047,7995
+Alajuela,CR2,Atenas,CR205,Jesús,CR20502,2146,2202,4348
+Alajuela,CR2,Atenas,CR205,Mercedes,CR20503,1885,1901,3786
+Alajuela,CR2,Atenas,CR205,San Isidro,CR20504,1730,1746,3476
+Alajuela,CR2,Atenas,CR205,Concepción,CR20505,2082,2126,4208
+Alajuela,CR2,Atenas,CR205,San José,CR20506,1145,1159,2304
+Alajuela,CR2,Atenas,CR205,Santa Eulalia,CR20507,1212,1270,2482
+Alajuela,CR2,Atenas,CR205,Escobal,CR20508,494,517,1011
+Alajuela,CR2,Naranjo,CR206,Naranjo,CR20601,8589,8684,17273
+Alajuela,CR2,Naranjo,CR206,San Miguel,CR20602,2828,2873,5701
+Alajuela,CR2,Naranjo,CR206,San José,CR20603,1797,1840,3637
+Alajuela,CR2,Naranjo,CR206,Cirri Sur,CR20604,2741,2724,5465
+Alajuela,CR2,Naranjo,CR206,San Jeronimo,CR20605,1999,2020,4019
+Alajuela,CR2,Naranjo,CR206,San Juan,CR20606,1827,1819,3646
+Alajuela,CR2,Naranjo,CR206,Rosario,CR20607,2267,2304,4571
+Alajuela,CR2,Naranjo,CR206,Palmitos,CR20608,2469,2507,4976
+Alajuela,CR2,Palmares,CR207,Palmares,CR20701,1898,1868,3766
+Alajuela,CR2,Palmares,CR207,Zaragoza,CR20702,4907,4885,9792
+Alajuela,CR2,Palmares,CR207,Buenos Aires,CR20703,4441,4403,8844
+Alajuela,CR2,Palmares,CR207,Santiago,CR20704,1682,1657,3339
+Alajuela,CR2,Palmares,CR207,Candelaria,CR20705,1219,1211,2430
+Alajuela,CR2,Palmares,CR207,Esquipulas,CR20706,4133,4187,8320
+Alajuela,CR2,Palmares,CR207,Granja,CR20707,2467,2418,4885
+Alajuela,CR2,Poás,CR208,San Pedro,CR20801,4043,4157,8200
+Alajuela,CR2,Poás,CR208,San Juan,CR20802,2740,2824,5564
+Alajuela,CR2,Poás,CR208,San Rafael,CR20803,3219,3341,6560
+Alajuela,CR2,Poás,CR208,Carrillos,CR20804,5497,5651,11148
+Alajuela,CR2,Poás,CR208,Sabana Redonda,CR20805,1480,1518,2998
+Alajuela,CR2,Orotina,CR209,Orotina,CR20901,5239,5352,10591
+Alajuela,CR2,Orotina,CR209,Mastate,CR20902,1093,1120,2213
+Alajuela,CR2,Orotina,CR209,Hacienda Vieja,CR20903,617,608,1225
+Alajuela,CR2,Orotina,CR209,Coyolar,CR20904,3755,3783,7538
+Alajuela,CR2,Orotina,CR209,Ceiba,CR20905,1263,1276,2539
+Alajuela,CR2,San Carlos,CR210,Quesada,CR21001,22420,23439,45859
+Alajuela,CR2,San Carlos,CR210,Florencia,CR21002,8905,9389,18294
+Alajuela,CR2,San Carlos,CR210,Buenavista,CR21003,199,209,408
+Alajuela,CR2,San Carlos,CR210,Aguas Zarcas,CR21004,12664,13179,25843
+Alajuela,CR2,San Carlos,CR210,Venecia,CR21005,5869,6106,11975
+Alajuela,CR2,San Carlos,CR210,Pital,CR21006,12106,12641,24747
+Alajuela,CR2,San Carlos,CR210,Fortuna,CR21007,9454,9843,19297
+Alajuela,CR2,San Carlos,CR210,Tigra,CR21008,3863,4002,7865
+Alajuela,CR2,San Carlos,CR210,Palmera,CR21009,3796,4032,7828
+Alajuela,CR2,San Carlos,CR210,Venado,CR21010,1038,1118,2156
+Alajuela,CR2,San Carlos,CR210,Cutris,CR21011,7374,7809,15183
+Alajuela,CR2,San Carlos,CR210,Monterrey,CR21012,2097,2176,4273
+Alajuela,CR2,San Carlos,CR210,Pocosol,CR21013,9533,9888,19421
+Alajuela,CR2,Zarcero,CR211,Zarcero,CR21101,2120,2258,4378
+Alajuela,CR2,Zarcero,CR211,Laguna,CR21102,992,1019,2011
+Alajuela,CR2,Zarcero,CR211,Tapezco,CR21103,771,792,1563
+Alajuela,CR2,Zarcero,CR211,Guadalupe,CR21104,699,710,1409
+Alajuela,CR2,Zarcero,CR211,Palmira,CR21105,809,882,1691
+Alajuela,CR2,Zarcero,CR211,Zapote,CR21106,446,486,932
+Alajuela,CR2,Zarcero,CR211,Brisas,CR21107,1222,1283,2505
+Alajuela,CR2,Valverde Vega,CR212,Sarchi Norte,CR21201,4118,4221,8339
+Alajuela,CR2,Valverde Vega,CR212,Sarchi Sur,CR21202,3191,3275,6466
+Alajuela,CR2,Valverde Vega,CR212,Toro Amarillo,CR21203,184,195,379
+Alajuela,CR2,Valverde Vega,CR212,San Pedro,CR21204,2183,2229,4412
+Alajuela,CR2,Valverde Vega,CR212,Rodriguez,CR21205,1371,1425,2796
+Alajuela,CR2,Upala,CR213,Upala,CR21301,8187,8367,16554
+Alajuela,CR2,Upala,CR213,Aguas Claras,CR21302,2791,2901,5692
+Alajuela,CR2,Upala,CR213,San José,CR21303,4280,4443,8723
+Alajuela,CR2,Upala,CR213,Bijagua,CR21304,2638,2696,5334
+Alajuela,CR2,Upala,CR213,Delicias,CR21305,2662,2766,5428
+Alajuela,CR2,Upala,CR213,Dos Rios,CR21306,1957,2013,3970
+Alajuela,CR2,Upala,CR213,Yolillal,CR21307,2001,2077,4078
+Alajuela,CR2,Upala,CR213,Canalete,CR21308,2406,2581,4987
+Alajuela,CR2,Los Chiles,CR214,Los Chiles,CR21401,10118,10979,21097
+Alajuela,CR2,Los Chiles,CR214,Caño Negro,CR21402,1134,1175,2309
+Alajuela,CR2,Los Chiles,CR214,El Amparo,CR21403,3713,3977,7690
+Alajuela,CR2,Los Chiles,CR214,San Jorge,CR21404,1612,1733,3345
+Alajuela,CR2,Guatuso,CR215,San Rafael,CR21501,5001,4981,9982
+Alajuela,CR2,Guatuso,CR215,Buenavista,CR21502,986,981,1967
+Alajuela,CR2,Guatuso,CR215,Cote,CR21503,540,547,1087
+Alajuela,CR2,Guatuso,CR215,Katira,CR21504,3187,3237,6424
+Cartago,CR3,Cartago,CR301,Oriental,CR30101,6195,6156,12351
+Cartago,CR3,Cartago,CR301,Occidental,CR30102,5220,5227,10447
+Cartago,CR3,Cartago,CR301,Carmen,CR30103,9645,9646,19291
+Cartago,CR3,Cartago,CR301,San Nicolás,CR30104,14775,14887,29662
+Cartago,CR3,Cartago,CR301,Aguacaliente,CR30105,17949,18164,36113
+Cartago,CR3,Cartago,CR301,Guadalupe,CR30106,8180,8261,16441
+Cartago,CR3,Cartago,CR301,Corralillo,CR30107,5998,5991,11989
+Cartago,CR3,Cartago,CR301,Tierra Blanca,CR30108,2923,2950,5873
+Cartago,CR3,Cartago,CR301,Dulce Nombre,CR30109,5909,6026,11935
+Cartago,CR3,Cartago,CR301,Llano Grande,CR30110,2529,2539,5068
+Cartago,CR3,Cartago,CR301,Quebradilla,CR30111,2988,3037,6025
+Cartago,CR3,Paraiso,CR302,Paraiso,CR30201,10743,10764,21507
+Cartago,CR3,Paraíso,CR302,Santiago,CR30202,3216,3223,6439
+Cartago,CR3,Paraíso,CR302,Orosi,CR30203,5046,5095,10141
+Cartago,CR3,Paraiso,CR302,Cachi,CR30204,2957,2954,5911
+Cartago,CR3,Paraiso,CR302,Llanos de Santa Lucia,CR30205,9641,9737,19378
+Cartago,CR3,La Union,CR303,Tres Rios,CR30301,4675,4641,9316
+Cartago,CR3,La Unión,CR303,San Diego,CR30302,12504,12600,25104
+Cartago,CR3,La Unión,CR303,San Juan,CR30303,7801,7833,15634
+Cartago,CR3,La Unión,CR303,San Rafael,CR30304,8014,8107,16121
+Cartago,CR3,La Unión,CR303,Concepción,CR30305,9464,9604,19068
+Cartago,CR3,La Unión,CR303,Dulce Nombre,CR30306,4589,4589,9178
+Cartago,CR3,La Union,CR303,San Ramon,CR30307,2260,2233,4493
+Cartago,CR3,La Union,CR303,Rio Azul,CR30308,7276,7392,14668
+Cartago,CR3,Jiménez,CR304,Juan Viñas,CR30401,3469,3629,7098
+Cartago,CR3,Jiménez,CR304,Tucurrique,CR30402,2753,2827,5580
+Cartago,CR3,Jiménez,CR304,Pejibaye,CR30403,1808,1852,3660
+Cartago,CR3,Turrialba,CR305,Turrialba,CR30501,13503,13605,27108
+Cartago,CR3,Turrialba,CR305,La Suiza,CR30502,3966,3991,7957
+Cartago,CR3,Turrialba,CR305,Peralta,CR30503,304,318,622
+Cartago,CR3,Turrialba,CR305,Santa Cruz,CR30504,1870,1918,3788
+Cartago,CR3,Turrialba,CR305,Santa Teresita,CR30505,2678,2711,5389
+Cartago,CR3,Turrialba,CR305,Pavones,CR30506,2306,2326,4632
+Cartago,CR3,Turrialba,CR305,Tuis,CR30507,1482,1480,2962
+Cartago,CR3,Turrialba,CR305,Tayutic,CR30508,1254,1265,2519
+Cartago,CR3,Turrialba,CR305,Santa Rosa,CR30509,2864,2867,5731
+Cartago,CR3,Turrialba,CR305,Tres Equis,CR30510,979,983,1962
+Cartago,CR3,Turrialba,CR305,La Isabel,CR30511,3150,3211,6361
+Cartago,CR3,Turrialba,CR305,Chirripo,CR30512,2261,2314,4575
+Cartago,CR3,Alvarado,CR306,Pacayas,CR30601,2952,3011,5963
+Cartago,CR3,Alvarado,CR306,Cervantes,CR30602,3377,3488,6865
+Cartago,CR3,Alvarado,CR306,Capellades,CR30603,1327,1369,2696
+Cartago,CR3,Oreamuno,CR307,San Rafael,CR30701,14668,14516,29184
+Cartago,CR3,Oreamuno,CR307,Cot,CR30702,5636,5595,11231
+Cartago,CR3,Oreamuno,CR307,Potrero Cerrado,CR30703,1351,1329,2680
+Cartago,CR3,Oreamuno,CR307,Cipreses,CR30704,2117,2082,4199
+Cartago,CR3,Oreamuno,CR307,Santa Rosa,CR30705,1502,1496,2998
+Cartago,CR3,El Guarco,CR308,Tejar,CR30801,13250,13666,26916
+Cartago,CR3,El Guarco,CR308,San Isidro,CR30802,5723,5805,11528
+Cartago,CR3,El Guarco,CR308,Tobosi,CR30803,3830,3912,7742
+Cartago,CR3,El Guarco,CR308,Patio de Agua,CR30804,221,231,452
+Heredia,CR4,Heredia,CR401,Heredia,CR40101,9729,9331,19060
+Heredia,CR4,Heredia,CR401,Mercedes,CR40102,15331,14665,29996
+Heredia,CR4,Heredia,CR401,San Francisco,CR40103,30081,29343,59424
+Heredia,CR4,Heredia,CR401,Ulloa,CR40104,17764,17444,35208
+Heredia,CR4,Heredia,CR401,Vara Blanca,CR40105,473,485,958
+Heredia,CR4,Barva,CR402,Barva,CR40201,2551,2537,5088
+Heredia,CR4,Barva,CR402,San Pedro,CR40202,5879,5977,11856
+Heredia,CR4,Barva,CR402,San Pablo,CR40203,4955,5010,9965
+Heredia,CR4,Barva,CR402,San Roque,CR40204,2718,2721,5439
+Heredia,CR4,Barva,CR402,Santa Lucía,CR40205,4219,4208,8427
+Heredia,CR4,Barva,CR402,San José de la Montaña,CR40206,3410,3426,6836
+Heredia,CR4,Santo Domingo,CR403,Santo Domingo,CR40301,2542,2528,5070
+Heredia,CR4,Santo Domingo,CR403,San Vicente,CR40302,4001,4003,8004
+Heredia,CR4,Santo Domingo,CR403,San Miguel,CR40303,3940,3979,7919
+Heredia,CR4,Santo Domingo,CR403,Paracito,CR40304,1402,1406,2808
+Heredia,CR4,Santo Domingo,CR403,Santo Tomás,CR40305,3943,3946,7889
+Heredia,CR4,Santo Domingo,CR403,Santa Rosa,CR40306,4577,4596,9173
+Heredia,CR4,Santo Domingo,CR403,Tures,CR40307,2191,2241,4432
+Heredia,CR4,Santo Domingo,CR403,Pará,CR40308,2078,2088,4166
+Heredia,CR4,Santa Bárbara,CR404,Santa Bárbara,CR40401,3189,3182,6371
+Heredia,CR4,Santa Bárbara,CR404,San Pedro,CR40402,3463,3450,6913
+Heredia,CR4,Santa Bárbara,CR404,San Juan,CR40403,4572,4619,9191
+Heredia,CR4,Santa Bárbara,CR404,Jesús,CR40404,5792,5877,11669
+Heredia,CR4,Santa Bárbara,CR404,Santo Domingo,CR40405,1815,1832,3647
+Heredia,CR4,Santa Bárbara,CR404,Purabá,CR40406,2771,2775,5546
+Heredia,CR4,San Rafael,CR405,San Rafael,CR40501,5304,5444,10748
+Heredia,CR4,San Rafael,CR405,San Josecito,CR40502,7013,7138,14151
+Heredia,CR4,San Rafael,CR405,Santiago,CR40503,5179,5215,10394
+Heredia,CR4,San Rafael,CR405,Angeles,CR40504,6389,6459,12848
+Heredia,CR4,San Rafael,CR405,Concepción,CR40505,3845,3937,7782
+Heredia,CR4,San Isidro,CR406,San Isidro,CR40601,3173,3226,6399
+Heredia,CR4,San Isidro,CR406,San José,CR40602,4346,4448,8794
+Heredia,CR4,San Isidro,CR406,Concepción,CR40603,1527,1556,3083
+Heredia,CR4,San Isidro,CR406,San Francisco,CR40604,2588,2584,5172
+Heredia,CR4,Belén,CR407,San Antonio,CR40701,5763,5820,11583
+Heredia,CR4,Belen,CR407,Rivera,CR40702,3853,3816,7669
+Heredia,CR4,Belen,CR407,Asuncion,CR40703,3720,3690,7410
+Heredia,CR4,Flores,CR408,San Joaquin,CR40801,4164,4154,8318
+Heredia,CR4,Flores,CR408,Barrantes,CR40802,2622,2659,5281
+Heredia,CR4,Flores,CR408,Llorente,CR40803,5774,5774,11548
+Heredia,CR4,San Pablo,CR409,San Pablo,CR40901,10840,10587,21427
+Heredia,CR4,San Pablo,CR409,Rincon de Sabanilla,CR40902,5044,4897,9941
+Heredia,CR4,Sarapiquí,CR410,Puerto Viejo,CR41001,14787,15895,30682
+Heredia,CR4,Sarapiqui,CR410,La Virgen,CR41002,7693,8381,16074
+Heredia,CR4,Sarapiquí,CR410,Horquetas,CR41003,16837,18199,35036
+Heredia,CR4,Sarapiqui,CR410,Llanuras de Gaspar,CR41004,944,1062,2006
+Heredia,CR4,Sarapiquí,CR410,Cureña,CR41005,741,812,1553
+Guanacaste,CR5,Liberia,CR501,Liberia,CR50101,32568,33472,66040
+Guanacaste,CR5,Liberia,CR501,Cañas Dulces,CR50102,2005,2012,4017
+Guanacaste,CR5,Liberia,CR501,Mayorga,CR50103,1007,995,2002
+Guanacaste,CR5,Liberia,CR501,Nacascolo,CR50104,1512,1550,3062
+Guanacaste,CR5,Liberia,CR501,Curubande,CR50105,1584,1607,3191
+Guanacaste,CR5,Nicoya,CR502,Nicoya,CR50201,13180,13739,26919
+Guanacaste,CR5,Nicoya,CR502,Mansion,CR50202,2822,2952,5774
+Guanacaste,CR5,Nicoya,CR502,San Antonio,CR50203,3516,3607,7123
+Guanacaste,CR5,Nicoya,CR502,Quebrada Honda,CR50204,1275,1312,2587
+Guanacaste,CR5,Nicoya,CR502,Sámara,CR50205,2299,2328,4627
+Guanacaste,CR5,Nicoya,CR502,Nosara,CR50206,3461,3583,7044
+Guanacaste,CR5,Nicoya,CR502,Belen de Nosarita,CR50207,1511,1540,3051
+Guanacaste,CR5,Santa Cruz,CR503,Santa Cruz,CR50301,13814,13831,27645
+Guanacaste,CR5,Santa Cruz,CR503,Bolson,CR50302,1033,1116,2149
+Guanacaste,CR5,Santa Cruz,CR503,Veintisiete de Abril,CR50303,4421,4687,9108
+Guanacaste,CR5,Santa Cruz,CR503,Tempate,CR50304,3033,3321,6354
+Guanacaste,CR5,Santa Cruz,CR503,Cartagena,CR50305,2464,2575,5039
+Guanacaste,CR5,Santa Cruz,CR503,Cuajiniquil,CR50306,1197,1417,2614
+Guanacaste,CR5,Santa Cruz,CR503,Diriá,CR50307,2396,2514,4910
+Guanacaste,CR5,Santa Cruz,CR503,Cabo Velas,CR50308,2049,2254,4303
+Guanacaste,CR5,Santa Cruz,CR503,Tamarindo,CR50309,3644,4359,8003
+Guanacaste,CR5,Bagaces,CR504,Bagaces,CR50401,7978,8184,16162
+Guanacaste,CR5,Bagaces,CR504,Fortuna,CR50402,1495,1598,3093
+Guanacaste,CR5,Bagaces,CR504,Mogote,CR50403,1966,2086,4052
+Guanacaste,CR5,Bagaces,CR504,Rio Naranjo,CR50404,578,609,1187
+Guanacaste,CR5,Carrillo,CR505,Filadelfia,CR50501,4307,4582,8889
+Guanacaste,CR5,Carrillo,CR505,Palmira,CR50502,3300,3453,6753
+Guanacaste,CR5,Carrillo,CR505,Sardinal,CR50503,9598,10099,19697
+Guanacaste,CR5,Carrillo,CR505,Belen,CR50504,5589,5927,11516
+Guanacaste,CR5,Cañas,CR506,Cañas,CR50601,13199,13080,26279
+Guanacaste,CR5,Cañas,CR506,Palmira,CR50602,673,676,1349
+Guanacaste,CR5,Cañas,CR506,San Miguel,CR50603,1032,1027,2059
+Guanacaste,CR5,Cañas,CR506,Bebedero,CR50604,1289,1273,2562
+Guanacaste,CR5,Cañas,CR506,Porozal,CR50605,399,394,793
+Guanacaste,CR5,Abangares,CR507,Juntas,CR50701,5135,5244,10379
+Guanacaste,CR5,Abangares,CR507,Sierra,CR50702,1397,1408,2805
+Guanacaste,CR5,Abangares,CR507,San Juan,CR50703,911,931,1842
+Guanacaste,CR5,Abangares,CR507,Colorado,CR50704,2543,2585,5128
+Guanacaste,CR5,Tilarán,CR508,Tilarán,CR50801,4747,4647,9394
+Guanacaste,CR5,Tilarán,CR508,Quebrada Grande,CR50802,1550,1535,3085
+Guanacaste,CR5,Tilarán,CR508,Tronadora,CR50803,1017,1000,2017
+Guanacaste,CR5,Tilarán,CR508,Santa Rosa,CR50804,1081,1093,2174
+Guanacaste,CR5,Tilarán,CR508,Libano,CR50805,484,475,959
+Guanacaste,CR5,Tilarán,CR508,Tierras Morenas,CR50806,764,774,1538
+Guanacaste,CR5,Tilarán,CR508,Arenal,CR50807,1358,1338,2696
+Guanacaste,CR5,Nandayure,CR509,Carmona,CR50901,1256,1386,2642
+Guanacaste,CR5,Nandayure,CR509,Santa Rita,CR50902,712,769,1481
+Guanacaste,CR5,Nandayure,CR509,Zapotal,CR50903,600,661,1261
+Guanacaste,CR5,Nandayure,CR509,San Pablo,CR50904,1126,1230,2356
+Guanacaste,CR5,Nandayure,CR509,Porvenir,CR50905,357,404,761
+Guanacaste,CR5,Nandayure,CR509,Bejuco,CR50906,1577,1737,3314
+Guanacaste,CR5,La Cruz,CR510,La Cruz,CR51001,6547,6421,12968
+Guanacaste,CR5,La Cruz,CR510,Santa Cecilia,CR51002,4550,4488,9038
+Guanacaste,CR5,La Cruz,CR510,Garita,CR51003,1301,1313,2614
+Guanacaste,CR5,La Cruz,CR510,Santa Elena,CR51004,1499,1462,2961
+Guanacaste,CR5,Hojancha,CR511,Hojancha,CR51101,2267,2406,4673
+Guanacaste,CR5,Hojancha,CR511,Monte Romo,CR51102,352,376,728
+Guanacaste,CR5,Hojancha,CR511,Puerto Carrillo,CR51103,916,967,1883
+Guanacaste,CR5,Hojancha,CR511,Huacas,CR51104,359,400,759
+Puntarenas,CR6,Puntarenas,CR601,Puntarenas,CR60101,5050,5238,10288
+Puntarenas,CR6,Puntarenas,CR601,Pitahaya,CR60102,1342,1370,2712
+Puntarenas,CR6,Puntarenas,CR601,Chomes,CR60103,3231,3342,6573
+Puntarenas,CR6,Puntarenas,CR601,Lepanto,CR60104,5008,5388,10396
+Puntarenas,CR6,Puntarenas,CR601,Paquera,CR60105,4054,4264,8318
+Puntarenas,CR6,Puntarenas,CR601,Manzanillo,CR60106,1664,1754,3418
+Puntarenas,CR6,Puntarenas,CR601,Guacimal,CR60107,571,595,1166
+Puntarenas,CR6,Puntarenas,CR601,Barranca,CR60108,18976,19774,38750
+Puntarenas,CR6,Puntarenas,CR601,Monte Verde,CR60109,2413,2487,4900
+Puntarenas,CR6,Puntarenas,CR601,Isla Del Coco,CR60110,0,0,0
+Puntarenas,CR6,Puntarenas,CR601,Cobano,CR60111,4710,4916,9626
+Puntarenas,CR6,Puntarenas,CR601,Chacarita,CR60112,10228,10690,20918
+Puntarenas,CR6,Puntarenas,CR601,Chira,CR60113,821,883,1704
+Puntarenas,CR6,Puntarenas,CR601,Acapulco,CR60114,774,772,1546
+Puntarenas,CR6,Puntarenas,CR601,El Roble,CR60115,10211,10709,20920
+Puntarenas,CR6,Puntarenas,CR601,Arancibia,CR60116,382,393,775
+Puntarenas,CR6,Esparza,CR602,Espiritu Santo,CR60201,11159,10773,21932
+Puntarenas,CR6,Esparza,CR602,San Juan Grande,CR60202,4423,4338,8761
+Puntarenas,CR6,Esparza,CR602,Macacona,CR60203,2663,2729,5392
+Puntarenas,CR6,Esparza,CR602,San Rafael,CR60204,832,869,1701
+Puntarenas,CR6,Esparza,CR602,San Jeronimo,CR60205,446,482,928
+Puntarenas,CR6,Buenos Aires,CR603,Buenos Aires,CR60301,14196,14530,28726
+Puntarenas,CR6,Buenos Aires,CR603,Volcán,CR60302,1834,1881,3715
+Puntarenas,CR6,Buenos Aires,CR603,Potrero Grande,CR60303,3247,3244,6491
+Puntarenas,CR6,Buenos Aires,CR603,Boruca,CR60304,1628,1659,3287
+Puntarenas,CR6,Buenos Aires,CR603,Pilas,CR60305,877,879,1756
+Puntarenas,CR6,Buenos Aires,CR603,Colinas,CR60306,693,703,1396
+Puntarenas,CR6,Buenos Aires,CR603,Chánguena,CR60307,1463,1456,2919
+Puntarenas,CR6,Buenos Aires,CR603,Biolley,CR60308,1310,1289,2599
+Puntarenas,CR6,Buenos Aires,CR603,Brunka,CR60309,1595,1627,3222
+Puntarenas,CR6,Montes de Oro,CR604,Miramar,CR60401,4482,4480,8962
+Puntarenas,CR6,Montes de Oro,CR604,Union,CR60402,748,752,1500
+Puntarenas,CR6,Montes de Oro,CR604,San Isidro,CR60403,1990,2004,3994
+Puntarenas,CR6,Osa,CR605,Puerto Cortes,CR60501,4217,4568,8785
+Puntarenas,CR6,Osa,CR605,Palmar,CR60502,4837,4882,9719
+Puntarenas,CR6,Osa,CR605,Sierpe,CR60503,1734,1894,3628
+Puntarenas,CR6,Osa,CR605,Bahia Ballena,CR60504,1627,1841,3468
+Puntarenas,CR6,Osa,CR605,Piedras Blancas,CR60505,2128,2388,4516
+Puntarenas,CR6,Osa,CR605,Bahia Drake,CR60506,511,643,1154
+Puntarenas,CR6,Aguirre,CR606,Quepos,CR60601,11912,13347,25259
+Puntarenas,CR6,Aguirre,CR606,Savegre,CR60602,1929,2148,4077
+Puntarenas,CR6,Aguirre,CR606,Naranjito,CR60603,1966,2246,4212
+Puntarenas,CR6,Golfito,CR607,Golfito,CR60701,5673,6188,11861
+Puntarenas,CR6,Golfito,CR607,Puerto Jimenez,CR60702,6066,6453,12519
+Puntarenas,CR6,Golfito,CR607,Guaycará,CR60703,6739,7326,14065
+Puntarenas,CR6,Golfito,CR607,Pavon,CR60704,3680,3922,7602
+Puntarenas,CR6,Coto Brus,CR608,San Vito,CR60801,8373,8266,16639
+Puntarenas,CR6,Coto Brus,CR608,Sabalito,CR60802,6667,6527,13194
+Puntarenas,CR6,Coto Brus,CR608,Aguabuena,CR60803,3527,3520,7047
+Puntarenas,CR6,Coto Brus,CR608,Limoncito,CR60804,2094,2055,4149
+Puntarenas,CR6,Coto Brus,CR608,Pittier,CR60805,1644,1620,3264
+Puntarenas,CR6,Parrita,CR609,Parrita,CR60901,10055,10539,20594
+Puntarenas,CR6,Corredores,CR610,Corredores,CR61001,9805,10193,19998
+Puntarenas,CR6,Corredores,CR610,La Cuesta,CR61002,2606,2648,5254
+Puntarenas,CR6,Corredores,CR610,Canoas,CR61003,7744,7939,15683
+Puntarenas,CR6,Corredores,CR610,Laurel,CR61004,5950,6067,12017
+Puntarenas,CR6,Garabito,CR611,Jaco,CR61101,8697,9447,18144
+Puntarenas,CR6,Garabito,CR611,Tárcoles,CR61102,4108,4469,8577
+Limon,CR7,Limon,CR701,Limon,CR70101,30654,30275,60929
+Limon,CR7,Limon,CR701,Valle  La Estrella,CR70102,10521,10096,20617
+Limon,CR7,Limon,CR701,Rio Blanco,CR70103,5046,5074,10120
+Limón,CR7,Limón,CR701,Matama,CR70104,4271,4104,8375
+Limon,CR7,Pococi,CR702,Guápiles,CR70201,18648,20324,38972
+Limon,CR7,Pococi,CR702,Jimenez,CR70202,6231,6656,12887
+Limón,CR7,Pococí,CR702,Rita,CR70203,13933,14980,28913
+Limón,CR7,Pococí,CR702,Roxana,CR70204,9745,10370,20115
+Limón,CR7,Pococí,CR702,Cariari,CR70205,19316,20533,39849
+Limón,CR7,Pococí,CR702,Colorado,CR70206,2543,2437,4980
+Limón,CR7,Pococí,CR702,La Colonia,CR70207,3181,3792,6973
+Limón,CR7,Siquirres,CR703,Siquirres,CR70301,16531,17992,34523
+Limón,CR7,Siquirres,CR703,Pacuarito,CR70302,5126,5570,10696
+Limón,CR7,Siquirres,CR703,Florida,CR70303,1266,1369,2635
+Limón,CR7,Siquirres,CR703,Germania,CR70304,1453,1585,3038
+Limón,CR7,Siquirres,CR703,Cairo,CR70305,3629,3911,7540
+Limon,CR7,Siquirres,CR703,Alegria,CR70306,3262,3613,6875
+Limón,CR7,Talamanca,CR704,Bratsi,CR70401,4944,5412,10356
+Limón,CR7,Talamanca,CR704,Sixaola,CR70402,5606,6149,11755
+Limón,CR7,Talamanca,CR704,Cahuita,CR70403,6303,7038,13341
+Limón,CR7,Talamanca,CR704,Telire,CR70404,4096,4434,8530
+Limón,CR7,Matina,CR705,Matina,CR70501,4853,5554,10407
+Limon,CR7,Matina,CR705,Batán,CR70502,9552,11018,20570
+Limón,CR7,Matina,CR705,Carrandi,CR70503,7479,8434,15913
+Limon,CR7,Guácimo,CR706,Guácimo,CR70601,12532,13108,25640
+Limón,CR7,Guácimo,CR706,Mercedes,CR70602,1124,1210,2334
+Limón,CR7,Guácimo,CR706,Pocora,CR70603,4074,4306,8380
+Limon,CR7,Guácimo,CR706,Rio Jimenez,CR70604,5687,5978,11665
+Limon,CR7,Guácimo,CR706,Duacari,CR70605,3931,4132,8063
