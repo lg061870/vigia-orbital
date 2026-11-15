@@ -17,8 +17,8 @@ const SHOTS = [
   {a: 'a3', d: 18.75, v: [{img: 'slides/s3.png', at: 0, focus: [0.5, 0.5], zoom: 1.03}]},
   {a: 'a4', d: 24.05, v: [
     {img: 'site/a.png', at: 0, focus: [0.5, 0.5], zoom: 1.03, cap: true},
-    {img: 'site/b.png', at: 6.5, focus: [0.5, 0.5], zoom: 1.03, cap: true},
-    {img: 'site/c.png', at: 11.5, focus: [0.5, 0.5], zoom: 1.03, cap: true},
+    {img: 'site/b.png', at: 6.0, focus: [0.5, 0.5], zoom: 1.03, cap: true},
+    {img: 'site/c.png', at: 10.5, focus: [0.5, 0.5], zoom: 1.03, cap: true},
     {sms: true, at: 16.5}]},
   {a: 'a6', d: 35.50, v: [{img: 'slides/s6.png', at: 0, focus: [0.5, 0.5], zoom: 1.03}]},
   {a: 'a7', d: 23.62, v: [{img: 'slides/s7.png', at: 0, focus: [0.5, 0.5], zoom: 1.03}, {img: 'slides/s8.png', at: 17.9, focus: [0.5, 0.5], zoom: 1.03}]},
@@ -38,7 +38,7 @@ const Still = ({img, focus, zoom, from = 1, len, cap}) => {
   return (
     <AbsoluteFill style={{opacity: op, backgroundColor: '#0F2236'}}>
       <Img src={staticFile(img)} style={{width: 1920, height: 1080, transform: `scale(${z})`, transformOrigin: `${focus[0] * 100}% ${focus[1] * 100}%`}} />
-      {cap ? <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 64, background: 'rgba(15,34,54,0.92)', color: '#FAF8F3', font: '600 30px Arial', display: 'flex', alignItems: 'center', justifyContent: 'center', letterSpacing: 0.5}}>Live at&nbsp;<span style={{color: '#F5B971'}}>lg061870.github.io/vigia-orbital</span></div> : null}
+      {cap ? <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 54, background: 'rgba(15,34,54,0.92)', color: '#FAF8F3', font: '600 30px Arial', display: 'flex', alignItems: 'center', justifyContent: 'center', letterSpacing: 0.5}}>Live at&nbsp;<span style={{color: '#F5B971'}}>lg061870.github.io/vigia-orbital</span></div> : null}
     </AbsoluteFill>
   );
 };
