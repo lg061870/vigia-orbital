@@ -96,6 +96,8 @@ function initMap(geo) {
       l.bindTooltip(f.properties.name, {permanent: true, direction: "center", className: "clabel"});
     }
   }).addTo(S.map);
+  S.dots = L.layerGroup().addTo(S.map);
+  S.fireTicket = 0;
 }
 
 // Keep the selected canton in the part of the map that the panels leave free
@@ -107,6 +109,27 @@ function fit() {
   } else {
     S.map.fitBounds(sel.getBounds().pad(0.6), {paddingTopLeft: [60 * k, 170 * k], paddingBottomRight: [60 * k, 540 * k], maxZoom: 9.6});
   }
+}
+
+// Fire detections of the reference satellite (NASA FIRMS), as dots: the selected day in the
+// detail view, all five forecast days in the forecast view. Files are fetched per year, once.
+const PTS = {};
+async function yearPoints(y) {
+  if (!(y in PTS)) PTS[y] = fetch(`data/fires/${y}.json`).then(r => r.ok ? r.json() : {days: {}}).then(j => j.days).catch(() => ({}));
+  return PTS[y];
+}
+async function drawFires(dates) {
+  const ticket = ++S.fireTicket;
+  const past = S.fire ? dates.filter(d => d <= S.fire.through) : [];
+  const days = await Promise.all(past.map(async d => (await yearPoints(d.slice(0, 4)))[d.slice(5)] || []));
+  if (ticket !== S.fireTicket) return;               // a newer selection came in meanwhile
+  S.dots.clearLayers();
+  let n = 0;
+  for (const xy of days) for (let i = 0; i < xy.length; i += 2, n++)
+    L.circleMarker([xy[i], xy[i + 1]], {radius: 4.5, color: "#FFFFFF", weight: 1.2, fillColor: "#FF2A00", fillOpacity: 0.95, interactive: false}).addTo(S.dots);
+  const el = $("dotnote");
+  el.hidden = !past.length;
+  el.innerHTML = `<i></i>${n} fire detection${n === 1 ? "" : "s"} in Guanacaste, ${S.view === "detail" ? "this day" : "these 5 days"} (NASA FIRMS)`;
 }
 
 function setMode(m) {
@@ -203,6 +226,7 @@ function render(refit) {
 
   document.querySelectorAll("#cards .card").forEach(b => b.onclick = () => { S.day = +b.dataset.i; setView("detail"); });
   document.querySelectorAll("#stripcards .card").forEach(b => b.onclick = () => { S.day = +b.dataset.i; render(); });
+  drawFires(S.view === "detail" ? [day.date] : sel.days.map(d => d.date));
   if (refit) { S.map.invalidateSize(); fit(); }
 }
 

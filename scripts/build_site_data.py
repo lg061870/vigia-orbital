@@ -100,6 +100,7 @@ def main() -> None:
 if __name__ == "__main__" and "--fire-days" not in sys.argv:
     main()
     fire_days()
+    fire_points()
 
 
 def fire_days() -> None:
@@ -120,5 +121,27 @@ def fire_days() -> None:
     print(f"{p.name:18s} {p.stat().st_size/1e3:7.1f} KB")
 
 
+def fire_points() -> None:
+    """site/data/fires/<year>.json: where the reference satellite detected vegetation fires, per local day.
+
+    Same rules as the model: S-NPP to 2025, NOAA-20 from 2026; type 0 or near-real-time; Guanacaste cantons.
+    Format: {"days": {"MM-DD": [lat, lon, lat, lon, ...]}} with 4 decimals.
+    """
+    det = pd.read_csv(DATA / "csv" / "detection.csv", parse_dates=["acq_datetime_utc"], dtype={"version": str})
+    det = det[((det.type == 0) | (det.processing == "NRT")) & det.canton_id.str.startswith("CR5", na=False)].copy()
+    det["date"] = (det.acq_datetime_utc - pd.Timedelta(hours=6)).dt.normalize()
+    ref = det[((det.date.dt.year <= 2025) & (det.source == "viirs-snpp")) | ((det.date.dt.year >= 2026) & (det.source == "viirs-jpss1"))]
+    (OUT / "fires").mkdir(exist_ok=True)
+    total = 0
+    for year, g in ref.groupby(ref.date.dt.year):
+        days = {d.strftime("%m-%d"): [round(float(v), 4) for xy in zip(x.latitude, x.longitude) for v in xy]
+                for d, x in g.groupby("date")}
+        f = OUT / "fires" / f"{year}.json"
+        f.write_text(json.dumps({"year": int(year), "days": days}, separators=(",", ":")))
+        total += f.stat().st_size
+    print(f"fires/*.json       {total/1e3:7.1f} KB in total, {len(ref):,} detections")
+
+
 if __name__ == "__main__" and "--fire-days" in sys.argv:
     fire_days()
+    fire_points()
