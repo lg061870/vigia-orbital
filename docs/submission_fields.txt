@@ -46,7 +46,6 @@ FIELD: Use of Artificial Intelligence
 ======================================================================
 I used AI tools as assistants, and I reviewed and ran everything myself.
 - Claude (Anthropic), through Claude Code: helped write and review the Python code (data pipeline, model functions, validation), the website and API code, the slides and the documentation. Code in the repository written with AI assistance is identified as such in the README and in the commit history ("Co-Authored-By: Claude").
-- OpenAI voice (ChatGPT): read the narration of the project video. The video carries a visible note saying so.
 - No AI-generated data. All data come from the sources listed below, and every number in the project is computed by the code in the notebook from those data.
 - Icons and slide design: the satellite logo, the flame icons and the layout of the slides and website were generated with Claude as vector graphics and code. Every slide of the demo carries a visible "AI-generated" label. No NASA logos, flags or mission identifiers are used or modified.
 - Not AI-generated: the satellite images (NASA GIBS) and the charts, which are drawn by the project's code from the data.
@@ -71,6 +70,6 @@ FIELD: Space Agency Partner and Other Data and References
 - geoBoundaries: province, canton and district boundaries
 - Humanitarian Data Exchange (HDX): OpenStreetMap / HOT layers, Kontur population, UNFPA population
 - OpenStreetMap contributors
-- Software: Leaflet, FastAPI, pandas, statsmodels, scikit-learn, GeoPandas, DuckDB, Remotion
+- Software: Leaflet, FastAPI, pandas, statsmodels, scikit-learn, GeoPandas, DuckDB
 
 Full citations and licences: https://github.com/lg061870/vigia-orbital#data-sources-and-citations
