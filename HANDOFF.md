@@ -50,8 +50,6 @@ UI mockup (private): https://claude.ai/artifact/WZhoxYtu2QVSNXR48CYEmW. Dark com
 6. 9–12:30: **Offline Leaflet app** (Spanish): animated 10-day forecast map, replay timeline, conservation-area panel, prioritized detection list, phone layout, alert preview. Basemap = `imagenes_demo/` PNGs via `L.imageOverlay` (bboxes in README); Leaflet from `offline_libs/`.
 7. 13:30–15: Demo polish; optional 30 m dNBR hero map of Santa Cruz (Landsat/HLS, before/after 17 Mar 2024).
 8. 15–16: Full offline test, phone check.
-9. 16–18: 2-minute pitch (Spanish), slides, backup video.
-10. 18–23:59: Submission: Space Apps project page, demo link/video, data and resources list.
 
 ## Pitch lines (Spanish, data-backed)
 - "Guanacaste concentra el 63 % de los focos de calor de Costa Rica, y el 88 % ocurre en solo tres meses."
