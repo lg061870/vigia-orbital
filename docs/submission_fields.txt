@@ -9,7 +9,7 @@ Vigía Orbital
 ======================================================================
 FIELD: High-Level Project Summary
 ======================================================================
-Vigía Orbital is a 5-day wildfire risk forecast for the 11 cantons of Guanacaste, Costa Rica: a weather forecast, but for fires. To build it I first harmonized NASA's MODIS and VIIRS hot spot records (four satellites, 2012–2026) into one consistent measure: one reference satellite per period and fire days per canton, instead of raw detection counts that jump every time a satellite is added. On that record, a simple and explainable model combines the normal risk for each canton and week with current weather (NASA POWER), vegetation dryness (MODIS NDVI and NDMI) and recent fire. Tested blind, season by season from 2013 to 2025, it is 8.4 % more accurate than an average year and better in 12 of 14 seasons. It runs live as a website and an open API, and can deliver the forecast as a text message under 1 KB for brigades with weak signal. Guanacaste holds 63 % of Costa Rica's fire detections, so five days of warning helps crews be in the right place before the fire.
+Vigía Orbital introduces the Risk of Fire Index, a new index produced by a machine learning model built on NASA data that forecasts wildfire risk 5 days ahead for the 11 cantons of Guanacaste, Costa Rica. To build it I first harmonized NASA's MODIS and VIIRS hot spot records (four satellites, 2012–2026) into one consistent measure: one reference satellite per period and fire days per canton, instead of raw detection counts that jump every time a satellite is added. The model is one logistic regression for each forecast day (1 to 5 days ahead) that starts from the normal risk for each canton and week and adjusts it with current weather (NASA POWER), vegetation dryness (MODIS NDVI and NDMI), recent fire (NASA FIRMS) and terrain (NASADEM). Tested blind, season by season from 2013 to 2025, it is 8.4 % more accurate than an average year and better in 12 of 14 seasons. Guanacaste holds 63 % of Costa Rica's fire detections, so five days of warning helps crews be in the right place before the fire. The index is also available through a website and an open API, which can deliver it as a text message under 1 KB for brigades with weak signal.
 
 ======================================================================
 FIELD: Link to Project Demo
@@ -24,14 +24,14 @@ https://github.com/lg061870/vigia-orbital
 ======================================================================
 FIELD: Detailed Project Description
 ======================================================================
-What it does. For each canton of Guanacaste and each of the next five days, Vigía Orbital gives the probability that satellites detect a vegetation fire, with a level (Low, Moderate, High, Very high, Extreme) and the reasons behind it.
+What it is. The project is the Risk of Fire Index: a machine learning model built on NASA data that, for each canton of Guanacaste and each of the next five days, gives the probability that satellites detect a vegetation fire, with a level (Low, Moderate, High, Very high, Extreme) and the reasons behind it. The website, the API and the notebook demonstrate how to use the index and how it is built:
 - Live website: https://lg061870.github.io/vigia-orbital/ (pick a canton and a day; turn back the clock to any date since 2012 and compare the forecast with what the satellites detected)
 - Open API: https://lg061870-vigia-orbital-api.hf.space/api/docs (forecast on request, also as a plain text message)
 - Reproducible notebook: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb
 
 How it addresses the challenge (harmonization). VIIRS (375 m) detects 3.5 to 5.4 times more fires than MODIS (1 km), and the ratio changes by year and canton, so no single conversion factor works. Each new satellite also inflates raw counts. My harmonized measure uses one reference satellite per period (VIIRS S-NPP for 2012–2025, NOAA-20 from 2026), keeps vegetation fires only, converts UTC to local dates, and counts fire days per canton (yes/no). I checked the hand-over: NOAA-21 matches S-NPP within ±4 % per year (2023–2025), so the record continues after S-NPP.
 
-How the forecast works. One logistic regression per day ahead (1 to 5). It starts from history (the normal for that canton and week of the year, 2012–2025) and adjusts for weather compared with normal (days without rain, maximum temperature, wind, humidity, soil wetness, 30-day rain), vegetation compared with normal (NDVI, NDMI), recent fire in the canton (last 7 days) and terrain. Coefficients are estimated by maximum likelihood.
+How the model works. One logistic regression per day ahead (1 to 5). It starts from history (the normal for that canton and week of the year, 2012–2025) and adjusts for weather compared with normal (days without rain, maximum temperature, wind, humidity, soil wetness, 30-day rain), vegetation compared with normal (NDVI, NDMI), recent fire in the canton (last 7 days) and terrain. Coefficients are estimated by maximum likelihood.
 
 Validation. Leave-one-season-out, 2013–2025: each season is forecast by a model that never saw it. Brier skill score +8.4 % against the canton-and-week climatology; AUC 0.932 against 0.919; positive in 12 of 14 seasons (up to +21 % in the worst seasons); when it forecasts 90 % or more, fire is observed 96 % of the time (7,900 canton-days); skill from +7.8 % on day 1 to +5.4 % on day 5. On the 2026 season, a true out-of-sample test, it tied with climatology.
 
@@ -42,7 +42,7 @@ Limits. A light rain can make it too optimistic for a few days; MODIS vegetation
 Tools. Python, pandas, NumPy, statsmodels, scikit-learn, GeoPandas, rasterio, DuckDB, Google Colab, FastAPI, Leaflet, GitHub Pages and Actions, Hugging Face Spaces.
 
 ======================================================================
-FIELD: Use of Artificial Intelligence
+NOT A FORM FIELD (the form has checkboxes only; this text is in the README): Use of Artificial Intelligence
 ======================================================================
 I used AI tools as assistants, and I reviewed and ran everything myself.
 - Claude (Anthropic), through Claude Code: helped write and review the Python code (data pipeline, model functions, validation), the website and API code, the slides and the documentation. Code in the repository written with AI assistance is identified as such in the README and in the commit history ("Co-Authored-By: Claude").

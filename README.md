@@ -1,12 +1,15 @@
-# Vigía Orbital
-
-*"Desde el espacio, cuidamos nuestra tierra."*
+# Vigía Orbital: the Risk of Fire Index
 
 NASA Space Apps Challenge 2026, San José, Costa Rica. Challenge: **Harmonization of MODIS and VIIRS Hot Spots**.
 
-> Vigía Orbital convierte datos satelitales de NASA en un plan de temporada y una lista priorizada de incendios a atender, para que las brigadas de Guanacaste vayan donde realmente se necesitan.
+The **Risk of Fire Index** is a machine learning model built on NASA data that forecasts wildfire risk 5 days ahead for the 11 cantons of Guanacaste, Costa Rica. For each canton and each of the next five days it gives the probability that satellites detect a vegetation fire, with a level (Low, Moderate, High, Very high, Extreme) and the reasons behind it.
 
-This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (Programa Nacional de Manejo del Fuego), Bomberos forestales, CNE and the municipalities. The engine is a harmonized MODIS + VIIRS hotspot record for 2012–2025. On top of it sit three pieces: a risk outlook by canton, triage of each alert as a likely agricultural burn or a likely wildfire, and a recurrence map for prevention. Everything runs offline.
+- **The record it learns from.** NASA FIRMS hot spots from MODIS and three VIIRS instruments (2012–2026), harmonized into one consistent measure: one reference satellite per period and fire days per canton, instead of raw detection counts that jump every time a satellite is added.
+- **The model.** One logistic regression for each forecast day (1 to 5 days ahead). It starts from the normal risk for each canton and week and adjusts it with current weather (NASA POWER), vegetation dryness (MODIS NDVI and NDMI), recent fire (NASA FIRMS) and terrain (NASADEM). Code: `vigia/model.py`; notebook: `notebooks/vigia_orbital_modelo.ipynb`.
+- **Validation.** Tested blind, season by season (2013–2025): 8.4 % more accurate than an average year, better in 12 of 14 seasons, AUC 0.932 against 0.919. When the index says 90 % or more, fire is observed 96 % of the time. On the 2026 season it tied with the average year.
+- **Demo (7 slides):** [`docs/vigia_orbital_demo_7_slides.pdf`](docs/vigia_orbital_demo_7_slides.pdf)
+
+The website, the API and the notebook are demonstrations of how to use the index and how it is built; see [How to use it: demonstrations](#how-to-use-it-demonstrations).
 
 ## Repository layout
 
@@ -22,7 +25,9 @@ This is a fire-season **planning** tool for Guanacaste. It is built for SINAC (P
 | `api/` | FastAPI forecast service (`Dockerfile` at the root). |
 | `docs/pitch.md` | 2-minute pitch outline (Spanish), with the source of every number. |
 
-## Website and API
+## How to use it: demonstrations
+
+Three ways to use the index and see how it is built: the website, the open API and the notebook ([open in Colab](https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb)).
 
 **Live:** website https://lg061870.github.io/vigia-orbital/ · API https://lg061870-vigia-orbital-api.hf.space/api (docs at `/api/docs`)
 
