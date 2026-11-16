@@ -1,0 +1,60 @@
+# Space Apps 2026: submission form texts (Vigía Orbital)
+
+Copy each block into the matching field. Everything is in English.
+
+## Project Name
+Vigía Orbital
+
+## High-Level Project Summary
+Vigía Orbital is a 5-day wildfire risk forecast for the 11 cantons of Guanacaste, Costa Rica: a weather forecast, but for fires. To build it I first harmonized NASA's MODIS and VIIRS hot spot records (four satellites, 2012–2026) into one consistent measure: one reference satellite per period and fire days per canton, instead of raw detection counts that jump every time a satellite is added. On that record, a simple and explainable model combines the normal risk for each canton and week with current weather (NASA POWER), vegetation dryness (MODIS NDVI and NDMI) and recent fire. Tested blind, season by season from 2013 to 2025, it is 8.4 % more accurate than an average year and better in 12 of 14 seasons. It runs live as a website and an open API, and can deliver the forecast as a text message under 1 KB for brigades with weak signal. Guanacaste holds 63 % of Costa Rica's fire detections, so five days of warning helps crews be in the right place before the fire.
+
+## Link to Project Demo (7 slides)
+https://github.com/lg061870/vigia-orbital/blob/main/docs/vigia_orbital_demo_7_slides.pdf
+
+## Link to Final Project
+https://github.com/lg061870/vigia-orbital
+
+## Detailed Project Description
+**What it does.** For each canton of Guanacaste and each of the next five days, Vigía Orbital gives the probability that satellites detect a vegetation fire, with a level (Low, Moderate, High, Very high, Extreme) and the reasons behind it.
+- Live website: https://lg061870.github.io/vigia-orbital/ (pick a canton and a day; turn back the clock to any date since 2012 and compare the forecast with what the satellites detected)
+- Open API: https://lg061870-vigia-orbital-api.hf.space/api/docs (forecast on request, also as a plain text message)
+- Reproducible notebook: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb
+
+**How it addresses the challenge (harmonization).** VIIRS (375 m) detects 3.5 to 5.4 times more fires than MODIS (1 km), and the ratio changes by year and canton, so no single conversion factor works. Each new satellite also inflates raw counts. My harmonized measure uses one reference satellite per period (VIIRS S-NPP for 2012–2025, NOAA-20 from 2026), keeps vegetation fires only, converts UTC to local dates, and counts fire days per canton (yes/no). I checked the hand-over: NOAA-21 matches S-NPP within ±4 % per year (2023–2025), so the record continues after S-NPP.
+
+**How the forecast works.** One logistic regression per day ahead (1 to 5). It starts from history (the normal for that canton and week of the year, 2012–2025) and adjusts for weather compared with normal (days without rain, maximum temperature, wind, humidity, soil wetness, 30-day rain), vegetation compared with normal (NDVI, NDMI), recent fire in the canton (last 7 days) and terrain. Coefficients are estimated by maximum likelihood.
+
+**Validation.** Leave-one-season-out, 2013–2025: each season is forecast by a model that never saw it. Brier skill score +8.4 % against the canton-and-week climatology; AUC 0.932 against 0.919; positive in 12 of 14 seasons (up to +21 % in the worst seasons); when it forecasts 90 % or more, fire is observed 96 % of the time (7,900 canton-days); skill from +7.8 % on day 1 to +5.4 % on day 5. On the 2026 season, a true out-of-sample test, it tied with climatology.
+
+**Benefits.** SINAC's fire program and brigades can decide where to position crews for the next five days; firefighters and the national emergency commission can decide when to scale up or stand down; municipalities can time prevention messages and burn controls.
+
+**Limits.** A light rain can make it too optimistic for a few days; MODIS vegetation products arrive weeks late; it works at canton level; "fire" means a satellite detection, so small fires and fires under clouds are missed; it has not yet been validated against SINAC field reports.
+
+**Tools.** Python, pandas, NumPy, statsmodels, scikit-learn, GeoPandas, rasterio, DuckDB, Google Colab, FastAPI, Leaflet, GitHub Pages and Actions, Hugging Face Spaces.
+
+## Use of Artificial Intelligence
+I used AI tools as assistants, and I reviewed and ran everything myself.
+- **Claude (Anthropic), through Claude Code:** helped write and review the Python code (data pipeline, model functions, validation), the website and API code, the slides and the documentation. Code in the repository written with AI assistance is identified as such in the README and in the commit history ("Co-Authored-By: Claude").
+- **OpenAI voice (ChatGPT):** read the narration of the project video. The video carries a visible note saying so.
+- **No AI-generated data.** All data come from the sources listed below, and every number in the project is computed by the code in the notebook from those data.
+- No AI-generated images. The images are NASA satellite imagery (GIBS) and charts produced by the project's code.
+
+## NASA Data
+- NASA FIRMS: MODIS (Terra/Aqua) and VIIRS (S-NPP, NOAA-20, NOAA-21) active fire / hot spot detections — https://firms.modaps.eosdis.nasa.gov/
+- NASA POWER: daily weather (temperature, humidity, wind, precipitation, soil wetness) — https://power.larc.nasa.gov/
+- NASA MODIS vegetation and surface reflectance products MOD13Q1 / MYD13Q1 (NDVI, NBR) and MOD09A1 / MYD09A1 (NDMI), v061
+- NASADEM: elevation and slope
+- NASA GIBS / Worldview: satellite imagery shown on the website and slides — https://www.earthdata.nasa.gov/engage/open-data-services-software/earthdata-developer-portal/gibs-api
+- NASA ARSET: training "Using the Fire Mapping Tools to Map Fires" (reference for the manual workflow)
+
+## Space Agency Partner and Other Data and References
+- NOAA Climate Prediction Center: Oceanic Niño Index (ONI)
+- ESA WorldCover 2021: land cover
+- Microsoft Planetary Computer: access to the MODIS products
+- SINAC / SIREFOR (Costa Rica): conservation-area boundaries
+- geoBoundaries: province, canton and district boundaries
+- Humanitarian Data Exchange (HDX): OpenStreetMap / HOT layers, Kontur population, UNFPA population
+- OpenStreetMap contributors
+- Software: Leaflet, FastAPI, pandas, statsmodels, scikit-learn, GeoPandas, DuckDB, Remotion
+
+Full citations and licences: https://github.com/lg061870/vigia-orbital#data-sources-and-citations

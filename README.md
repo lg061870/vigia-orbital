@@ -161,6 +161,10 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 - Build during the event (14–15 Nov): harmonization, the risk model (built by canton and added up to SINAC's conservation areas ACG, ACT and ACAT, which is SINAC's planning unit), alert triage and the offline Leaflet app.
 - **Validate against SINAC burned-area reports** (seasonal reports from the Programa Nacional de Manejo del Fuego). Compare reported area burned and number of fires per season and canton with the harmonized detection record, and with the triage labels. This validation is not a prerequisite for the demo.
 
+## Use of AI
+
+Parts of this repository were written with AI assistance (Claude, by Anthropic, through Claude Code): the data pipeline scripts, the model module, the API, the website and the documentation. Those commits are marked "Co-Authored-By: Claude". I reviewed and ran all of it. No data are AI-generated: every number is computed by this code from the sources cited below. The project video is narrated by an AI voice.
+
 ## Data sources and citations
 
 - **MODIS MOD13Q1 / MYD13Q1 v061** (Didan, K., NASA EOSDIS LP DAAC), accessed via Microsoft Planetary Computer.
