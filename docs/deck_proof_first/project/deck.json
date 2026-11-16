@@ -1,1 +1,59 @@
-{"v":5,"createdOnFiles":{"v":1,"at":"2026-11-15T23:05:00Z"},"lists":"css","format":{"v":1,"shared":["project/deck.css"]},"title":"Vigía Orbital – Proof-first pitch","order":["semana-demo","detalle-dia","valida","armonizacion","formula","compruebalo","impacto","limites","pronostico-hoy","a3-coeficientes","a1-notebook","a2-fuentes"],"sections":{"s1":{"description":"The proof: a blind forecast that came true, and the season-by-season test","start":"semana-demo"},"s2":{"description":"How: harmonizing four satellites and a simple model","start":"armonizacion"},"s3":{"description":"Check it yourself, impact, limits and today’s forecast","start":"compruebalo"},"s4":{"description":"Appendix: coefficients, notebook and sources","start":"a3-coeficientes"}},"faces":{"barlow":{"family":"Barlow","href":"https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"},"source-sans-3":{"family":"Source Sans 3","href":"https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"}},"designSystems":[]}
+{
+  "v": 5,
+  "attachments": {},
+  "createdOnFiles": {
+    "at": "2026-11-15T23:05:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "faces": {
+    "barlow": {
+      "family": "Barlow",
+      "href": "https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    },
+    "source-sans-3": {
+      "family": "Source Sans 3",
+      "href": "https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    }
+  },
+  "format": {
+    "shared": [
+      "project/deck.css"
+    ],
+    "v": 1
+  },
+  "lists": "css",
+  "order": [
+    "semana-demo",
+    "detalle-dia",
+    "valida",
+    "armonizacion",
+    "formula",
+    "a1-notebook",
+    "compruebalo",
+    "impacto",
+    "limites",
+    "pronostico-hoy",
+    "a3-coeficientes",
+    "a2-fuentes"
+  ],
+  "sections": {
+    "s1": {
+      "description": "The proof: a blind forecast that came true, and the season-by-season test",
+      "start": "semana-demo"
+    },
+    "s2": {
+      "description": "How: harmonizing four satellites, a simple model, and the open notebook behind it",
+      "start": "armonizacion"
+    },
+    "s3": {
+      "description": "Check it yourself, impact, limits and today’s forecast",
+      "start": "compruebalo"
+    },
+    "s4": {
+      "description": "Appendix: coefficients and sources",
+      "start": "a3-coeficientes"
+    }
+  },
+  "title": "Vigía Orbital – Proof-first pitch"
+}
