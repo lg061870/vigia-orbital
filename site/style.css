@@ -146,3 +146,10 @@ dialog a{color:#2F6FB0}
   .map-source{position:static;color:var(--muted);text-shadow:none;margin:0 calc(20*var(--u)) calc(30*var(--u))}
   .about-grid{grid-template-columns:1fr}
 }
+
+/* Use of AI statement */
+.sel-off{margin-left:0}
+.sel-row .ai-btn{margin-left:auto;border-color:var(--fire);color:var(--fire);font-weight:600}
+dialog ul{padding-left:22px;margin:0}
+dialog li{margin-bottom:6px}
+.ai-yes{color:#C4471A}.ai-no{color:#1F7A54}

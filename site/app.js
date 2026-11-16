@@ -51,6 +51,8 @@ async function load() {
   $("next").onclick = () => { if (S.day < 4) { S.day++; render(); } };
   $("about-btn").onclick = () => $("about").showModal();
   $("about-close").onclick = () => $("about").close();
+  $("ai-btn").onclick = () => $("ai").showModal();
+  $("ai-close").onclick = () => $("ai").close();
   addEventListener("resize", () => { S.map.invalidateSize(); fit(); });
   renderAbout();
   setMode(new URLSearchParams(location.search).get("mode") === "demo" ? "demo" : "latest");

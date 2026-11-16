@@ -25,7 +25,7 @@
     <p id="issued" class="top-sub">Guanacaste, Costa Rica</p>
   </div>
   <div class="selector">
-    <div class="sel-row"><span class="sel-label">Area:</span><span class="sel-on">Canton</span><button id="about-btn" class="sel-off">About</button></div>
+    <div class="sel-row"><span class="sel-label">Area:</span><span class="sel-on">Canton</span><button id="ai-btn" class="sel-off ai-btn">Use of AI</button><button id="about-btn" class="sel-off">About</button></div>
     <select id="canton" aria-label="Canton"></select>
   </div>
 </header>
@@ -106,6 +106,33 @@
       <p class="fine">NASA Space Apps Challenge 2026, San José, Costa Rica · Harmonization of MODIS and VIIRS Hot Spots. A research prototype, not an official warning.</p>
     </div>
   </div>
+</dialog>
+
+<dialog id="ai">
+  <button class="close" id="ai-close" aria-label="Close">×</button>
+  <h2>Use of AI (Super Intelligence) in this project</h2>
+  <p>I used AI tools as assistants. I reviewed and ran everything myself.</p>
+  <div class="about-grid">
+    <div>
+      <h3 class="ai-yes">AI-generated</h3>
+      <ul>
+        <li><b>The icons:</b> the satellite logo and the flame icons, drawn as vector graphics with Claude (Anthropic).</li>
+        <li><b>The design and layout</b> of this website and of the demo slides, made with Claude.</li>
+        <li><b>Parts of the code</b> (data pipeline, model module, API, website), written with Claude’s assistance. Those commits are marked “Co-Authored-By: Claude” in the repository.</li>
+        <li><b>Help drafting</b> the documentation and slide text.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="ai-no">Not AI-generated</h3>
+      <ul>
+        <li><b>The data:</b> NASA FIRMS, NASA POWER, NASA MODIS, NASADEM and the other sources listed under About.</li>
+        <li><b>The satellite images on the map:</b> NASA GIBS imagery, shown as published, with the canton outlines and names drawn over it.</li>
+        <li><b>The numbers:</b> every index value, level, chart and validation result is computed by the project’s code from the data.</li>
+        <li><b>The “fire detected” badges:</b> satellite observations from NASA FIRMS.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">No NASA logos, flags or mission identifiers are used or modified in any AI-generated element.</p>
 </dialog>
 
 <script src="lib/leaflet/leaflet.js"></script>
