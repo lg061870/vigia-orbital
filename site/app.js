@@ -29,6 +29,11 @@ async function load() {
   const get = f => fetch("data/" + f).then(r => r.json());
   const [geo, latest, demo, meta] = await Promise.all([get("cantons.geojson"), get("latest.json"), get("demo.json"), get("meta.json")]);
   S.data = {latest, demo}; S.meta = meta; S.geo = geo;
+  // What the reference satellite saw on each past day (so the badges never depend on the API)
+  try {
+    const fd = await get("fire_days.json"), t0 = Date.parse(fd.origin + "T00:00:00Z");
+    S.fire = {through: fd.through, t0, sets: Object.fromEntries(Object.entries(fd.cantons).map(([k, v]) => [k, new Set(v)]))};
+  } catch (e) { S.fire = null; }
   await tryLiveApi();
   initMap(geo);
   const sel = $("canton");
@@ -144,7 +149,10 @@ const card = (d, i, opts) => `
   </button>`;
 
 function render(refit) {
-  const D = S.data[S.mode], sel = D.cantons[S.canton], day = sel.days[S.day];
+  const D = S.data[S.mode], sel = D.cantons[S.canton];
+  if (S.fire) for (const d of sel.days) if (d.fire_observed == null && d.date <= S.fire.through)
+    d.fire_observed = S.fire.sets[S.canton]?.has(Math.round((Date.parse(d.date + "T00:00:00Z") - S.fire.t0) / 864e5)) ? 1 : 0;
+  const day = sel.days[S.day];
   const name = S.geo.features.find(f => f.properties.canton_id === S.canton).properties.name;
   $("canton").value = S.canton;
   satellite(D.eve);
@@ -154,7 +162,7 @@ function render(refit) {
   $("note").innerHTML = S.mode === "demo"
     ? "A real past week, forecast by a model trained <b>without any 2018 data</b>."
     : S.mode === "date"
-      ? `Computed just now by the <a href="${S.live}/docs">API</a>. Past dates use the official model (trained on 2012–2025); only the Demo week is a strict blind test.`
+      ? `Computed just now by the <a href="${S.live}/docs">API</a>. The badges show what the satellites detected afterwards. Past dates use the official model (trained on 2012–2025); only the Demo week is a strict blind test.`
       : S.liveLatest
         ? `<b>Live</b> from the <a href="${S.live}/docs">API</a>.` + (inp.recent_fire_through
           ? ` Fire data through ${fmt(inp.recent_fire_through, {day: "numeric", month: "short"})}; weather from ${fmt(inp.weather_as_of, {day: "numeric", month: "short"})}.` : "")

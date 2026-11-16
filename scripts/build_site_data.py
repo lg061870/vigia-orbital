@@ -97,5 +97,28 @@ def main() -> None:
         print(f"{f.name:18s} {f.stat().st_size/1e3:7.1f} KB")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and "--fire-days" not in sys.argv:
     main()
+    fire_days()
+
+
+def fire_days() -> None:
+    """site/data/fire_days.json: for each canton, the days with fire seen by the reference satellite.
+
+    Lets the website show what happened after any past forecast without asking the API.
+    Days are counted from 2012-01-01 to keep the file small.
+    """
+    cdd = pd.read_csv(DATA / "csv" / "canton_day.csv", parse_dates=["date"])
+    det = pd.read_csv(DATA / "csv" / "detection.csv", parse_dates=["acq_datetime_utc"], dtype={"version": str})
+    daily = prepare_daily(cdd, det)
+    origin = pd.Timestamp("2012-01-01")
+    out = {"origin": "2012-01-01", "through": str(daily.date.max().date()), "cantons": {}}
+    for cid, g in daily[daily.fire_ref_day == 1].groupby("canton_id"):
+        out["cantons"][cid] = [int(x) for x in (g.date - origin).dt.days]
+    p = OUT / "fire_days.json"
+    p.write_text(json.dumps(out, separators=(",", ":")))
+    print(f"{p.name:18s} {p.stat().st_size/1e3:7.1f} KB")
+
+
+if __name__ == "__main__" and "--fire-days" in sys.argv:
+    fire_days()
