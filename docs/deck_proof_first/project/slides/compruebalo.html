@@ -1,0 +1,47 @@
+<section id="compruebalo" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">Don’t take my word for it: <span class="accent">check it yourself</span></h1>
+<p class="top-sub">Live, open and reproducible. Pick any date since 2012 and compare the forecast with what happened</p>
+</div>
+</div>
+<div class="body">
+<div class="wbox" style="flex:1; border-top:10px solid #E4571B">
+<h3>1 · The live forecast</h3>
+<p class="formula">lg061870.github.io/vigia-orbital</p>
+<ul>
+<li>Every canton of Guanacaste, five days ahead.</li>
+<li><b>Turn back the clock:</b> any date since 2012.</li>
+<li>For past dates it shows the forecast <b>and</b> what the satellites detected afterwards.</li>
+<li>Each day explains why: weather, vegetation, recent fire.</li>
+</ul>
+</div>
+<div class="wbox" style="flex:1; border-top:10px solid #1F5A6B">
+<h3>2 · The open API</h3>
+<p class="formula">…hf.space/api/docs</p>
+<ul>
+<li>Computes each forecast on request; nothing is stored.</li>
+<li>Any system can call it: one web address per canton and date.</li>
+<li>The same forecast as a <b>text message under 1 KB</b>, for brigades with weak signal.</li>
+</ul>
+</div>
+<div class="wbox" style="flex:1; border-top:10px solid #2E9E6A; align-items:center">
+<h3>3 · The notebook</h3>
+<img src="/_blob/31017da3bb059d38ec6cd69df05d4f0a" alt="QR code linking to the Vigía Orbital notebook in Google Colab" style="width:300px; height:300px; object-fit:contain">
+<p style="text-align:center">From raw NASA data to every number in this presentation, step by step.</p>
+<p class="muted" style="text-align:center">github.com/lg061870/vigia-orbital</p>
+</div>
+</div>
+<div class="stats">
+<div class="stat"><p class="num">4 satellites</p><p class="lab">harmonized into one fire record</p></div>
+<div class="stat"><p class="num">≈ 158,000</p><p class="lab">fire detections, 2012–2026</p></div>
+<div class="stat"><p class="num">13 seasons</p><p class="lab">each one forecast blind (2013–2025)</p></div>
+<div class="stat"><p class="num">5 days</p><p class="lab">of warning, canton by canton</p></div>
+</div>
+<aside>Don’t take my word for it. Everything you just saw is live and open, so you can check it yourself. First, the website: every canton of Guanacaste, five days ahead. You can turn back the clock to any date since 2012, and for past dates it shows both the forecast and what the satellites detected afterwards. Second, the open API: it computes each forecast on request, any system can call it, and it returns the same forecast as a plain text message under one kilobyte, for brigades with a weak signal. Third, the notebook: it goes from raw NASA data to every number in this presentation. One honest note: forecasts for past dates on the site use the official model, which was trained on those years; the strict blind tests are the demo week and the season-by-season validation. Website: https://lg061870.github.io/vigia-orbital/ · API: https://lg061870-vigia-orbital-api.hf.space/api/docs · Notebook: https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb</aside>
+</section>

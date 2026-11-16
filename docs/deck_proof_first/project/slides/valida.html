@@ -1,0 +1,30 @@
+<section id="valida" class="lightslide">
+<div class="topbar">
+<div class="brand-row">
+<svg width="76" height="76" viewBox="0 0 76 76" aria-label="Vigía Orbital satellite"><g transform="rotate(-35 38 38)"><rect x="2" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><rect x="52" y="30" width="22" height="16" rx="2" fill="#2F6FB0"/><path d="M8 30v16M14 30v16M20 30v16M58 30v16M64 30v16M70 30v16" stroke="#9CC3E8" stroke-width="1.5"/><rect x="24" y="36" width="28" height="4" fill="#0F2236"/><rect x="29" y="26" width="18" height="24" rx="3" fill="#0F2236"/><circle cx="38" cy="38" r="4" fill="#E4571B"/></g><path d="M50 58c6-10 18-12 22-10-2 8-10 16-22 10z" fill="#2E9E6A"/><path d="M50 58c6-3 12-6 18-9" stroke="#FAF8F3" stroke-width="1.5" fill="none"/></svg>
+<p class="brand">Vigía<br>Orbital</p>
+</div>
+<div class="brand-sep"></div>
+<div class="title-col">
+<h1 class="top-title">Does it work?</h1>
+<p class="top-sub">Tested on fire seasons the model never saw</p>
+</div>
+</div>
+<div class="body">
+<div class="wbox" style="flex:1.7">
+<h3>Better than an average year, season by season</h3>
+<img src="/_blob/d177f9026be8ac72f71572c89b5e8f3b" alt="Bar chart of improvement over an average year for each season left out: positive in 12 of 14, largest in 2013 (+21%), 2022 (+17%) and 2024 (+15%); 2016 and 2020 slightly negative; 2026 test about zero" style="width:1040px; height:456px; object-fit:contain">
+</div>
+<div class="wbox" style="flex:1">
+<h3>Skill by day ahead</h3>
+<img src="/_blob/f4540399766b763176533d4b81e556c1" alt="Bar chart: +7.8% tomorrow, +6.8%, +6.3%, +5.8%, +5.4% on day 5" style="width:600px; height:456px; object-fit:contain">
+</div>
+</div>
+<div class="stats">
+<div class="stat"><p class="num">+8.4 %</p><p class="lab">more accurate than an average year (13 unseen seasons)</p></div>
+<div class="stat"><p class="num">12 of 14</p><p class="lab">seasons better than the average year</p></div>
+<div class="stat"><p class="num">96 %</p><p class="lab">fire happened when the model said ≥ 90 % (7,900 canton-days)</p></div>
+<div class="stat"><p class="num">≈ 0</p><p class="lab">2026 test season: a tie, said honestly</p></div>
+</div>
+<aside>Does it work? One blind week could be luck, so I tested it the strict way: for each season from 2013 to 2025, I trained the model on all the other years and forecast that season blind. Overall, its probabilities are 8.4 percent more accurate than simply using an average year, and it wins in 12 of 14 seasons — most in the worst ones: 2013 by 21 percent, 2022 by 17, 2024 by 15. It’s also reliable at the extremes: when it said 90 percent or more, fire happened 96 percent of the time, over 7,900 canton-days. And it holds up over the five days: plus 7.8 percent tomorrow, still plus 5.4 percent on day five. To be honest: on the 2026 season, a true test it never saw, it tied with the average year — a season with nothing unusual for the conditions to explain. Metric: Brier skill score versus the canton-and-week climatology; AUC 0.932 vs 0.919.</aside>
+</section>
