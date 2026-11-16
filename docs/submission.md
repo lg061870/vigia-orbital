@@ -37,7 +37,8 @@ I used AI tools as assistants, and I reviewed and ran everything myself.
 - **Claude (Anthropic), through Claude Code:** helped write and review the Python code (data pipeline, model functions, validation), the website and API code, the slides and the documentation. Code in the repository written with AI assistance is identified as such in the README and in the commit history ("Co-Authored-By: Claude").
 - **OpenAI voice (ChatGPT):** read the narration of the project video. The video carries a visible note saying so.
 - **No AI-generated data.** All data come from the sources listed below, and every number in the project is computed by the code in the notebook from those data.
-- No AI-generated images. The images are NASA satellite imagery (GIBS) and charts produced by the project's code.
+- **Icons and slide design:** the satellite logo, the flame icons and the layout of the slides and website were generated with Claude as vector graphics and code. Every slide of the demo carries a visible "AI-generated" label. No NASA logos, flags or mission identifiers are used or modified.
+- **Not AI-generated:** the satellite images (NASA GIBS) and the charts, which are drawn by the project's code from the data.
 
 ## NASA Data
 - NASA FIRMS: MODIS (Terra/Aqua) and VIIRS (S-NPP, NOAA-20, NOAA-21) active fire / hot spot detections — https://firms.modaps.eosdis.nasa.gov/

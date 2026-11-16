@@ -163,7 +163,7 @@ Reproduce with `scripts/sanity_check.py` and `scripts/season_stats.py`. Season =
 
 ## Use of AI
 
-Parts of this repository were written with AI assistance (Claude, by Anthropic, through Claude Code): the data pipeline scripts, the model module, the API, the website and the documentation. Those commits are marked "Co-Authored-By: Claude". I reviewed and ran all of it. No data are AI-generated: every number is computed by this code from the sources cited below. The project video is narrated by an AI voice.
+Parts of this repository were written with AI assistance (Claude, by Anthropic, through Claude Code): the data pipeline scripts, the model module, the API, the website and the documentation. Those commits are marked "Co-Authored-By: Claude". I reviewed and ran all of it. No data are AI-generated: every number is computed by this code from the sources cited below. The satellite logo, the flame icons and the slide and website design are also AI-generated; the demo slides carry a visible label. The project video is narrated by an AI voice.
 
 ## Data sources and citations
 
