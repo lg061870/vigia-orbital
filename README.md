@@ -7,6 +7,7 @@ The **Risk of Fire Index** is a machine learning model built on NASA data that f
 - **The record it learns from.** NASA FIRMS hot spots from MODIS and three VIIRS instruments (2012–2026), harmonized into one consistent measure: one reference satellite per period and fire days per canton, instead of raw detection counts that jump every time a satellite is added.
 - **The model.** One logistic regression for each forecast day (1 to 5 days ahead). It starts from the normal risk for each canton and week and adjusts it with current weather (NASA POWER), vegetation dryness (MODIS NDVI and NDMI), recent fire (NASA FIRMS) and terrain (NASADEM). Code: `vigia/model.py`; notebook: `notebooks/vigia_orbital_modelo.ipynb`.
 - **Validation.** Tested blind, season by season (2013–2025): 8.4 % more accurate than an average year, better in 12 of 14 seasons, AUC 0.932 against 0.919. When the index says 90 % or more, fire is observed 96 % of the time. On the 2026 season it tied with the average year.
+- **Live site:** https://vigia.systematicalabs.com
 - **Demo (7 slides):** [`docs/vigia_orbital_demo_7_slides.pdf`](docs/vigia_orbital_demo_7_slides.pdf)
 
 The website, the API and the notebook are demonstrations of how to use the index and how it is built; see [How to use it: demonstrations](#how-to-use-it-demonstrations).
@@ -29,7 +30,7 @@ The website, the API and the notebook are demonstrations of how to use the index
 
 Three ways to use the index and see how it is built: the website, the open API and the notebook ([open in Colab](https://colab.research.google.com/github/lg061870/vigia-orbital/blob/main/notebooks/vigia_orbital_modelo.ipynb)).
 
-**Live:** website https://lg061870.github.io/vigia-orbital/ · API https://lg061870-vigia-orbital-api.hf.space/api (docs at `/api/docs`)
+**Live:** website https://vigia.systematicalabs.com · API https://lg061870-vigia-orbital-api.hf.space/api (docs at `/api/docs`)
 
 **Website** (`site/`, deployed to GitHub Pages by `.github/workflows/pages.yml`): a map of the Guanacaste cantons coloured by risk, the 5-day cards, and why each day's risk is what it is. It has two views: the latest forecast, and the demo week (eve 18 Jan 2018, from a model trained without 2018). Every morning (05:17 Costa Rica) the Pages workflow runs `scripts/daily_forecast.py`, which issues that day's forecast with the same code as the API and saves it as the site's fallback (`site/data/latest.json`); set the repository secret `FIRMS_MAP_KEY` so it gets fresh fire data. Rebuild the demo and map data after a new official run:
 
